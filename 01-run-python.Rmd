@@ -209,7 +209,7 @@ cd /
 
 前面说过，python的代码文件`.py`是一个和`.txt`同样的纯文本文件，所以我们这次直接用记事本来编辑。
 
-打开windows的记事本，把刚才的1 + 2程序写进去,按ctrl+s保存
+打开windows的记事本，把刚才的1 + 2程序写进去，按ctrl+s保存
 
 ```{python eval=FALSE}
 a = 1
@@ -250,6 +250,14 @@ C:\PythonClass>_
 
 ```
 python add.py
+
+```
+
+这句命令的含义是：让系统中装好的python解释器，去运行`add.py`这个python脚本文件。这个脚本文件就在当前目录中（或者环境变量path中的目录，现在可以忽略这一点）。
+
+实际上，我们以用绝对路径来指向`add.py`，也是一样的。
+```
+python C:/PythonClass/add.py
 
 ```
 

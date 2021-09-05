@@ -23,5 +23,3 @@ use_win
 在spyder中写代码
 运行
 从头到尾运行代码
-函数专题for-julie
-变量作用域

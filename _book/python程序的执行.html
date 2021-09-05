@@ -178,10 +178,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3.3.1" data-path="使用spyder编程环境.html"><a href="使用spyder编程环境.html#从头到尾运行代码"><i class="fa fa-check"></i><b>3.3.1</b> 从头到尾运行代码</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="函数专题for-julie.html"><a href="函数专题for-julie.html"><i class="fa fa-check"></i><b>4</b> 函数专题(for Julie)</a>
-<ul>
-<li class="chapter" data-level="4.1" data-path="函数专题for-julie.html"><a href="函数专题for-julie.html#变量作用域"><i class="fa fa-check"></i><b>4.1</b> 变量作用域</a></li>
-</ul></li>
 </ul>
 
       </nav>
@@ -355,7 +351,7 @@ Python中，对变量赋值使用1个等号 “<code>=</code>”。
 <div id="编写源代码" class="section level3" number="2.4.1">
 <h3><span class="header-section-number">2.4.1</span> 编写源代码</h3>
 <p>前面说过，python的代码文件<code>.py</code>是一个和<code>.txt</code>同样的纯文本文件，所以我们这次直接用记事本来编辑。</p>
-<p>打开windows的记事本，把刚才的1 + 2程序写进去,按ctrl+s保存</p>
+<p>打开windows的记事本，把刚才的1 + 2程序写进去，按ctrl+s保存</p>
 <div class="sourceCode" id="cb7"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb7-1"><a href="python程序的执行.html#cb7-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="dv">1</span></span>
 <span id="cb7-2"><a href="python程序的执行.html#cb7-2" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> <span class="dv">2</span></span>
 <span id="cb7-3"><a href="python程序的执行.html#cb7-3" aria-hidden="true" tabindex="-1"></a>c <span class="op">=</span> a <span class="op">+</span> b</span>
@@ -382,6 +378,10 @@ Python中，对变量赋值使用1个等号 “<code>=</code>”。
 <pre><code>C:\PythonClass&gt;_</code></pre>
 <p>输入（并回车）</p>
 <pre><code>python add.py
+</code></pre>
+<p>这句命令的含义是：让系统中装好的python解释器，去运行<code>add.py</code>这个python脚本文件。这个脚本文件就在当前目录中（或者环境变量path中的目录，现在可以忽略这一点）。</p>
+<p>实际上，我们以用绝对路径来指向<code>add.py</code>，也是一样的。</p>
+<pre><code>python C:/PythonClass/add.py
 </code></pre>
 <p>如果一切顺利，你将会看到结果</p>
 <pre><code>3</code></pre>
