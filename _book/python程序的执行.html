@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>2 Python程序的执行 | 写给文科生的Python入门和数据处理教程</title>
+  <meta name="description" content="为人文社科类研究员和学生设计的的Python入门和数据处理教程" />
+  <meta name="generator" content="bookdown 0.23 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="2 Python程序的执行 | 写给文科生的Python入门和数据处理教程" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="为人文社科类研究员和学生设计的的Python入门和数据处理教程" />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="2 Python程序的执行 | 写给文科生的Python入门和数据处理教程" />
+  
+  <meta name="twitter:description" content="为人文社科类研究员和学生设计的的Python入门和数据处理教程" />
+  
+
+<meta name="author" content="lee" />
+
+
+<meta name="date" content="2021-09-05" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="index.html"/>
+<link rel="next" href="使用spyder编程环境.html"/>
+<script src="libs/header-attrs-2.10/header-attrs.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">写给文科生的Python入门和数据处理教程</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> 引言</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#本书目标"><i class="fa fa-check"></i><b>1.1</b> 本书目标</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#本书不足"><i class="fa fa-check"></i><b>1.2</b> 本书不足</a></li>
+<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#使用的程序和版本"><i class="fa fa-check"></i><b>1.3</b> 使用的程序和版本</a></li>
+<li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#把python安装到你的电脑里"><i class="fa fa-check"></i><b>1.4</b> 把Python安装到你的电脑里</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="python程序的执行.html"><a href="python程序的执行.html"><i class="fa fa-check"></i><b>2</b> Python程序的执行</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="python程序的执行.html"><a href="python程序的执行.html#一个python程序是什么"><i class="fa fa-check"></i><b>2.1</b> 一个Python程序是什么</a>
+<ul>
+<li class="chapter" data-level="2.1.1" data-path="python程序的执行.html"><a href="python程序的执行.html#ext_name"><i class="fa fa-check"></i><b>2.1.1</b> 基础知识：扩展名和文件类型</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="python程序的执行.html"><a href="python程序的执行.html#python_interactive"><i class="fa fa-check"></i><b>2.2</b> Python的交互式环境</a>
+<ul>
+<li class="chapter" data-level="2.2.1" data-path="python程序的执行.html"><a href="python程序的执行.html#简单的编程计算1-2"><i class="fa fa-check"></i><b>2.2.1</b> 简单的编程：计算1 + 2</a></li>
+<li class="chapter" data-level="2.2.2" data-path="python程序的执行.html"><a href="python程序的执行.html#上述程序中涉及的一些概念"><i class="fa fa-check"></i><b>2.2.2</b> 上述程序中涉及的一些概念</a></li>
+<li class="chapter" data-level="2.2.3" data-path="python程序的执行.html"><a href="python程序的执行.html#退出运行环境"><i class="fa fa-check"></i><b>2.2.3</b> 退出运行环境</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="python程序的执行.html"><a href="python程序的执行.html#预备知识"><i class="fa fa-check"></i><b>2.3</b> 预备知识</a>
+<ul>
+<li class="chapter" data-level="2.3.1" data-path="python程序的执行.html"><a href="python程序的执行.html#路径path"><i class="fa fa-check"></i><b>2.3.1</b> 路径Path</a></li>
+<li class="chapter" data-level="2.3.2" data-path="python程序的执行.html"><a href="python程序的执行.html#相对路径和绝对路径"><i class="fa fa-check"></i><b>2.3.2</b> 相对路径和绝对路径</a></li>
+<li class="chapter" data-level="2.3.3" data-path="python程序的执行.html"><a href="python程序的执行.html#进入某个目录"><i class="fa fa-check"></i><b>2.3.3</b> 进入某个目录</a></li>
+<li class="chapter" data-level="2.3.4" data-path="python程序的执行.html"><a href="python程序的执行.html#use_win"><i class="fa fa-check"></i><b>2.3.4</b> 用Windows图形界面获得路径</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="python程序的执行.html"><a href="python程序的执行.html#用python解释器来运行"><i class="fa fa-check"></i><b>2.4</b> 用Python解释器来运行</a>
+<ul>
+<li class="chapter" data-level="2.4.1" data-path="python程序的执行.html"><a href="python程序的执行.html#编写源代码"><i class="fa fa-check"></i><b>2.4.1</b> 编写源代码</a></li>
+<li class="chapter" data-level="2.4.2" data-path="python程序的执行.html"><a href="python程序的执行.html#执行这个代码"><i class="fa fa-check"></i><b>2.4.2</b> 执行这个代码</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="使用spyder编程环境.html"><a href="使用spyder编程环境.html"><i class="fa fa-check"></i><b>3</b> 使用Spyder编程环境</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="使用spyder编程环境.html"><a href="使用spyder编程环境.html#界面"><i class="fa fa-check"></i><b>3.1</b> 界面</a></li>
+<li class="chapter" data-level="3.2" data-path="使用spyder编程环境.html"><a href="使用spyder编程环境.html#在spyder中写代码"><i class="fa fa-check"></i><b>3.2</b> 在Spyder中写代码</a></li>
+<li class="chapter" data-level="3.3" data-path="使用spyder编程环境.html"><a href="使用spyder编程环境.html#运行"><i class="fa fa-check"></i><b>3.3</b> 运行</a>
+<ul>
+<li class="chapter" data-level="3.3.1" data-path="使用spyder编程环境.html"><a href="使用spyder编程环境.html#从头到尾运行代码"><i class="fa fa-check"></i><b>3.3.1</b> 从头到尾运行代码</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="函数专题for-julie.html"><a href="函数专题for-julie.html"><i class="fa fa-check"></i><b>4</b> 函数专题(for Julie)</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="函数专题for-julie.html"><a href="函数专题for-julie.html#变量作用域"><i class="fa fa-check"></i><b>4.1</b> 变量作用域</a></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">写给文科生的Python入门和数据处理教程</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="python程序的执行" class="section level1" number="2">
+<h1><span class="header-section-number">2</span> Python程序的执行</h1>
+<div id="一个python程序是什么" class="section level2" number="2.1">
+<h2><span class="header-section-number">2.1</span> 一个Python程序是什么</h2>
+<p>我们所谓“写一个Python”程序，到底是在写一个什么东西？</p>
+<p>一般情况下，所谓一个Python程序，仅仅是一个你电脑里的<strong>纯文本文件</strong>，但<a href="python程序的执行.html#ext_name">扩展名</a>是<code>*.py</code>，这个文件本质上一个<code>.txt</code>文件没什么不同，都可以用任何文本编辑器（例如你电脑里的“记事本”）打开和编辑。</p>
+<p>我们要做的工作，就是用一个文本编辑器（当然也可以是一个集成编程环境如后面会用到的Spyder），编辑一个<code>.py</code>文件，然后把你要的代码写进去，用不同的方法去执行这个文件里代码。可能是在系统里一次性执行整个文件里所有代码，也可能是在一个交互环境里一步一步地执行。</p>
+<div id="ext_name" class="section level3" number="2.1.1">
+<h3><span class="header-section-number">2.1.1</span> 基础知识：扩展名和文件类型</h3>
+<p>用于表示某个文件是什么类型，一般我们会看文件名的最后一个英文<code>.</code>以及之后的内容。</p>
+<p><strong>注意</strong>：这里只是泛泛而论。扩展名也是可以修改的，所以未必和实际的文件类型一致。</p>
+<ol style="list-style-type: decimal">
+<li>一个文件，其名为<code>WINWORD.EXE</code>，其扩展名为<code>.exe</code>（Window系统的文件名不区分大小写，但Mac系统的文件名严格区分大小写），则意味着这是一个“Windows系统的可执行文件”。这实际上是微软Windows版本office中的Word的主程序。我们（在windows下）常说的“运行一个程序”，就是执行一个exe文件。</li>
+<li>一个文件，其名为<code>鲁迅全集.txt</code>，其扩展名为<code>.txt</code>，则意味着这是一个“纯文本文件”，其中的所有内容都可以视为文字，可以用任何一个文本编辑器，例如记事本，或者Word打开。</li>
+<li>其他扩展名，如<code>.jpg</code>是常见的图形文件，<code>.docx</code>是2007版本以后的Word文档，等等等等。</li>
+</ol>
+</div>
+</div>
+<div id="python_interactive" class="section level2" number="2.2">
+<h2><span class="header-section-number">2.2</span> Python的交互式环境</h2>
+<p>我们先采用最基本的Python的交互式环境，给大家一点运行程序的感觉。</p>
+<ol style="list-style-type: decimal">
+<li>启动Anaconda Prompt。（用Mac的同学，启动终端terminal）</li>
+</ol>
+<p><img src="images/Anaconda_icon.png" width="200" /></p>
+<ol start="2" style="list-style-type: decimal">
+<li>我们会看到命令行窗口</li>
+</ol>
+<p><img src="images/terminal.png" width="400"/></p>
+<ol start="3" style="list-style-type: decimal">
+<li>输入<code>python &lt;回车&gt;</code>，我们可以进入python的交互式运行环境。</li>
+</ol>
+<p><span style="color:red"><strong>注意：</strong></span>
+其中的命令提示符<code>&gt;&gt;&gt;</code>。三个右侧尖括号，表示<strong>我们正处于python的交互式环境中</strong>，此时我们可以执行python的语句。</p>
+<p>同时可见Python的版本为3.9.5，一般3.7.x以上皆可。</p>
+<p><img src="images/python-interactive.png"/></p>
+<div id="简单的编程计算1-2" class="section level3" number="2.2.1">
+<h3><span class="header-section-number">2.2.1</span> 简单的编程：计算1 + 2</h3>
+<ol style="list-style-type: decimal">
+<li>我们依次输入（每行代码以<回车>结束）</li>
+</ol>
+<pre><code>&gt;&gt;&gt; a = 1
+&gt;&gt;&gt; b = 2
+&gt;&gt;&gt; c = a + b 
+&gt;&gt;&gt; print(c)</code></pre>
+<p>显然，1+2必然得到</p>
+<pre><code>3</code></pre>
+<ol start="2" style="list-style-type: decimal">
+<li>结果大致如图</li>
+</ol>
+<p><img src="images/basic_add.png" width="400"/></p>
+<p><span style="color:red"><strong>注意：</strong></span></p>
+<ul>
+<li>无法得到结果<code>3</code>，首先检查有没有<strong>输入错误（打错字）</strong>。</li>
+<li><code>print(c)</code>中的小括号，是英文括号。在语法层面上的所有符号，都是<strong>英文符号</strong>。</li>
+<li>如果输入的代码有误，已经敲了回车，只要把正确代码的再输入一次即可。</li>
+</ul>
+</div>
+<div id="上述程序中涉及的一些概念" class="section level3" number="2.2.2">
+<h3><span class="header-section-number">2.2.2</span> 上述程序中涉及的一些概念</h3>
+<p>这个涉及程序设计的几个基本概念：</p>
+<ol style="list-style-type: decimal">
+<li>变量和赋值</li>
+</ol>
+<p>变量，顾名思义，一个可变的量。编程中变量的概念和代数中的<code>x</code>, <code>y</code>, <code>z</code>基本一样。
+Python中，对变量赋值使用1个等号 “<code>=</code>”。
+显然， 我们有3个变量，<code>a</code>, <code>b</code>和<code>c</code>。我们把<code>1</code>赋予<code>a</code>，<code>2</code>赋予<code>b</code>，把<code>a + b</code>的值赋予<code>c</code>。</p>
+<ol start="2" style="list-style-type: decimal">
+<li>运算符</li>
+</ol>
+<p>加减乘除，以及逻辑运算如是否等于，大于，小于等，我们以后会用到。这里只用到“加法”</p>
+<ol start="3" style="list-style-type: decimal">
+<li>函数</li>
+</ol>
+<p>和数学函数一样，我们调用一个函数，给这个函数传递一个参数，然后这个函数会根据这个参数做一些事情。可能是为你进行一个计算，可能修改某个变量等等，也可能什么都不做。</p>
+<p>这里我们调用的函数是<code>print()</code>，这个函数的用途是把你传递给他的变量<code>c</code>的值打印出来。函数的调用方法是函数名与小括号。</p>
+<p><strong>数据分析的程序，大部分情况下可以视为由变量和函数组成。</strong></p>
+</div>
+<div id="退出运行环境" class="section level3" number="2.2.3">
+<h3><span class="header-section-number">2.2.3</span> 退出运行环境</h3>
+<p>输入<code>exit()</code>，然后回车即可。</p>
+<p>可见，<code>exit</code>本身也是一个函数（函数名+小括号），其调用这个函数的作用是退出Python交互式运行环境。</p>
+<p><span style="color:red"><strong>注意：</strong></span>一定要退出，以便后续的程序能执行。</p>
+<p>此时，我们又回到了一开始的命令行（终端）环境中</p>
+<p><img src="images/exit_python.png" width="300"/></p>
+<p>可见，命令提示符现在是一个<code>&gt;</code>，这提示我们正处于系统的命令行环境中</p>
+<ol style="list-style-type: decimal">
+<li>可以执行系统中的命令，但不能执行python中的语句！</li>
+<li>要进行交互式的python编程，要首先进入<a href="python程序的执行.html#python_interactive">Python的交互式环境</a>中！</li>
+</ol>
+</div>
+</div>
+<div id="预备知识" class="section level2" number="2.3">
+<h2><span class="header-section-number">2.3</span> 预备知识</h2>
+<div id="路径path" class="section level3" number="2.3.1">
+<h3><span class="header-section-number">2.3.1</span> 路径Path</h3>
+<p><em>你的文件或者文件夹（目录），到底保存到了哪里？</em></p>
+<p>所谓路径(path)，到达某个文件或者文件夹（目录）的层级结构，每一层用一个斜杠“<code>/</code>”分割。</p>
+<p>在命令行（终端）环境下，在命令提示符<code>&gt;</code>之前，一般会有提示你当前路径，即当前你处于哪个目录下。</p>
+<p>例如 <code>C:\Users\lee</code>，指的就是，在你的<code>C</code>盘下，<code>Users</code>目录下，的<code>lee</code>目录。</p>
+<p><span style="color:red"><strong>注意：</strong></span>在你的电脑上，这里的<code>lee</code>会替换为你的用户名</p>
+<p><img src="images/exit_python.png" width="300"/></p>
+<p>这样，你输入的任何命令，都会对“当前路径”生效。</p>
+<p>同样，路径既可以指向一个目录（文件夹），也可以指向一个文件。</p>
+<p>如<code>C:\Users\lee\add.py</code>，就指的是，在你的<code>C</code>盘下的<code>Users</code>目录下的<code>lee</code>目录下的一个叫<code>add.py</code>的文件。</p>
+</div>
+<div id="相对路径和绝对路径" class="section level3" number="2.3.2">
+<h3><span class="header-section-number">2.3.2</span> 相对路径和绝对路径</h3>
+<ol style="list-style-type: decimal">
+<li>绝对路径：从根目录（windows下即一个盘符，如c盘或者d盘）开始的路径，可以确定无疑地指向某个文件或者目录。如<code>C:\Users\lee\add.py</code>。</li>
+<li>相对路径：不从根目录起始的路径。其指向的目的地，从你的“当前路径”开始，往下数。</li>
+</ol>
+<p>假如，你的当前路径是<code>C:\Users</code>，那么此时，相对路径<code>lee\add.py</code>，所指向的，就是当前路径下（<code>C:\Users</code>），<code>lee</code>目录下的<code>add.py</code>。这也等价于绝对路径<code>C:\Users\lee\add.py</code>。</p>
+<ol start="3" style="list-style-type: decimal">
+<li>两者的区别：绝对路径从根目录开始，相对路径从“当前路径”开始。</li>
+</ol>
+</div>
+<div id="进入某个目录" class="section level3" number="2.3.3">
+<h3><span class="header-section-number">2.3.3</span> 进入某个目录</h3>
+<p>Windows命令行，和Mac的终端，有相同的命令<code>cd &lt;路径&gt;</code>，可以进入一个目录。</p>
+<p>如，在终端中输入（并回车）注意这里使用的是绝对路径</p>
+<pre><code>cd C:/Users </code></pre>
+<p>则会让终端进入到 <code>C:/Users</code> 目录下。见提示符<code>&gt;</code>前方的“当前路径”已经改变为<code>C:/Users</code>。你现在已经位于<code>C:/Users</code> 目录。</p>
+<p><img src="images/cd_01.png" width="300"/></p>
+<p>尝试相对路径，在终端中输入（并回车），注意这里的<code>lee</code>，请替换成你的用户名。</p>
+<pre><code>cd lee</code></pre>
+<p>则会让终端进入到 <code>C:/Users/lee</code> 目录下。见提示符<code>&gt;</code>前方的“当前路径”已经改变为<code>C:/Users/lee</code>。你现在已经位于<code>C:/Users/lee</code> 目录。</p>
+<p><img src="images/cd_02.png" width="300"/></p>
+<p>其他用法包括：</p>
+<ol style="list-style-type: decimal">
+<li>进入上一级目录</li>
+</ol>
+<pre><code>cd ..</code></pre>
+<ol start="2" style="list-style-type: decimal">
+<li>进入根目录</li>
+</ol>
+<pre><code>cd /</code></pre>
+<p>可以让你在命令行和终端中，定位到你想要的目录和文件。</p>
+</div>
+<div id="use_win" class="section level3" number="2.3.4">
+<h3><span class="header-section-number">2.3.4</span> 用Windows图形界面获得路径</h3>
+<p>在你的windows资源管理器（俗称“我的电脑”），在任何一个文件夹中，点击地址栏</p>
+<p><img src="images/windows_01.png" width="400"/></p>
+<p>你就可以得到这个文件夹的路径，可以粘贴到命令行中。</p>
+<p><img src="images/windows_02.png" width="400"/></p>
+<p><span style="color:red"><strong>特别注意：正反斜杠问题</strong></span></p>
+<p>在编程的语境下，反斜杠“<code>\</code>”有特殊用途。因此，表示路径的时候，我们统一用（正）斜杠“<code>/</code>”，而不用反斜杠“<code>\</code>”。</p>
+<p>统一的写法，如<code>C:/Users/lee</code></p>
+</div>
+</div>
+<div id="用python解释器来运行" class="section level2" number="2.4">
+<h2><span class="header-section-number">2.4</span> 用Python解释器来运行</h2>
+<p>当你离开交互环境，你的程序就没了。当然，我们不可能每次都把程序从头写一次。如前文所述，我们编写一个<code>.py</code>文件来保存我们的代码，然后利用系统中安装的Python解释器来执行它。</p>
+<div id="编写源代码" class="section level3" number="2.4.1">
+<h3><span class="header-section-number">2.4.1</span> 编写源代码</h3>
+<p>前面说过，python的代码文件<code>.py</code>是一个和<code>.txt</code>同样的纯文本文件，所以我们这次直接用记事本来编辑。</p>
+<p>打开windows的记事本，把刚才的1 + 2程序写进去,按ctrl+s保存</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb7-1"><a href="python程序的执行.html#cb7-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb7-2"><a href="python程序的执行.html#cb7-2" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> <span class="dv">2</span></span>
+<span id="cb7-3"><a href="python程序的执行.html#cb7-3" aria-hidden="true" tabindex="-1"></a>c <span class="op">=</span> a <span class="op">+</span> b</span>
+<span id="cb7-4"><a href="python程序的执行.html#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(c)</span></code></pre></div>
+<ol style="list-style-type: decimal">
+<li>在<code>C</code>盘根目录下，建立一个新的文件夹，例如“<code>PythonClass</code>”。</li>
+<li>类型选择<em>.</em>（所有文件），文件名可以任意起，但是必须以<code>.py</code>结尾。例如我这里采用<code>add.py</code>。</li>
+<li>保存。</li>
+</ol>
+<p>注意：</p>
+<ol style="list-style-type: decimal">
+<li>如果你按此操作，那么你的<code>PythonClass</code>文件夹的完整路径（绝对路径）就是<code>C:/PythonClass</code>。而你的<code>.py</code>文件的完整路径，就是<code>C:/PythonClass/add.py</code></li>
+<li>如果你自行选取其他位置保存<code>.py</code>文件，那么路径也可以如此类推。如果实在找不到，则可见<a href="python程序的执行.html#use_win">在Windows图形界面获得路径</a>。</li>
+</ol>
+</div>
+<div id="执行这个代码" class="section level3" number="2.4.2">
+<h3><span class="header-section-number">2.4.2</span> 执行这个代码</h3>
+<p>确保你刚才已经退出了Python的交互环境。我们现在首先要定位到我们保存<code>.py</code>文件的目录，如果大家按操作运行，这个文件应该在<code>C:/PythonClass</code>目录下。
+我们<code>cd</code>命令，转移到我们保存<code>py</code>文件的路径：</p>
+<p>输入 (并回车)</p>
+<pre><code>cd C:/PythonClass
+</code></pre>
+<p>此时你的命令提示符应该告诉你，现在位于<code>C:/PythonClass</code>目录下。</p>
+<pre><code>C:\PythonClass&gt;_</code></pre>
+<p>输入（并回车）</p>
+<pre><code>python add.py
+</code></pre>
+<p>如果一切顺利，你将会看到结果</p>
+<pre><code>3</code></pre>
+<p>而不同之处在于，我们的程序这次保留了下来，我们要继续上一次编程，我们只要打开这个py文件，继续往里写代码即可。</p>
+<p>那如果我们既要保存代码，又要一边执行代码、一边看结果怎么办？</p>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="使用spyder编程环境.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": {
+"engine": "lunr",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>
