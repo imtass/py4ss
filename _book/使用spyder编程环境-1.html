@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>3 使用Spyder编程环境 | 写给文科生的Python入门和数据处理教程</title>
+  <title>4 使用Spyder编程环境 | 写给文科生的Python入门和数据处理教程</title>
   <meta name="description" content="为人文社科类研究员和学生设计的的Python入门和数据处理教程" />
   <meta name="generator" content="bookdown 0.23 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="3 使用Spyder编程环境 | 写给文科生的Python入门和数据处理教程" />
+  <meta property="og:title" content="4 使用Spyder编程环境 | 写给文科生的Python入门和数据处理教程" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="3 使用Spyder编程环境 | 写给文科生的Python入门和数据处理教程" />
+  <meta name="twitter:title" content="4 使用Spyder编程环境 | 写给文科生的Python入门和数据处理教程" />
   
   <meta name="twitter:description" content="为人文社科类研究员和学生设计的的Python入门和数据处理教程" />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="python程序的执行.html"/>
-<link rel="next" href="python语言基础.html"/>
+<link rel="prev" href="使用spyder编程环境.html"/>
+
 <script src="libs/header-attrs-2.10/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -55,70 +55,6 @@
 <script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
 
 
-<style type="text/css">
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-    color: #aaaaaa;
-  }
-pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
-code span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code span.at { color: #7d9029; } /* Attribute */
-code span.bn { color: #40a070; } /* BaseN */
-code span.bu { } /* BuiltIn */
-code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code span.ch { color: #4070a0; } /* Char */
-code span.cn { color: #880000; } /* Constant */
-code span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code span.dt { color: #902000; } /* DataType */
-code span.dv { color: #40a070; } /* DecVal */
-code span.er { color: #ff0000; font-weight: bold; } /* Error */
-code span.ex { } /* Extension */
-code span.fl { color: #40a070; } /* Float */
-code span.fu { color: #06287e; } /* Function */
-code span.im { } /* Import */
-code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
-code span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code span.op { color: #666666; } /* Operator */
-code span.ot { color: #007020; } /* Other */
-code span.pp { color: #bc7a00; } /* Preprocessor */
-code span.sc { color: #4070a0; } /* SpecialChar */
-code span.ss { color: #bb6688; } /* SpecialString */
-code span.st { color: #4070a0; } /* String */
-code span.va { color: #19177c; } /* Variable */
-code span.vs { color: #4070a0; } /* VerbatimString */
-code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
-</style>
 
 
 <link rel="stylesheet" href="style.css" type="text/css" />
@@ -137,7 +73,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><a href="./">写给文科生的Python入门和数据处理教程</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> 引言</a>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> url: your book url like <span>https://bookdown.org/yihui/bookdown</span></a>
 <ul>
 <li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#本书目标"><i class="fa fa-check"></i><b>1.1</b> 本书目标</a></li>
 <li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#本书不足"><i class="fa fa-check"></i><b>1.2</b> 本书不足</a></li>
@@ -186,7 +122,23 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3.5.1" data-path="使用spyder编程环境.html"><a href="使用spyder编程环境.html#按cell单元格执行"><i class="fa fa-check"></i><b>3.5.1</b> 按Cell（单元格）执行</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="python语言基础.html"><a href="python语言基础.html"><i class="fa fa-check"></i><b>4</b> Python语言基础</a></li>
+<li class="chapter" data-level="4" data-path="使用spyder编程环境-1.html"><a href="使用spyder编程环境-1.html"><i class="fa fa-check"></i><b>4</b> 使用Spyder编程环境</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="使用spyder编程环境-1.html"><a href="使用spyder编程环境-1.html#界面-1"><i class="fa fa-check"></i><b>4.1</b> 界面</a></li>
+<li class="chapter" data-level="4.2" data-path="使用spyder编程环境-1.html"><a href="使用spyder编程环境-1.html#在spyder中写代码-1"><i class="fa fa-check"></i><b>4.2</b> 在Spyder中写代码</a></li>
+<li class="chapter" data-level="4.3" data-path="使用spyder编程环境-1.html"><a href="使用spyder编程环境-1.html#运行程序-1"><i class="fa fa-check"></i><b>4.3</b> 运行程序</a>
+<ul>
+<li class="chapter" data-level="4.3.1" data-path="使用spyder编程环境-1.html"><a href="使用spyder编程环境-1.html#从头到尾运行代码-1"><i class="fa fa-check"></i><b>4.3.1</b> 从头到尾运行代码</a></li>
+<li class="chapter" data-level="4.3.2" data-path="使用spyder编程环境-1.html"><a href="使用spyder编程环境-1.html#变量监视器-1"><i class="fa fa-check"></i><b>4.3.2</b> 变量监视器</a></li>
+<li class="chapter" data-level="4.3.3" data-path="使用spyder编程环境-1.html"><a href="使用spyder编程环境-1.html#单步执行-1"><i class="fa fa-check"></i><b>4.3.3</b> 单步执行</a></li>
+<li class="chapter" data-level="4.3.4" data-path="使用spyder编程环境-1.html"><a href="使用spyder编程环境-1.html#选择执行-1"><i class="fa fa-check"></i><b>4.3.4</b> 选择执行</a></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="使用spyder编程环境-1.html"><a href="使用spyder编程环境-1.html#预备知识python的注释comment-1"><i class="fa fa-check"></i><b>4.4</b> 预备知识：Python的注释（comment）</a></li>
+<li class="chapter" data-level="4.5" data-path="使用spyder编程环境-1.html"><a href="使用spyder编程环境-1.html#运行程序续-1"><i class="fa fa-check"></i><b>4.5</b> 运行程序（续）</a>
+<ul>
+<li class="chapter" data-level="4.5.1" data-path="使用spyder编程环境-1.html"><a href="使用spyder编程环境-1.html#按cell单元格执行-1"><i class="fa fa-check"></i><b>4.5.1</b> 按Cell（单元格）执行</a></li>
+</ul></li>
+</ul></li>
 </ul>
 
       </nav>
@@ -204,12 +156,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="使用spyder编程环境" class="section level1" number="3">
-<h1><span class="header-section-number">3</span> 使用Spyder编程环境</h1>
+<div id="使用spyder编程环境-1" class="section level1" number="4">
+<h1><span class="header-section-number">4</span> 使用Spyder编程环境</h1>
 <p>实际上，我们真正用python做数据分析的时候，一般会利用一个集成编程环境，例如我们<strong>本课程要用的Spyder</strong>，或者流行的PyCharm，或者jupyter notebook等等。</p>
 <p>这些集成编辑环境，通常会把.py文件的编辑和python的交互环境结合起来，让我们一边编辑py文件的同时，一边执行代码并查看结果。数据分析完毕时，代码同时也写成了。</p>
-<div id="界面" class="section level2" number="3.1">
-<h2><span class="header-section-number">3.1</span> 界面</h2>
+<div id="界面-1" class="section level2" number="4.1">
+<h2><span class="header-section-number">4.1</span> 界面</h2>
 <p>打开Spyder</p>
 <p><img src="images/Spyder_icon.png" width="200"/></p>
 <p><img src="images/spyder_ui.png" /></p>
@@ -222,28 +174,28 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>工具栏，我们后面再说。</li>
 </ol>
 </div>
-<div id="在spyder中写代码" class="section level2" number="3.2">
-<h2><span class="header-section-number">3.2</span> 在Spyder中写代码</h2>
+<div id="在spyder中写代码-1" class="section level2" number="4.2">
+<h2><span class="header-section-number">4.2</span> 在Spyder中写代码</h2>
 <p>我们在左侧的文本编辑器，把刚才的1+2程序写进去，按Ctrl+s保存一下（Mac: Cmd + s）。</p>
 <p><img src="images/spyder_ui_1p2.png" /></p>
 </div>
-<div id="运行程序" class="section level2" number="3.3">
-<h2><span class="header-section-number">3.3</span> 运行程序</h2>
-<div id="从头到尾运行代码" class="section level3" number="3.3.1">
-<h3><span class="header-section-number">3.3.1</span> 从头到尾运行代码</h3>
+<div id="运行程序-1" class="section level2" number="4.3">
+<h2><span class="header-section-number">4.3</span> 运行程序</h2>
+<div id="从头到尾运行代码-1" class="section level3" number="4.3.1">
+<h3><span class="header-section-number">4.3.1</span> 从头到尾运行代码</h3>
 <p>点击工具栏的运行按钮（Run File），或者按键盘的F5，我们可以把当前的<code>.py</code>脚本从头到尾运行一遍。
 看交互式窗口，得到结果为<code>3</code>。</p>
 <p><img src="images/spyder_ui_runall.png" /></p>
 <p>Run File，这个按钮的功能约等于我们在命令行环境下，直接运行“<code>Python temp.py</code>”。(注意我们正在编辑的文件是<code>temp.py</code>)</p>
 </div>
-<div id="变量监视器" class="section level3" number="3.3.2">
-<h3><span class="header-section-number">3.3.2</span> 变量监视器</h3>
+<div id="变量监视器-1" class="section level3" number="4.3.2">
+<h3><span class="header-section-number">4.3.2</span> 变量监视器</h3>
 <p>点击右上角一栏的<code>Variable Explorer</code>（变量浏览器），可以看到当前运行环境中的所有变量和他们的类型以及值（变量类型见后）。
 点击交互界面上方的垃圾桶图标<code>Remove all variables</code>（移除所有变量），点击yes。</p>
 <p><img src="images/spyder_ui_ve.png" /></p>
 </div>
-<div id="单步执行" class="section level3" number="3.3.3">
-<h3><span class="header-section-number">3.3.3</span> 单步执行</h3>
+<div id="单步执行-1" class="section level3" number="4.3.3">
+<h3><span class="header-section-number">4.3.3</span> 单步执行</h3>
 <p>现在找到“Run selection or current line”按钮。</p>
 <p><img src="images/btn_run_line.png"  width="50"/></p>
 <p>这个按钮，顾名思义。如果你选择了一部分代码则，执行这部分代码。如果你没有选择代码，则执行光标所在行。执行完毕后，光标会自动移动到下一行。</p>
@@ -260,13 +212,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>这使得我们可以逐步查看每一行代码的效果，是实际工作中的常规操作之一。</p>
 <p><img src="images/spyder_ui_runline_all.png"/></p>
 </div>
-<div id="选择执行" class="section level3" number="3.3.4">
-<h3><span class="header-section-number">3.3.4</span> 选择执行</h3>
+<div id="选择执行-1" class="section level3" number="4.3.4">
+<h3><span class="header-section-number">4.3.4</span> 选择执行</h3>
 <p>这个按钮也可以一次性执行<strong>你所选择的代码</strong>，这个大家可以自行尝试。</p>
 </div>
 </div>
-<div id="预备知识python的注释comment" class="section level2" number="3.4">
-<h2><span class="header-section-number">3.4</span> 预备知识：Python的注释（comment）</h2>
+<div id="预备知识python的注释comment-1" class="section level2" number="4.4">
+<h2><span class="header-section-number">4.4</span> 预备知识：Python的注释（comment）</h2>
 <p>先说注释。Python使用井号：<code>#</code>来表示注释。所谓注释，就是“<strong>给人看</strong>”的内容，而Python的解释器会直接忽略掉这部分。</p>
 <ol style="list-style-type: decimal">
 <li>注释可以出现在任何地方，注意<code>#</code>号只会影响同一行右边的代码，因此也可以出现在行尾。</li>
@@ -281,10 +233,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ol>
 <p>特别地，<strong>注释是考试的给分点</strong>。你的考试程序输出了正确的结果，可以得到合格评价，同时具有良好的编写风格、合理的注释，才能得到更高分。</p>
 </div>
-<div id="运行程序续" class="section level2" number="3.5">
-<h2><span class="header-section-number">3.5</span> 运行程序（续）</h2>
-<div id="按cell单元格执行" class="section level3" number="3.5.1">
-<h3><span class="header-section-number">3.5.1</span> 按Cell（单元格）执行</h3>
+<div id="运行程序续-1" class="section level2" number="4.5">
+<h2><span class="header-section-number">4.5</span> 运行程序（续）</h2>
+<div id="按cell单元格执行-1" class="section level3" number="4.5.1">
+<h3><span class="header-section-number">4.5.1</span> 按Cell（单元格）执行</h3>
 <p>一般我们的程序，往往有一长串代码，或者连续几条语句，只是为了达到某一个特定目的。如果我们修改了某些代码，希望把整个代码块一次执行完，直接查看阶段性的结果，就可以使用cell。</p>
 <p>可以使用特殊的注释<code>#%%</code>，两个<code>#%%</code>中间的代码，会被Spyder认为是一个cell（单元格）。光标所在的cell，会有不同颜色的背景颜色来区分。</p>
 <p><img src="images/spyder_cell.png"/></p>
@@ -308,8 +260,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           </div>
         </div>
       </div>
-<a href="python程序的执行.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="python语言基础.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="使用spyder编程环境.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

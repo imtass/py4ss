@@ -10,8 +10,8 @@ python_interactive
 简单的编程计算1-2
 上述程序中涉及的一些概念
 退出运行环境
-预备知识
-路径path
+预备知识路径
+path
 相对路径和绝对路径
 进入某个目录
 use_win
@@ -21,5 +21,12 @@ use_win
 使用spyder编程环境
 界面
 在spyder中写代码
-运行
+运行程序
 从头到尾运行代码
+变量监视器
+单步执行
+选择执行
+预备知识python的注释comment
+运行程序续
+按cell单元格执行
+python语言基础

@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>写给文科生的Python入门和数据处理教程</title>
+  <title>4 Python语言基础 | 写给文科生的Python入门和数据处理教程</title>
   <meta name="description" content="为人文社科类研究员和学生设计的的Python入门和数据处理教程" />
   <meta name="generator" content="bookdown 0.23 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="写给文科生的Python入门和数据处理教程" />
+  <meta property="og:title" content="4 Python语言基础 | 写给文科生的Python入门和数据处理教程" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="写给文科生的Python入门和数据处理教程" />
+  <meta name="twitter:title" content="4 Python语言基础 | 写给文科生的Python入门和数据处理教程" />
   
   <meta name="twitter:description" content="为人文社科类研究员和学生设计的的Python入门和数据处理教程" />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
+<link rel="prev" href="使用spyder编程环境.html"/>
 
-<link rel="next" href="python程序的执行.html"/>
 <script src="libs/header-attrs-2.10/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -204,71 +204,17 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">写给文科生的Python入门和数据处理教程</h1>
-<p class="author"><em>lee</em></p>
-<p class="date"><em>2021-09-06</em></p>
-</div>
-<div id="引言" class="section level1" number="1">
-<h1><span class="header-section-number">1</span> 引言</h1>
-<p>本文是Python入门和数据处理教程，基于经管类本科课堂教学用的讲义，以供同学们自学和参考。</p>
-<p><em>p.s.</em> 本文使用RStudio以及R的Bookdown包写成。</p>
-<div id="本书目标" class="section level2" number="1.1">
-<h2><span class="header-section-number">1.1</span> 本书目标</h2>
-<ol style="list-style-type: decimal">
-<li>负基础Python入门</li>
-</ol>
-<p>对于首次接触编程的人，可能对计算机和操作系统的有关知识（如“命令行”，“路径”等）缺乏了解。本文尽量把有关的知识都介绍到，争取做到“会打字就能学Python”。</p>
-<ol start="2" style="list-style-type: decimal">
-<li>Python数据处理</li>
-</ol>
-<ul>
-<li>基本目标：替代Excel</li>
-<li>进阶目标：对科研常用数据，如Wind和CSMAR数据库、CFPS和CHIP等微观调查数据、统计局数据、oTree实验数据等，按照研究要求进行清洗、剪裁、整合以及绘图，为进一步分析（如回归）制作出合适的数据集。</li>
-</ul>
-<ol start="3" style="list-style-type: decimal">
-<li>金融数据分析</li>
-</ol>
-<p>待定：视教学情况。</p>
-</div>
-<div id="本书不足" class="section level2" number="1.2">
-<h2><span class="header-section-number">1.2</span> 本书不足</h2>
-<ol style="list-style-type: decimal">
-<li>由于课时非常紧张，有很多有意义的内容不得不舍弃，包括但不限于：</li>
-</ol>
-<ul>
-<li>函数式编程和数据流思想</li>
-<li>面向对象编程</li>
-<li>单元测试</li>
-</ul>
-<ol start="2" style="list-style-type: decimal">
-<li>作者水平有限，很多内容未必是最优做法，只能争取尽量清晰和明确。</li>
-<li>要顾及同学们的计算机基础有高有低，有些地方不得不写得比较啰嗦。</li>
-</ol>
-</div>
-<div id="使用的程序和版本" class="section level2" number="1.3">
-<h2><span class="header-section-number">1.3</span> 使用的程序和版本</h2>
-<ol style="list-style-type: decimal">
-<li>使用Anaconda以及附带的Spyder作为主要的编程环境</li>
-<li>Python版本3.7.x或以上</li>
-</ol>
-</div>
-<div id="把python安装到你的电脑里" class="section level2" number="1.4">
-<h2><span class="header-section-number">1.4</span> 把Python安装到你的电脑里</h2>
-<p>要完成任何一个编程任务，首先要借助Python现有的巨大的程序库（一般可称为库Library，或者包Package）。本课程主要针对经济类数据分析，涉及的包比较多。为了避免逐个安装，我们采用比较简单的做法，直接安装Anaconda。这是一个所谓“Python发行版”，里面包含了Python的执行程序（解释器等），以及大量的科学计算用包。一般的数据分析工作，直接安装这个即可。</p>
-<p>下载地址：<a href="https://www.anaconda.com/products/individual#Downloads" class="uri">https://www.anaconda.com/products/individual#Downloads</a></p>
-<p>直接百度Anaconda也能找到这个链接。按照你自己的操作系统下载 ，一般选择<strong>最新版</strong>，现在的电脑一般选择<strong>64bit</strong>的安装文件，安装过程采用<strong>默认选项</strong>即可。</p>
-<p><img src="images/anaconda_download.png" title="下载anaconda" /></p>
+<div id="python语言基础" class="section level1" number="4">
+<h1><span class="header-section-number">4</span> Python语言基础</h1>
 
-</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
+<a href="使用spyder编程环境.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 
-<a href="python程序的执行.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
