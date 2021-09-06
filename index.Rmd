@@ -1,6 +1,6 @@
 --- 
 title: "写给文科生的Python入门和数据处理教程"
-author: "lee"
+author: "Lee"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 documentclass: book
