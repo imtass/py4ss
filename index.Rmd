@@ -12,6 +12,16 @@ link-citations: yes
 # github-repo: rstudio/bookdown-demo
 ---
 
+```{r}
+colorize <- function(x, color) {
+  if (knitr::is_latex_output()) {
+    sprintf("\\textcolor{%s}{%s}", color, x)
+  } else if (knitr::is_html_output()) {
+    sprintf("<span style='color: %s;'>%s</span>", color,
+      x)
+  } else x
+}
+```
 
 # 引言 
 
@@ -49,8 +59,7 @@ link-citations: yes
 
 
 1. 使用Anaconda以及附带的Spyder作为主要的编程环境
-2. Python版本3.7.x或以上
-
+2. Python版本3.6或以上。（涉及Type Hints和f-string等）
 
 
 ## 把Python安装到你的电脑里
