@@ -200,7 +200,7 @@ print(a.upper()) # 转为大写：upper
 
 ### 显示特殊字符：转义字符`\`
 
-1. “换行\n”
+1. “换行`\n`”
 
 ```{python}
 print("Hello\nPython")
