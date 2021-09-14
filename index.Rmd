@@ -21,6 +21,8 @@ colorize <- function(x, color) {
       x)
   } else x
 }
+
+red = functional::CurryL(colorize,color = "red")
 ```
 
 # 引言 

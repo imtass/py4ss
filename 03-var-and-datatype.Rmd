@@ -346,14 +346,193 @@ print(f"z是{z:.2%}")
 其他格式，可以问百度和谷歌，我们后面遇到也会讲。
 
 
-## 布尔型
+## 布尔型Boolean
 
-## 看懂出错信息
+布尔型Boolean，也常简称为bool，逻辑关系，只有2个值：真`True`，或者假`False`（`r colorize("注意区分大小写",'red')`）
 
-## 列表
+一般用于条件判断（详细见后）
 
-## 元组
 
-## 字典
+```{python}
+a = 1
+b = 2
 
-## 类型提示Type Hints
+if a > b:
+  print("a is bigger")
+
+```
+
+### 简单布尔运算
+
+对于不熟悉编程的同学可能有点抽象。
+
+与 `and`，或`or`，非`not`
+
+1. 与 `and`，简称：“所有条件同时成立”（全部条件为`True`，会得到`True`；否则为`False`）
+
+如：“学号是单数”，且“坐在班级前排的同学”
+
+
+```{python}
+print(True and True)
+print(False and True)
+print(False and False)
+
+```
+
+2. 或`or`，简称：“最少有一个条件成立”（最少一个条件为`True`，会得到`True`；全部条件为`False`，则得到`False`）
+
+```{python}
+print(True or True)
+print(False or True)
+print(False or False)
+
+```
+3. 非`not`：取反
+
+```{python}
+print(not True)
+print(not False)
+
+```
+
+4. 举例：
+
+```{python}
+a = 1
+b = 2
+
+a > b
+
+(a > 1) and (b > 1)
+
+(a > 1) or (b > 1)
+
+not (b < 2)
+
+```
+`r red("**注意**")`：重点强调，必须留意运算符的优先级，先运算的部分要加括号！这和小学的数学运算是一样的。
+
+
+## None类型
+
+空值，一切皆非。粗略地可以理解为一个“占位符”，例如一个不返回任何值的函数，以后遇到会再解释。
+
+```{python}
+a = None
+print(a)
+```
+
+
+## 简单类型转换
+
+1. 字符串和数值
+
+字符串：可以表示词语、句子，可以拼接，组合
+数字：可以运算
+
+数字可以拼接吗？字符串可以做运算吗？
+
+先转换一下类型
+
+```{python eval=FALSE}
+birth = "2001"
+
+age = 2021 - birth
+print(age)
+```
+
+```
+TypeError: unsupported operand type(s) for -: 'int' and 'str'
+NameError: name 'age' is not defined
+```
+
+一般而言，类型转换的函数，就是目标类型的名字。
+
+把某个变量（如字符串str）转整型int，用函数`int()`，转为浮点是`float()`
+
+```{python}
+birth = "2001"
+age = 2021 - int(birth)
+print(age)
+
+age = 2021 - float(birth)
+print(age)
+```
+
+显然反过来转换也是可以的，把某个变量转为字符串`str()`
+```{python}
+
+print('Your age is ' + str(age))
+
+```
+
+
+
+
+2. 布尔型
+
+特别地，布尔型中，`True`可视为`1`，`False`可视为`0`。
+因此我们可以把数字的运算套用在布尔型上。
+
+`r red("注意")`：要保持代码的清晰性，一般不建议使用布尔型进行运算，除非你很明白自己在做什么。
+
+
+```{python}
+a = True # True可视为1
+print(a + 1)
+
+b = False # False可视为0
+print(b - 1)
+```
+
+
+做条件判断的时候，`0`会判定为`False`，非`0`会判断为`True`，这个我们后面说条件语句的时候会说。
+
+```{python}
+if -1:
+  print('hello')
+  
+
+```
+
+
+## Python的类型转换和类型错误
+
+Python是一个“动态类型+强类型”语言
+
+1. 动态类型：
+
+变量名运行时绑定，变量名只是一个可以撕掉和重新粘贴的标签。你为某个变赋值什么类型，这个变量就是什么类型，在运行时可以随你的赋值代码而改变。
+
+2. 强类型：
+
+**一般情况下**，Python不会为你自动转换类型（不会“隐式类型转换”）。
+
+如一个很热门的语言JavaScript，大家现在上网看到的多数网站，其页面都是js语言写的。
+
+
+在js中，一个字符"0"加一个数字1，js会自动（隐式地）把后者转换为字符串，然后进行拼接。
+```
+"0" + 1; // "01"
+```
+这其实对你的代码质量（如类型的检验）提出了更高要求，比如你的本意可能是要2个数字相加。
+
+但这段代码会在你毫无知觉的情况下，一直运行下去，导致你可能要在无数代码执行过后，才发现问题。
+
+
+在Python中，则会报错TypeError错误。
+
+```{python eval=FALSE}
+'0' + 1
+```
+```
+TypeError: must be str, not int
+```
+
+显然，这说的是一个str，只能和另一个str相加（串联），而不能是一个int。
+这个时候你应该用“显式”的类型转换。
+
+如果看到TypeError，检查你的变量类型。
+
+

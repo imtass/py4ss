@@ -24,7 +24,7 @@
 <meta name="author" content="Li Weicheng @ gpnu" />
 
 
-<meta name="date" content="2021-09-07" />
+<meta name="date" content="2021-09-14" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -210,12 +210,21 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="4.3.2" data-path="变量和常用数据类型.html"><a href="变量和常用数据类型.html#显示特殊字符转义字符"><i class="fa fa-check"></i><b>4.3.2</b> 显示特殊字符：转义字符<code>\</code></a></li>
 <li class="chapter" data-level="4.3.3" data-path="变量和常用数据类型.html"><a href="变量和常用数据类型.html#字符串格式化"><i class="fa fa-check"></i><b>4.3.3</b> 字符串格式化</a></li>
 </ul></li>
-<li class="chapter" data-level="4.4" data-path="变量和常用数据类型.html"><a href="变量和常用数据类型.html#布尔型"><i class="fa fa-check"></i><b>4.4</b> 布尔型</a></li>
-<li class="chapter" data-level="4.5" data-path="变量和常用数据类型.html"><a href="变量和常用数据类型.html#看懂出错信息"><i class="fa fa-check"></i><b>4.5</b> 看懂出错信息</a></li>
-<li class="chapter" data-level="4.6" data-path="变量和常用数据类型.html"><a href="变量和常用数据类型.html#列表"><i class="fa fa-check"></i><b>4.6</b> 列表</a></li>
-<li class="chapter" data-level="4.7" data-path="变量和常用数据类型.html"><a href="变量和常用数据类型.html#元组"><i class="fa fa-check"></i><b>4.7</b> 元组</a></li>
-<li class="chapter" data-level="4.8" data-path="变量和常用数据类型.html"><a href="变量和常用数据类型.html#字典"><i class="fa fa-check"></i><b>4.8</b> 字典</a></li>
-<li class="chapter" data-level="4.9" data-path="变量和常用数据类型.html"><a href="变量和常用数据类型.html#类型提示type-hints"><i class="fa fa-check"></i><b>4.9</b> 类型提示Type Hints</a></li>
+<li class="chapter" data-level="4.4" data-path="变量和常用数据类型.html"><a href="变量和常用数据类型.html#布尔型boolean"><i class="fa fa-check"></i><b>4.4</b> 布尔型Boolean</a>
+<ul>
+<li class="chapter" data-level="4.4.1" data-path="变量和常用数据类型.html"><a href="变量和常用数据类型.html#简单布尔运算"><i class="fa fa-check"></i><b>4.4.1</b> 简单布尔运算</a></li>
+</ul></li>
+<li class="chapter" data-level="4.5" data-path="变量和常用数据类型.html"><a href="变量和常用数据类型.html#none类型"><i class="fa fa-check"></i><b>4.5</b> None类型</a></li>
+<li class="chapter" data-level="4.6" data-path="变量和常用数据类型.html"><a href="变量和常用数据类型.html#简单类型转换"><i class="fa fa-check"></i><b>4.6</b> 简单类型转换</a></li>
+<li class="chapter" data-level="4.7" data-path="变量和常用数据类型.html"><a href="变量和常用数据类型.html#python的类型转换和类型错误"><i class="fa fa-check"></i><b>4.7</b> Python的类型转换和类型错误</a></li>
+<li class="chapter" data-level="4.8" data-path="变量和常用数据类型.html"><a href="变量和常用数据类型.html#列表list"><i class="fa fa-check"></i><b>4.8</b> 列表List</a>
+<ul>
+<li class="chapter" data-level="4.8.1" data-path="变量和常用数据类型.html"><a href="变量和常用数据类型.html#列表的创建"><i class="fa fa-check"></i><b>4.8.1</b> 列表的创建</a></li>
+<li class="chapter" data-level="4.8.2" data-path="变量和常用数据类型.html"><a href="变量和常用数据类型.html#列表的元素"><i class="fa fa-check"></i><b>4.8.2</b> 列表的元素</a></li>
+</ul></li>
+<li class="chapter" data-level="4.9" data-path="变量和常用数据类型.html"><a href="变量和常用数据类型.html#元组"><i class="fa fa-check"></i><b>4.9</b> 元组</a></li>
+<li class="chapter" data-level="4.10" data-path="变量和常用数据类型.html"><a href="变量和常用数据类型.html#字典"><i class="fa fa-check"></i><b>4.10</b> 字典</a></li>
+<li class="chapter" data-level="4.11" data-path="变量和常用数据类型.html"><a href="变量和常用数据类型.html#类型提示type-hints"><i class="fa fa-check"></i><b>4.11</b> 类型提示Type Hints</a></li>
 </ul></li>
 </ul>
 
@@ -491,23 +500,238 @@ c的值是: 3</code></pre>
 <p>其他格式，可以问百度和谷歌，我们后面遇到也会讲。</p>
 </div>
 </div>
-<div id="布尔型" class="section level2" number="4.4">
-<h2><span class="header-section-number">4.4</span> 布尔型</h2>
+<div id="布尔型boolean" class="section level2" number="4.4">
+<h2><span class="header-section-number">4.4</span> 布尔型Boolean</h2>
+<p>布尔型Boolean，也常简称为bool，逻辑关系，只有2个值：真<code>True</code>，或者假<code>False</code>（<span style="color: red;">注意区分大小写</span>）</p>
+<p>一般用于条件判断（详细见后）</p>
+<div class="sourceCode" id="cb84"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb84-1"><a href="变量和常用数据类型.html#cb84-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb84-2"><a href="变量和常用数据类型.html#cb84-2" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> <span class="dv">2</span></span>
+<span id="cb84-3"><a href="变量和常用数据类型.html#cb84-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb84-4"><a href="变量和常用数据类型.html#cb84-4" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> a <span class="op">&gt;</span> b:</span>
+<span id="cb84-5"><a href="变量和常用数据类型.html#cb84-5" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(<span class="st">&quot;a is bigger&quot;</span>)</span></code></pre></div>
+<div id="简单布尔运算" class="section level3" number="4.4.1">
+<h3><span class="header-section-number">4.4.1</span> 简单布尔运算</h3>
+<p>对于不熟悉编程的同学可能有点抽象。</p>
+<p>与 <code>and</code>，或<code>or</code>，非<code>not</code></p>
+<ol style="list-style-type: decimal">
+<li>与 <code>and</code>，简称：“所有条件同时成立”（全部条件为<code>True</code>，会得到<code>True</code>；否则为<code>False</code>）</li>
+</ol>
+<p>如：“学号是单数”，且“坐在班级前排的同学”</p>
+<div class="sourceCode" id="cb85"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb85-1"><a href="变量和常用数据类型.html#cb85-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="va">True</span> <span class="kw">and</span> <span class="va">True</span>)</span></code></pre></div>
+<pre><code>## True</code></pre>
+<div class="sourceCode" id="cb87"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb87-1"><a href="变量和常用数据类型.html#cb87-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="va">False</span> <span class="kw">and</span> <span class="va">True</span>)</span></code></pre></div>
+<pre><code>## False</code></pre>
+<div class="sourceCode" id="cb89"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb89-1"><a href="变量和常用数据类型.html#cb89-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="va">False</span> <span class="kw">and</span> <span class="va">False</span>)</span></code></pre></div>
+<pre><code>## False</code></pre>
+<ol start="2" style="list-style-type: decimal">
+<li>或<code>or</code>，简称：“最少有一个条件成立”（最少一个条件为<code>True</code>，会得到<code>True</code>；全部条件为<code>False</code>，则得到<code>False</code>）</li>
+</ol>
+<div class="sourceCode" id="cb91"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb91-1"><a href="变量和常用数据类型.html#cb91-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="va">True</span> <span class="kw">or</span> <span class="va">True</span>)</span></code></pre></div>
+<pre><code>## True</code></pre>
+<div class="sourceCode" id="cb93"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb93-1"><a href="变量和常用数据类型.html#cb93-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="va">False</span> <span class="kw">or</span> <span class="va">True</span>)</span></code></pre></div>
+<pre><code>## True</code></pre>
+<div class="sourceCode" id="cb95"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb95-1"><a href="变量和常用数据类型.html#cb95-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="va">False</span> <span class="kw">or</span> <span class="va">False</span>)</span></code></pre></div>
+<pre><code>## False</code></pre>
+<ol start="3" style="list-style-type: decimal">
+<li>非<code>not</code>：取反</li>
+</ol>
+<div class="sourceCode" id="cb97"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb97-1"><a href="变量和常用数据类型.html#cb97-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="kw">not</span> <span class="va">True</span>)</span></code></pre></div>
+<pre><code>## False</code></pre>
+<div class="sourceCode" id="cb99"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb99-1"><a href="变量和常用数据类型.html#cb99-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="kw">not</span> <span class="va">False</span>)</span></code></pre></div>
+<pre><code>## True</code></pre>
+<ol start="4" style="list-style-type: decimal">
+<li>举例：</li>
+</ol>
+<div class="sourceCode" id="cb101"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb101-1"><a href="变量和常用数据类型.html#cb101-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb101-2"><a href="变量和常用数据类型.html#cb101-2" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> <span class="dv">2</span></span>
+<span id="cb101-3"><a href="变量和常用数据类型.html#cb101-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb101-4"><a href="变量和常用数据类型.html#cb101-4" aria-hidden="true" tabindex="-1"></a>a <span class="op">&gt;</span> b</span></code></pre></div>
+<pre><code>## False</code></pre>
+<div class="sourceCode" id="cb103"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb103-1"><a href="变量和常用数据类型.html#cb103-1" aria-hidden="true" tabindex="-1"></a>(a <span class="op">&gt;</span> <span class="dv">1</span>) <span class="kw">and</span> (b <span class="op">&gt;</span> <span class="dv">1</span>)</span></code></pre></div>
+<pre><code>## False</code></pre>
+<div class="sourceCode" id="cb105"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb105-1"><a href="变量和常用数据类型.html#cb105-1" aria-hidden="true" tabindex="-1"></a>(a <span class="op">&gt;</span> <span class="dv">1</span>) <span class="kw">or</span> (b <span class="op">&gt;</span> <span class="dv">1</span>)</span></code></pre></div>
+<pre><code>## True</code></pre>
+<div class="sourceCode" id="cb107"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb107-1"><a href="变量和常用数据类型.html#cb107-1" aria-hidden="true" tabindex="-1"></a><span class="kw">not</span> (b <span class="op">&lt;</span> <span class="dv">2</span>)</span></code></pre></div>
+<pre><code>## True</code></pre>
+<p><span style="color: red;"><strong>注意</strong></span>：重点强调，必须留意运算符的优先级，先运算的部分要加括号！这和小学的数学运算是一样的。</p>
 </div>
-<div id="看懂出错信息" class="section level2" number="4.5">
-<h2><span class="header-section-number">4.5</span> 看懂出错信息</h2>
 </div>
-<div id="列表" class="section level2" number="4.6">
-<h2><span class="header-section-number">4.6</span> 列表</h2>
+<div id="none类型" class="section level2" number="4.5">
+<h2><span class="header-section-number">4.5</span> None类型</h2>
+<p>空值，一切皆非。粗略地可以理解为一个“占位符”，例如一个不返回任何值的函数，以后遇到会再解释。</p>
+<div class="sourceCode" id="cb109"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb109-1"><a href="变量和常用数据类型.html#cb109-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="va">None</span></span>
+<span id="cb109-2"><a href="变量和常用数据类型.html#cb109-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(a)</span></code></pre></div>
+<pre><code>## None</code></pre>
 </div>
-<div id="元组" class="section level2" number="4.7">
-<h2><span class="header-section-number">4.7</span> 元组</h2>
+<div id="简单类型转换" class="section level2" number="4.6">
+<h2><span class="header-section-number">4.6</span> 简单类型转换</h2>
+<ol style="list-style-type: decimal">
+<li>字符串和数值</li>
+</ol>
+<p>字符串：可以表示词语、句子，可以拼接，组合
+数字：可以运算</p>
+<p>数字可以拼接吗？字符串可以做运算吗？</p>
+<p>先转换一下类型</p>
+<div class="sourceCode" id="cb111"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb111-1"><a href="变量和常用数据类型.html#cb111-1" aria-hidden="true" tabindex="-1"></a>birth <span class="op">=</span> <span class="st">&quot;2001&quot;</span></span>
+<span id="cb111-2"><a href="变量和常用数据类型.html#cb111-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb111-3"><a href="变量和常用数据类型.html#cb111-3" aria-hidden="true" tabindex="-1"></a>age <span class="op">=</span> <span class="dv">2021</span> <span class="op">-</span> birth</span>
+<span id="cb111-4"><a href="变量和常用数据类型.html#cb111-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(age)</span></code></pre></div>
+<pre><code>TypeError: unsupported operand type(s) for -: &#39;int&#39; and &#39;str&#39;
+NameError: name &#39;age&#39; is not defined</code></pre>
+<p>一般而言，类型转换的函数，就是目标类型的名字。</p>
+<p>把某个变量（如字符串str）转整型int，用函数<code>int()</code>，转为浮点是<code>float()</code></p>
+<div class="sourceCode" id="cb113"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb113-1"><a href="变量和常用数据类型.html#cb113-1" aria-hidden="true" tabindex="-1"></a>birth <span class="op">=</span> <span class="st">&quot;2001&quot;</span></span>
+<span id="cb113-2"><a href="变量和常用数据类型.html#cb113-2" aria-hidden="true" tabindex="-1"></a>age <span class="op">=</span> <span class="dv">2021</span> <span class="op">-</span> <span class="bu">int</span>(birth)</span>
+<span id="cb113-3"><a href="变量和常用数据类型.html#cb113-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(age)</span></code></pre></div>
+<pre><code>## 20</code></pre>
+<div class="sourceCode" id="cb115"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb115-1"><a href="变量和常用数据类型.html#cb115-1" aria-hidden="true" tabindex="-1"></a>age <span class="op">=</span> <span class="dv">2021</span> <span class="op">-</span> <span class="bu">float</span>(birth)</span>
+<span id="cb115-2"><a href="变量和常用数据类型.html#cb115-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(age)</span></code></pre></div>
+<pre><code>## 20.0</code></pre>
+<p>显然反过来转换也是可以的，把某个变量转为字符串<code>str()</code></p>
+<div class="sourceCode" id="cb117"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb117-1"><a href="变量和常用数据类型.html#cb117-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb117-2"><a href="变量和常用数据类型.html#cb117-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&#39;Your age is &#39;</span> <span class="op">+</span> <span class="bu">str</span>(age))</span></code></pre></div>
+<pre><code>## Your age is 20.0</code></pre>
+<ol start="2" style="list-style-type: decimal">
+<li>布尔型</li>
+</ol>
+<p>特别地，布尔型中，<code>True</code>可视为<code>1</code>，<code>False</code>可视为<code>0</code>。
+因此我们可以把数字的运算套用在布尔型上。</p>
+<p><span style="color: red;">注意</span>：要保持代码的清晰性，一般不建议使用布尔型进行运算，除非你很明白自己在做什么。</p>
+<div class="sourceCode" id="cb119"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb119-1"><a href="变量和常用数据类型.html#cb119-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="va">True</span> <span class="co"># True可视为1</span></span>
+<span id="cb119-2"><a href="变量和常用数据类型.html#cb119-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(a <span class="op">+</span> <span class="dv">1</span>)</span></code></pre></div>
+<pre><code>## 2</code></pre>
+<div class="sourceCode" id="cb121"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb121-1"><a href="变量和常用数据类型.html#cb121-1" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> <span class="va">False</span> <span class="co"># False可视为0</span></span>
+<span id="cb121-2"><a href="变量和常用数据类型.html#cb121-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(b <span class="op">-</span> <span class="dv">1</span>)</span></code></pre></div>
+<pre><code>## -1</code></pre>
+<p>做条件判断的时候，<code>0</code>会判定为<code>False</code>，非<code>0</code>会判断为<code>True</code>，这个我们后面说条件语句的时候会说。</p>
+<div class="sourceCode" id="cb123"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb123-1"><a href="变量和常用数据类型.html#cb123-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="op">-</span><span class="dv">1</span>:</span>
+<span id="cb123-2"><a href="变量和常用数据类型.html#cb123-2" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(<span class="st">&#39;hello&#39;</span>)</span>
+<span id="cb123-3"><a href="变量和常用数据类型.html#cb123-3" aria-hidden="true" tabindex="-1"></a>  </span></code></pre></div>
+<pre><code>## hello</code></pre>
 </div>
-<div id="字典" class="section level2" number="4.8">
-<h2><span class="header-section-number">4.8</span> 字典</h2>
+<div id="python的类型转换和类型错误" class="section level2" number="4.7">
+<h2><span class="header-section-number">4.7</span> Python的类型转换和类型错误</h2>
+<p>Python是一个“动态类型+强类型”语言</p>
+<ol style="list-style-type: decimal">
+<li>动态类型：</li>
+</ol>
+<p>变量名运行时绑定，变量名只是一个可以撕掉和重新粘贴的标签。你为某个变赋值什么类型，这个变量就是什么类型，在运行时可以随你的赋值代码而改变。</p>
+<ol start="2" style="list-style-type: decimal">
+<li>强类型：</li>
+</ol>
+<p><strong>一般情况下</strong>，Python不会为你自动转换类型（不会“隐式类型转换”）。</p>
+<p>如一个很热门的语言JavaScript，大家现在上网看到的多数网站，其页面都是js语言写的。</p>
+<p>在js中，一个字符“0”加一个数字1，js会自动（隐式地）把后者转换为字符串，然后进行拼接。</p>
+<pre><code>&quot;0&quot; + 1; // &quot;01&quot;</code></pre>
+<p>这其实对你的代码质量（如类型的检验）提出了更高要求，比如你的本意可能是要2个数字相加。</p>
+<p>但这段代码会在你毫无知觉的情况下，一直运行下去，导致你可能要在无数代码执行过后，才发现问题。</p>
+<p>在Python中，则会报错TypeError错误。</p>
+<div class="sourceCode" id="cb126"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb126-1"><a href="变量和常用数据类型.html#cb126-1" aria-hidden="true" tabindex="-1"></a><span class="co">&#39;0&#39;</span> <span class="op">+</span> <span class="dv">1</span></span></code></pre></div>
+<pre><code>TypeError: must be str, not int</code></pre>
+<p>显然，这说的是一个str，只能和另一个str相加（串联），而不能是一个int。
+这个时候你应该用“显式”的类型转换。</p>
+<p>如果看到TypeError，检查你的变量类型。</p>
+
 </div>
-<div id="类型提示type-hints" class="section level2" number="4.9">
-<h2><span class="header-section-number">4.9</span> 类型提示Type Hints</h2>
+<div id="列表list" class="section level2" number="4.8">
+<h2><span class="header-section-number">4.8</span> 列表List</h2>
+<p>列表List是一个重点，超级常用，内容比较多</p>
+<div id="列表的创建" class="section level3" number="4.8.1">
+<h3><span class="header-section-number">4.8.1</span> 列表的创建</h3>
+<p>一个列表List，就是把几个元素(items)，用一个固定的顺序连在一起的数据结构。创建一个列表，可以用中括号<code>[]</code>，其中每一个元素用逗号分开。</p>
+<p>为了好看，建议每个逗号后加一个空格。</p>
+<div class="sourceCode" id="cb128"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb128-1"><a href="变量和常用数据类型.html#cb128-1" aria-hidden="true" tabindex="-1"></a><span class="co">#%% 列表List</span></span>
+<span id="cb128-2"><a href="变量和常用数据类型.html#cb128-2" aria-hidden="true" tabindex="-1"></a>numbers <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>]</span>
+<span id="cb128-3"><a href="变量和常用数据类型.html#cb128-3" aria-hidden="true" tabindex="-1"></a>letters <span class="op">=</span> [<span class="st">&quot;a&quot;</span>, <span class="st">&quot;b&quot;</span>, <span class="st">&quot;c&quot;</span>, <span class="st">&quot;d&quot;</span>]</span>
+<span id="cb128-4"><a href="变量和常用数据类型.html#cb128-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(numbers)</span></code></pre></div>
+<pre><code>## [1, 2, 3, 4, 5, 6]</code></pre>
+<div class="sourceCode" id="cb130"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb130-1"><a href="变量和常用数据类型.html#cb130-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(letters)</span></code></pre></div>
+<pre><code>## [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;]</code></pre>
+<p>列表中的元素，可以混合多种类型。<span style="color: red;">但一般不建议这么做</span>。</p>
+<div class="sourceCode" id="cb132"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb132-1"><a href="变量和常用数据类型.html#cb132-1" aria-hidden="true" tabindex="-1"></a>a_list <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="st">&quot;a&quot;</span>, <span class="st">&quot;b&quot;</span>, <span class="st">&quot;c&quot;</span>]</span>
+<span id="cb132-2"><a href="变量和常用数据类型.html#cb132-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(a_list)</span></code></pre></div>
+<pre><code>## [1, 2, 3, &#39;a&#39;, &#39;b&#39;, &#39;c&#39;]</code></pre>
+<p>我们还可以创建空List。比如，当列表的第一个元素还没确定，而你要先行创建列表，然后再生成元素添加进去。</p>
+<div class="sourceCode" id="cb134"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb134-1"><a href="变量和常用数据类型.html#cb134-1" aria-hidden="true" tabindex="-1"></a><span class="co">#%% 空列表</span></span>
+<span id="cb134-2"><a href="变量和常用数据类型.html#cb134-2" aria-hidden="true" tabindex="-1"></a>empty_list <span class="op">=</span> []</span>
+<span id="cb134-3"><a href="变量和常用数据类型.html#cb134-3" aria-hidden="true" tabindex="-1"></a>empty_list <span class="op">=</span> <span class="bu">list</span>()</span>
+<span id="cb134-4"><a href="变量和常用数据类型.html#cb134-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(empty_list)</span></code></pre></div>
+<pre><code>## []</code></pre>
+<p>对一个字符串String 使用list()函数，可以把字符串分解成字母组成的List。这本质上就是类型转换：用类型的名字做转换函数的名字。</p>
+<div class="sourceCode" id="cb136"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb136-1"><a href="变量和常用数据类型.html#cb136-1" aria-hidden="true" tabindex="-1"></a><span class="co">#%% str分解成</span></span>
+<span id="cb136-2"><a href="变量和常用数据类型.html#cb136-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">list</span>(<span class="st">&#39;apple&#39;</span>))</span></code></pre></div>
+<pre><code>## [&#39;a&#39;, &#39;p&#39;, &#39;p&#39;, &#39;l&#39;, &#39;e&#39;]</code></pre>
+<p><span style="color: red;">注意</span>：实际上，list()可以用于所有类型的序列（有序列结构的其他数据），以后我们遇到回说。</p>
+<p>特别地，如果我们转换一个多行的字符串，会发现什么？</p>
+<div class="sourceCode" id="cb138"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb138-1"><a href="变量和常用数据类型.html#cb138-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="st">&#39;&#39;&#39;hello</span></span>
+<span id="cb138-2"><a href="变量和常用数据类型.html#cb138-2" aria-hidden="true" tabindex="-1"></a><span class="st">python</span></span>
+<span id="cb138-3"><a href="变量和常用数据类型.html#cb138-3" aria-hidden="true" tabindex="-1"></a><span class="st">&#39;&#39;&#39;</span></span>
+<span id="cb138-4"><a href="变量和常用数据类型.html#cb138-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">list</span>(a))</span></code></pre></div>
+<pre><code>## [&#39;h&#39;, &#39;e&#39;, &#39;l&#39;, &#39;l&#39;, &#39;o&#39;, &#39;\n&#39;, &#39;p&#39;, &#39;y&#39;, &#39;t&#39;, &#39;h&#39;, &#39;o&#39;, &#39;n&#39;, &#39;\n&#39;]</code></pre>
+<p>注意，换行符<code>\n</code>也出现在其中。实际上，应该把换行符之类的不可见字符也看成一个真正的字符，实际上<strong>存在</strong>，但部分情况<strong>不可见</strong>而已</p>
+</div>
+<div id="列表的元素" class="section level3" number="4.8.2">
+<h3><span class="header-section-number">4.8.2</span> 列表的元素</h3>
+<p>要引用一个列表的元素，也使用<code>[]</code>，其中包括元素的索引(index)，注意第一个元素的索引是0（Python和c语言一样，从0开始计数）</p>
+<div class="sourceCode" id="cb140"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb140-1"><a href="变量和常用数据类型.html#cb140-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(numbers)</span></code></pre></div>
+<pre><code>## [1, 2, 3, 4, 5, 6]</code></pre>
+<div class="sourceCode" id="cb142"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb142-1"><a href="变量和常用数据类型.html#cb142-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(numbers[<span class="dv">0</span>])</span></code></pre></div>
+<pre><code>## 1</code></pre>
+<div class="sourceCode" id="cb144"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb144-1"><a href="变量和常用数据类型.html#cb144-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(numbers[<span class="dv">3</span>])</span></code></pre></div>
+<pre><code>## 4</code></pre>
+<p>可以反向引用元素，例如<code>-1</code>指向最后一个元素，<code>-2</code>指向倒数第二个，如此类推</p>
+<div class="sourceCode" id="cb146"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb146-1"><a href="变量和常用数据类型.html#cb146-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(numbers)</span></code></pre></div>
+<pre><code>## [1, 2, 3, 4, 5, 6]</code></pre>
+<div class="sourceCode" id="cb148"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb148-1"><a href="变量和常用数据类型.html#cb148-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(numbers[<span class="op">-</span><span class="dv">1</span>])</span></code></pre></div>
+<pre><code>## 6</code></pre>
+<div class="sourceCode" id="cb150"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb150-1"><a href="变量和常用数据类型.html#cb150-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(numbers[<span class="op">-</span><span class="dv">2</span>])</span></code></pre></div>
+<pre><code>## 5</code></pre>
+<p>列表中的元素是可变的。同样，用等号<code>=</code>对某个元素赋值即可</p>
+<div class="sourceCode" id="cb152"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb152-1"><a href="变量和常用数据类型.html#cb152-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(numbers)</span></code></pre></div>
+<pre><code>## [1, 2, 3, 4, 5, 6]</code></pre>
+<div class="sourceCode" id="cb154"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb154-1"><a href="变量和常用数据类型.html#cb154-1" aria-hidden="true" tabindex="-1"></a>numbers[<span class="dv">0</span>] <span class="op">=</span> <span class="dv">999</span> <span class="co"># 修改第一个元素的值为999</span></span>
+<span id="cb154-2"><a href="变量和常用数据类型.html#cb154-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(numbers)</span></code></pre></div>
+<pre><code>## [999, 2, 3, 4, 5, 6]</code></pre>
+<p>添加元素</p>
+<p>在List的最后添加元素可以用<code>.append()</code>。添加多个元素，可以用<code>.extend()</code>，注意<code>extend</code>使用一个list作为参数。插入元素到指定索引号<code>.insert()</code></p>
+<div class="sourceCode" id="cb156"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb156-1"><a href="变量和常用数据类型.html#cb156-1" aria-hidden="true" tabindex="-1"></a>letters <span class="op">=</span> <span class="bu">list</span>(<span class="st">&quot;abcd&quot;</span>)</span>
+<span id="cb156-2"><a href="变量和常用数据类型.html#cb156-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(letters)</span>
+<span id="cb156-3"><a href="变量和常用数据类型.html#cb156-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb156-4"><a href="变量和常用数据类型.html#cb156-4" aria-hidden="true" tabindex="-1"></a><span class="co"># 添加一个元素</span></span></code></pre></div>
+<pre><code>## [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;]</code></pre>
+<div class="sourceCode" id="cb158"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb158-1"><a href="变量和常用数据类型.html#cb158-1" aria-hidden="true" tabindex="-1"></a>letters.append(<span class="st">&#39;e&#39;</span>)</span>
+<span id="cb158-2"><a href="变量和常用数据类型.html#cb158-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(letters)</span>
+<span id="cb158-3"><a href="变量和常用数据类型.html#cb158-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb158-4"><a href="变量和常用数据类型.html#cb158-4" aria-hidden="true" tabindex="-1"></a><span class="co">#添加多个元素：把要添加的元素放进一个list里。</span></span></code></pre></div>
+<pre><code>## [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;]</code></pre>
+<div class="sourceCode" id="cb160"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb160-1"><a href="变量和常用数据类型.html#cb160-1" aria-hidden="true" tabindex="-1"></a>letters.extend([<span class="st">&#39;f&#39;</span>,<span class="st">&#39;g&#39;</span>])</span>
+<span id="cb160-2"><a href="变量和常用数据类型.html#cb160-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(letters)</span>
+<span id="cb160-3"><a href="变量和常用数据类型.html#cb160-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb160-4"><a href="变量和常用数据类型.html#cb160-4" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span></code></pre></div>
+<pre><code>## [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;, &#39;f&#39;, &#39;g&#39;]</code></pre>
+<div class="sourceCode" id="cb162"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb162-1"><a href="变量和常用数据类型.html#cb162-1" aria-hidden="true" tabindex="-1"></a>letters.insert(<span class="dv">3</span>,<span class="st">&quot;apple&quot;</span>)</span>
+<span id="cb162-2"><a href="变量和常用数据类型.html#cb162-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(letters)</span></code></pre></div>
+<pre><code>## [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;apple&#39;, &#39;d&#39;, &#39;e&#39;, &#39;f&#39;, &#39;g&#39;]</code></pre>
+<p>移除：移除某个元素，使用<code>.remove()</code>；按照索引移除<code>del</code></p>
+<div class="sourceCode" id="cb164"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb164-1"><a href="变量和常用数据类型.html#cb164-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb164-2"><a href="变量和常用数据类型.html#cb164-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(letters)</span></code></pre></div>
+<pre><code>## [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;apple&#39;, &#39;d&#39;, &#39;e&#39;, &#39;f&#39;, &#39;g&#39;]</code></pre>
+<div class="sourceCode" id="cb166"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb166-1"><a href="变量和常用数据类型.html#cb166-1" aria-hidden="true" tabindex="-1"></a>letters.remove(<span class="st">&#39;apple&#39;</span>) <span class="co"># 如果&#39;apple&#39;不存在，会抛出错误：ValueError: list.remove(x): x not in list</span></span>
+<span id="cb166-2"><a href="变量和常用数据类型.html#cb166-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(letters)</span></code></pre></div>
+<pre><code>## [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;, &#39;f&#39;, &#39;g&#39;]</code></pre>
+<div class="sourceCode" id="cb168"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb168-1"><a href="变量和常用数据类型.html#cb168-1" aria-hidden="true" tabindex="-1"></a><span class="kw">del</span> letters[<span class="dv">0</span>]</span>
+<span id="cb168-2"><a href="变量和常用数据类型.html#cb168-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(letters)</span></code></pre></div>
+<pre><code>## [&#39;b&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;, &#39;f&#39;, &#39;g&#39;]</code></pre>
+</div>
+</div>
+<div id="元组" class="section level2" number="4.9">
+<h2><span class="header-section-number">4.9</span> 元组</h2>
+</div>
+<div id="字典" class="section level2" number="4.10">
+<h2><span class="header-section-number">4.10</span> 字典</h2>
+</div>
+<div id="类型提示type-hints" class="section level2" number="4.11">
+<h2><span class="header-section-number">4.11</span> 类型提示Type Hints</h2>
 
 </div>
 </div>

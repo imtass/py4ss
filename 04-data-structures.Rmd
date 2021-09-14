@@ -1,0 +1,135 @@
+## 列表List
+
+列表List是一个重点，超级常用，内容比较多
+
+### 列表的创建
+一个列表List，就是把几个元素(items)，用一个固定的顺序连在一起的数据结构。创建一个列表，可以用中括号`[]`，其中每一个元素用逗号分开。
+
+为了好看，建议每个逗号后加一个空格。
+
+```{python}
+#%% 列表List
+numbers = [1, 2, 3, 4, 5, 6]
+letters = ["a", "b", "c", "d"]
+print(numbers)
+print(letters)
+```
+列表中的元素，可以混合多种类型。`r red("但一般不建议这么做")`。
+```{python}
+a_list = [1, 2, 3, "a", "b", "c"]
+print(a_list)
+```
+
+我们还可以创建空List。比如，当列表的第一个元素还没确定，而你要先行创建列表，然后再生成元素添加进去。
+```{python}
+#%% 空列表
+empty_list = []
+empty_list = list()
+print(empty_list)
+```
+
+对一个字符串String 使用list()函数，可以把字符串分解成字母组成的List。这本质上就是类型转换：用类型的名字做转换函数的名字。
+
+```{python}
+#%% str分解成
+print(list('apple'))
+```
+`r red("注意")`：实际上，list()可以用于所有类型的序列（有序列结构的其他数据），以后我们遇到回说。
+
+
+特别地，如果我们转换一个多行的字符串，会发现什么？
+
+```{python}
+a = '''hello
+python
+'''
+print(list(a))
+```
+注意，换行符`\n`也出现在其中。实际上，应该把换行符之类的不可见字符也看成一个真正的字符，实际上**存在**，但部分情况**不可见**而已
+
+
+### 列表的元素
+
+要引用一个列表的元素，也使用`[]`，其中包括元素的索引(index)，注意第一个元素的索引是0（Python和c语言一样，从0开始计数）
+
+
+
+```{python}
+print(numbers)
+print(numbers[0])
+print(numbers[3])
+```
+可以反向引用元素，例如`-1`指向最后一个元素，`-2`指向倒数第二个，如此类推
+
+```{python}
+print(numbers)
+print(numbers[-1])
+print(numbers[-2])
+```
+
+
+列表中的元素是可变的。同样，用等号`=`对某个元素赋值即可
+
+
+```{python}
+print(numbers)
+numbers[0] = 999 # 修改第一个元素的值为999
+print(numbers)
+```
+添加元素
+
+在List的最后添加元素可以用`.append()`。添加多个元素，可以用`.extend()`，注意`extend`使用一个list作为参数。插入元素到指定索引号`.insert()`
+
+```{python}
+letters = list("abcd")
+print(letters)
+
+# 添加一个元素
+letters.append('e')
+print(letters)
+
+#添加多个元素：把要添加的元素放进一个list里。
+letters.extend(['f','g'])
+print(letters)
+
+#
+letters.insert(3,"apple")
+print(letters)
+```
+
+移除：移除某个元素，使用`.remove()`；按照索引移除`del`
+
+```{python}
+
+print(letters)
+letters.remove('apple') # 如果'apple'不存在，会抛出错误：ValueError: list.remove(x): x not in list
+print(letters)
+
+del letters[0]
+print(letters)
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## 元组
+
+## 字典
+
+## 类型提示Type Hints
