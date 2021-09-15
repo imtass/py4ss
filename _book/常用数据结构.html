@@ -24,7 +24,7 @@
 <meta name="author" content="Li Weicheng @ gpnu" />
 
 
-<meta name="date" content="2021-09-14" />
+<meta name="date" content="2021-09-15" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -224,6 +224,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="5.1.1" data-path="常用数据结构.html"><a href="常用数据结构.html#列表的创建"><i class="fa fa-check"></i><b>5.1.1</b> 列表的创建</a></li>
 <li class="chapter" data-level="5.1.2" data-path="常用数据结构.html"><a href="常用数据结构.html#列表的元素"><i class="fa fa-check"></i><b>5.1.2</b> 列表的元素</a></li>
+<li class="chapter" data-level="5.1.3" data-path="常用数据结构.html"><a href="常用数据结构.html#注意list的拷贝"><i class="fa fa-check"></i><b>5.1.3</b> 注意：List的拷贝</a></li>
 </ul></li>
 <li class="chapter" data-level="5.2" data-path="常用数据结构.html"><a href="常用数据结构.html#元组"><i class="fa fa-check"></i><b>5.2</b> 元组</a></li>
 <li class="chapter" data-level="5.3" data-path="常用数据结构.html"><a href="常用数据结构.html#字典"><i class="fa fa-check"></i><b>5.3</b> 字典</a></li>
@@ -248,12 +249,20 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="常用数据结构" class="section level1" number="5">
 <h1><span class="header-section-number">5</span> 常用数据结构</h1>
+<p>数据结构：是计算机中存储、组织数据的方式。（几乎是废话）</p>
+<p>例如“新华字典”：</p>
+<ol style="list-style-type: decimal">
+<li>数据就是每一个字的解释</li>
+<li>组织方式是按拼音，顺序排列</li>
+<li>一个索引（目录），以供你查找数据。</li>
+</ol>
+<p>Python中的<code>Dict</code>与之类似，后面详细解释。</p>
 <div id="列表list" class="section level2" number="5.1">
 <h2><span class="header-section-number">5.1</span> 列表List</h2>
-<p>列表List是一个重点，超级常用，内容比较多</p>
+<p>一个列表List，就是把几个元素(items)，用一个<strong>固定的顺序</strong>连在一起的数据结构。列表List是一个重点，超级常用，内容比较多。</p>
 <div id="列表的创建" class="section level3" number="5.1.1">
 <h3><span class="header-section-number">5.1.1</span> 列表的创建</h3>
-<p>一个列表List，就是把几个元素(items)，用一个固定的顺序连在一起的数据结构。创建一个列表，可以用中括号<code>[]</code>，其中每一个元素用逗号分开。</p>
+<p>创建一个列表，可以用中括号<code>[]</code>，其中每一个元素用逗号分开。</p>
 <p>为了好看，建议每个逗号后加一个空格。</p>
 <div class="sourceCode" id="cb128"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb128-1"><a href="常用数据结构.html#cb128-1" aria-hidden="true" tabindex="-1"></a><span class="co">#%% 列表List</span></span>
 <span id="cb128-2"><a href="常用数据结构.html#cb128-2" aria-hidden="true" tabindex="-1"></a>numbers <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>]</span>
@@ -273,7 +282,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb134-4"><a href="常用数据结构.html#cb134-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(empty_list)</span></code></pre></div>
 <pre><code>## []</code></pre>
 <p>对一个字符串String 使用list()函数，可以把字符串分解成字母组成的List。这本质上就是类型转换：用类型的名字做转换函数的名字。</p>
-<div class="sourceCode" id="cb136"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb136-1"><a href="常用数据结构.html#cb136-1" aria-hidden="true" tabindex="-1"></a><span class="co">#%% str分解成</span></span>
+<p>如果把函数名<code>list</code>看成是一个动词，或者可以解释成：list a string。</p>
+<div class="sourceCode" id="cb136"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb136-1"><a href="常用数据结构.html#cb136-1" aria-hidden="true" tabindex="-1"></a><span class="co">#%% </span></span>
 <span id="cb136-2"><a href="常用数据结构.html#cb136-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">list</span>(<span class="st">&#39;apple&#39;</span>))</span></code></pre></div>
 <pre><code>## [&#39;a&#39;, &#39;p&#39;, &#39;p&#39;, &#39;l&#39;, &#39;e&#39;]</code></pre>
 <p><span style="color: red;">注意</span>：实际上，list()可以用于所有类型的序列（有序列结构的其他数据），以后我们遇到回说。</p>
@@ -310,21 +320,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>添加元素</p>
 <p>在List的最后添加元素可以用<code>.append()</code>。添加多个元素，可以用<code>.extend()</code>，注意<code>extend</code>使用一个list作为参数。插入元素到指定索引号<code>.insert()</code></p>
 <div class="sourceCode" id="cb156"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb156-1"><a href="常用数据结构.html#cb156-1" aria-hidden="true" tabindex="-1"></a>letters <span class="op">=</span> <span class="bu">list</span>(<span class="st">&quot;abcd&quot;</span>)</span>
-<span id="cb156-2"><a href="常用数据结构.html#cb156-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(letters)</span>
-<span id="cb156-3"><a href="常用数据结构.html#cb156-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb156-4"><a href="常用数据结构.html#cb156-4" aria-hidden="true" tabindex="-1"></a><span class="co"># 添加一个元素</span></span></code></pre></div>
+<span id="cb156-2"><a href="常用数据结构.html#cb156-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(letters)</span></code></pre></div>
 <pre><code>## [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;]</code></pre>
-<div class="sourceCode" id="cb158"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb158-1"><a href="常用数据结构.html#cb158-1" aria-hidden="true" tabindex="-1"></a>letters.append(<span class="st">&#39;e&#39;</span>)</span>
-<span id="cb158-2"><a href="常用数据结构.html#cb158-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(letters)</span>
-<span id="cb158-3"><a href="常用数据结构.html#cb158-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb158-4"><a href="常用数据结构.html#cb158-4" aria-hidden="true" tabindex="-1"></a><span class="co">#添加多个元素：把要添加的元素放进一个list里。</span></span></code></pre></div>
+<div class="sourceCode" id="cb158"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb158-1"><a href="常用数据结构.html#cb158-1" aria-hidden="true" tabindex="-1"></a>letters.append(<span class="st">&#39;e&#39;</span>)<span class="co"># 添加一个元素</span></span>
+<span id="cb158-2"><a href="常用数据结构.html#cb158-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(letters)</span></code></pre></div>
 <pre><code>## [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;]</code></pre>
-<div class="sourceCode" id="cb160"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb160-1"><a href="常用数据结构.html#cb160-1" aria-hidden="true" tabindex="-1"></a>letters.extend([<span class="st">&#39;f&#39;</span>,<span class="st">&#39;g&#39;</span>])</span>
-<span id="cb160-2"><a href="常用数据结构.html#cb160-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(letters)</span>
-<span id="cb160-3"><a href="常用数据结构.html#cb160-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb160-4"><a href="常用数据结构.html#cb160-4" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span></code></pre></div>
+<div class="sourceCode" id="cb160"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb160-1"><a href="常用数据结构.html#cb160-1" aria-hidden="true" tabindex="-1"></a>letters.extend([<span class="st">&#39;f&#39;</span>,<span class="st">&#39;g&#39;</span>]) <span class="co">#添加多个元素：把要添加的元素放进一个list里</span></span>
+<span id="cb160-2"><a href="常用数据结构.html#cb160-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(letters)</span></code></pre></div>
 <pre><code>## [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;, &#39;f&#39;, &#39;g&#39;]</code></pre>
-<div class="sourceCode" id="cb162"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb162-1"><a href="常用数据结构.html#cb162-1" aria-hidden="true" tabindex="-1"></a>letters.insert(<span class="dv">3</span>,<span class="st">&quot;apple&quot;</span>)</span>
+<div class="sourceCode" id="cb162"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb162-1"><a href="常用数据结构.html#cb162-1" aria-hidden="true" tabindex="-1"></a>letters.insert(<span class="dv">3</span>,<span class="st">&quot;apple&quot;</span>) <span class="co">#元素插入到指定索引的位置</span></span>
 <span id="cb162-2"><a href="常用数据结构.html#cb162-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(letters)</span></code></pre></div>
 <pre><code>## [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;apple&#39;, &#39;d&#39;, &#39;e&#39;, &#39;f&#39;, &#39;g&#39;]</code></pre>
 <p>移除：移除某个元素，使用<code>.remove()</code>；按照索引移除<code>del</code></p>
@@ -337,6 +341,82 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="sourceCode" id="cb168"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb168-1"><a href="常用数据结构.html#cb168-1" aria-hidden="true" tabindex="-1"></a><span class="kw">del</span> letters[<span class="dv">0</span>]</span>
 <span id="cb168-2"><a href="常用数据结构.html#cb168-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(letters)</span></code></pre></div>
 <pre><code>## [&#39;b&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;, &#39;f&#39;, &#39;g&#39;]</code></pre>
+</div>
+<div id="注意list的拷贝" class="section level3" number="5.1.3">
+<h3><span class="header-section-number">5.1.3</span> 注意：List的拷贝</h3>
+<p>这部分可能有点抽象。</p>
+<ol style="list-style-type: decimal">
+<li>变量名是个标签</li>
+<li>变量赋值，给内存中的一个数据“贴标签”</li>
+<li>那用一个变量，给另一个变量赋值会如何？</li>
+</ol>
+<p>以一个数字来举例</p>
+<div class="sourceCode" id="cb170"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb170-1"><a href="常用数据结构.html#cb170-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="dv">123</span></span>
+<span id="cb170-2"><a href="常用数据结构.html#cb170-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(a)</span></code></pre></div>
+<pre><code>## 123</code></pre>
+<div class="sourceCode" id="cb172"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb172-1"><a href="常用数据结构.html#cb172-1" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> a </span>
+<span id="cb172-2"><a href="常用数据结构.html#cb172-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(b)</span></code></pre></div>
+<pre><code>## 123</code></pre>
+<div class="sourceCode" id="cb174"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb174-1"><a href="常用数据结构.html#cb174-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="dv">321</span></span>
+<span id="cb174-2"><a href="常用数据结构.html#cb174-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f&#39;a is </span><span class="sc">{a}</span><span class="ch">\n</span><span class="ss">b is </span><span class="sc">{b}</span><span class="ss">&#39;</span>)</span></code></pre></div>
+<pre><code>## a is 321
+## b is 123</code></pre>
+<p>中间发生了什么</p>
+<ol style="list-style-type: decimal">
+<li><code>a = 123</code></li>
+</ol>
+<p>创建了一个整型对象，里面存放了<code>123</code>，把<code>a</code>这个名字绑定到这个对象上。</p>
+<ol start="2" style="list-style-type: decimal">
+<li><code>b = a</code></li>
+</ol>
+<p>把<code>a</code>这个标签，所指代的对象，再贴一个标签<code>b</code>。这个时候,<code>a</code>和<code>b</code>都指向这个整型对象，里面存放了<code>123</code>。</p>
+<ol start="3" style="list-style-type: decimal">
+<li><code>a = 321</code>
+创建了一个新的整型对象，里面存放了<code>321</code>，把<code>a</code>这个名字，重新绑定到这个对象上。</li>
+</ol>
+<p>现在 <code>a -&gt; 321</code>，<code>b -&gt; 123</code></p>
+<p>但List比较特殊</p>
+<p>以letters来举例：</p>
+<div class="sourceCode" id="cb176"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb176-1"><a href="常用数据结构.html#cb176-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> [<span class="st">&quot;a&quot;</span>, <span class="st">&quot;b&quot;</span>, <span class="st">&quot;c&quot;</span>, <span class="st">&quot;d&quot;</span>]</span>
+<span id="cb176-2"><a href="常用数据结构.html#cb176-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&#39;a is &#39;</span>, a)</span></code></pre></div>
+<pre><code>## a is  [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;]</code></pre>
+<ol style="list-style-type: decimal">
+<li>变量<code>a</code> 指向 <code>["a", "b", "c", "d"]</code></li>
+</ol>
+<p><img src="images/set_a.png" width="400" /></p>
+<div class="sourceCode" id="cb178"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb178-1"><a href="常用数据结构.html#cb178-1" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> a </span></code></pre></div>
+<p><img src="images/set_b.png" width="400" /></p>
+<ol start="2" style="list-style-type: decimal">
+<li>变量<code>b</code> 指向<code>a</code>相同的数据<code>["a", "b", "c", "d"]</code></li>
+</ol>
+<div class="sourceCode" id="cb179"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb179-1"><a href="常用数据结构.html#cb179-1" aria-hidden="true" tabindex="-1"></a>a[<span class="dv">0</span>] <span class="op">=</span> <span class="st">&#39;apple&#39;</span></span>
+<span id="cb179-2"><a href="常用数据结构.html#cb179-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&#39;b is &#39;</span>, b)</span></code></pre></div>
+<pre><code>## b is  [&#39;apple&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;]</code></pre>
+<ol start="3" style="list-style-type: decimal">
+<li>你修改了列表<code>a</code>的值，<code>b</code>的值也改变了！因为<code>a</code>和<code>b</code>一直指向同一个对象。</li>
+</ol>
+<p><img src="images/change_a.png" width="400" /></p>
+<ol start="4" style="list-style-type: decimal">
+<li>如果要避免这种情况，要明确地把<code>a</code><strong>复制</strong>一次，</li>
+</ol>
+<div class="sourceCode" id="cb181"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb181-1"><a href="常用数据结构.html#cb181-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> [<span class="st">&quot;a&quot;</span>, <span class="st">&quot;b&quot;</span>, <span class="st">&quot;c&quot;</span>, <span class="st">&quot;d&quot;</span>]</span>
+<span id="cb181-2"><a href="常用数据结构.html#cb181-2" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> a.copy()</span>
+<span id="cb181-3"><a href="常用数据结构.html#cb181-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f&#39;a is </span><span class="sc">{a}</span><span class="ch">\n</span><span class="ss">b is </span><span class="sc">{b}</span><span class="ss">&#39;</span>)</span></code></pre></div>
+<pre><code>## a is [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;]
+## b is [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;]</code></pre>
+<p><img src="images/copy_a.png" width="400" /></p>
+<div class="sourceCode" id="cb183"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb183-1"><a href="常用数据结构.html#cb183-1" aria-hidden="true" tabindex="-1"></a>a[<span class="dv">0</span>] <span class="op">=</span> <span class="st">&#39;apple&#39;</span></span></code></pre></div>
+<p><img src="images/set_b2.png" width="400" /></p>
+<div class="sourceCode" id="cb184"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb184-1"><a href="常用数据结构.html#cb184-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f&#39;a is </span><span class="sc">{a}</span><span class="ch">\n</span><span class="ss">b is </span><span class="sc">{b}</span><span class="ss">&#39;</span>)</span></code></pre></div>
+<pre><code>## a is [&#39;apple&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;]
+## b is [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;]</code></pre>
+<p>这样就不会互相干扰了。</p>
+<p>总结：</p>
+<ol style="list-style-type: decimal">
+<li>Number ,String,Tuple等，是“不可变类型”：修改这个变量，会创建一个对象，然后重绑定（转贴标签）</li>
+<li>List等，是“可变类型”：修改里面的值，其实是“<strong>原地修改</strong>”，导致所有指向这个数据的变量都发生改变。</li>
+<li>要避免上述情况，请明确地复制原List一次。</li>
+</ol>
 </div>
 </div>
 <div id="元组" class="section level2" number="5.2">

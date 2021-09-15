@@ -1,10 +1,22 @@
 # 常用数据结构
+
+数据结构：是计算机中存储、组织数据的方式。（几乎是废话）
+
+例如“新华字典”：
+
+1. 数据就是每一个字的解释
+2. 组织方式是按拼音，顺序排列
+3. 一个索引（目录），以供你查找数据。
+
+Python中的`Dict`与之类似，后面详细解释。
+
+
 ## 列表List
 
-列表List是一个重点，超级常用，内容比较多
+一个列表List，就是把几个元素(items)，用一个**固定的顺序**连在一起的数据结构。列表List是一个重点，超级常用，内容比较多。
 
 ### 列表的创建
-一个列表List，就是把几个元素(items)，用一个固定的顺序连在一起的数据结构。创建一个列表，可以用中括号`[]`，其中每一个元素用逗号分开。
+创建一个列表，可以用中括号`[]`，其中每一个元素用逗号分开。
 
 为了好看，建议每个逗号后加一个空格。
 
@@ -15,6 +27,7 @@ letters = ["a", "b", "c", "d"]
 print(numbers)
 print(letters)
 ```
+
 列表中的元素，可以混合多种类型。`r red("但一般不建议这么做")`。
 ```{python}
 a_list = [1, 2, 3, "a", "b", "c"]
@@ -31,8 +44,10 @@ print(empty_list)
 
 对一个字符串String 使用list()函数，可以把字符串分解成字母组成的List。这本质上就是类型转换：用类型的名字做转换函数的名字。
 
+如果把函数名`list`看成是一个动词，或者可以解释成：list a string。
+
 ```{python}
-#%% str分解成
+#%% 
 print(list('apple'))
 ```
 `r red("注意")`：实际上，list()可以用于所有类型的序列（有序列结构的其他数据），以后我们遇到回说。
@@ -85,16 +100,16 @@ print(numbers)
 letters = list("abcd")
 print(letters)
 
-# 添加一个元素
-letters.append('e')
+
+letters.append('e')# 添加一个元素
 print(letters)
 
-#添加多个元素：把要添加的元素放进一个list里。
-letters.extend(['f','g'])
+
+letters.extend(['f','g']) #添加多个元素：把要添加的元素放进一个list里
 print(letters)
 
-#
-letters.insert(3,"apple")
+
+letters.insert(3,"apple") #元素插入到指定索引的位置
 print(letters)
 ```
 
@@ -110,19 +125,108 @@ del letters[0]
 print(letters)
 ```
 
+### 注意：List的拷贝
+
+这部分可能有点抽象。
+
+1. 变量名是个标签
+2. 变量赋值，给内存中的一个数据“贴标签”
+3. 那用一个变量，给另一个变量赋值会如何？
+
+
+以一个数字来举例
+
+```{python}
+a = 123
+print(a)
+
+b = a 
+print(b)
+
+a = 321
+print(f'a is {a}\nb is {b}')
+
+```
+
+中间发生了什么
+
+1. `a = 123`
+
+创建了一个整型对象，里面存放了`123`，把`a`这个名字绑定到这个对象上。
+
+2. `b = a`
+
+把`a`这个标签，所指代的对象，再贴一个标签`b`。这个时候,`a`和`b`都指向这个整型对象，里面存放了`123`。
+
+3. `a = 321`
+创建了一个新的整型对象，里面存放了`321`，把`a`这个名字，重新绑定到这个对象上。
+
+现在 `a -> 321`，`b -> 123`
+
+
+但List比较特殊
+
+以letters来举例：
+```{python}
+a = ["a", "b", "c", "d"]
+print('a is ', a)
+
+```
+
+1. 变量`a` 指向 `["a", "b", "c", "d"]`
+
+<img src="images/set_a.png" width="400" />
+
+```{python}
+b = a 
+```
+
+<img src="images/set_b.png" width="400" />
+
+2. 变量`b` 指向`a`相同的数据`["a", "b", "c", "d"]`
+
+```{python}
+a[0] = 'apple'
+print('b is ', b)
+
+```
 
 
 
 
+3. 你修改了列表`a`的值，`b`的值也改变了！因为`a`和`b`一直指向同一个对象。 
+
+<img src="images/change_a.png" width="400" />
+
+
+4. 如果要避免这种情况，要明确地把`a`**复制**一次，
+
+```{python}
+a = ["a", "b", "c", "d"]
+b = a.copy()
+print(f'a is {a}\nb is {b}')
+```
+
+<img src="images/copy_a.png" width="400" />
+
+```{python}
+a[0] = 'apple'
+```
+<img src="images/set_b2.png" width="400" />
+
+```{python}
+print(f'a is {a}\nb is {b}')
+```
 
 
 
+这样就不会互相干扰了。
 
+总结：
 
-
-
-
-
+1. Number ,String,Tuple等，是“不可变类型”：修改这个变量，会创建一个对象，然后重绑定（转贴标签）
+2. List等，是“可变类型”：修改里面的值，其实是“**原地修改**”，导致所有指向这个数据的变量都发生改变。
+3. 要避免上述情况，请明确地复制原List一次。
 
 
 
