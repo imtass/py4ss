@@ -54,6 +54,8 @@ python的类型转换和类型错误
 列表的创建
 列表的元素
 注意list的拷贝
+list的切片
 元组
 字典
 类型提示type-hints
+url-your-book-url-like-httpsbookdown.orgyihuibookdown
