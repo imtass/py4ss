@@ -378,17 +378,273 @@ print(a)
 print(len(a))
 ```
 
-
-## 元组
-
-元组：同样是序列结构，可以视为“不可修改的列表”
-
-
-
+6. 获得最大最小值
+```{python}
+a = [1,2,3,4,5]
+print(max(a)) # 如果包含不可比较大小类型，如str，会出错！
+print(min(a))
 
 
+```
 
-## 字典
+
+
+
+## 元组Tuple
+
+元组：同样是序列结构，可以视为“**不可修改**的列表”，其中的数据，一旦创建，就不可修改。
+
+
+### 元组的创建
+
+和List类似，但使用小括号创建。
+
+注意，从打印的结果也可以看出，`()`表示元组，中括号`[]`表示列表。
+
+```{python}
+a = (1,2,3,4,5) 
+print(a) # 元组
+
+b = [1,2,3,4,5]
+print(b)
+```
+如果元组只有1个元素，必须加一个逗号`,`，以避免python认为这是个运算。
+```{python}
+a = (1,) # 正确的做法，识别成元组
+print(a)
+
+b = (1)
+print(b) # 会被识别成一个数字
+```
+
+
+也可以不用小括号，只使用逗号创建（为了维持代码的清晰和可识别，`r red("不建议这么做")`）
+```{python}
+a = 1,2,3,4,5
+print(a)
+```
+### 访问元组的元素
+
+访问元组的方法和List完全一样，可以照搬。
+
+但是“可读不可写”,**不能做任何修改或删除**。
+
+
+
+```{python}
+a = (1,2,3,4,5) # 读取元素和获得切片等，和List完全一样
+print(a[3])
+print(a[2:4]) 
+```
+
+```{python eval=FALSE}
+a = (1,2,3,4,5) 
+a[3] = 999 # 要对元组的值进行修改，会报错
+```
+```
+TypeError: 'tuple' object does not support item assignment
+```
+
+
+### 元组和列表的互转
+
+
+
+List和Tuple用非常接近的结构，互相转换只要用前述的“简单类型转换”方法即可
+
+```{python}
+
+a_list = list('apple') # str转为list
+a_tuple = tuple(a_list) # list转为tup;e
+print(a_tuple) # 注意，打印的结果是()小括号
+
+```
+
+```{python}
+a_tuple = (1,2,3,4,5) # 创建一个tuple
+a_list = list(a_tuple)
+print(a_list)
+```
+
+### 为什么要用tuple，不用list？
+
+Tuple只有List的一半能力（只能读，不能改），只用List也可以完成Tuple的所有功能，那用Tuple有何意义？
+
+
+1. List可能被**意外修改**，但Tuple不会
+
+如前述，List是一个可变类型，可以有不止一个变量名指向同一个List数据。所以，使用List保存的数据，可能会在传递的过程中，在不经意间被你的某些代码所修改，比如忘记`.copy()`。
+
+如果一个列表结构的数据，原则上不应该被改变，则可以采用Tuple。如果被代码意外修改，则会报错通知你。
+
+2. Tuple一般会比List节约内存，但我们一般不必考虑这一点
+
+
+## 字典Dictionary(dict)
+
+1. 和List或者Tuple类似，dict是很多数据的集合体
+2. 和List或者Tuple不同，dict中的数据**不保证顺序**，
+3. dict中的元素访问，是通过"键key"访问，一个key会对应一个value。
+4. key的必须是不可变类型，如string，int，或者tuple。（tuple也可以做key）
+5. 和List一样，dict可以存放不同类型的数据
+6. key是唯一的，如果对一个key赋予不同的值，那么新的value会替换旧的value.
+
+
+这和新华字典类似：
+1. 通过这个字的拼音(即key)，找一个字的含义(value)
+2. 你一般不会通过这个字在字典中的第几个(index)来访问，虽然也不是不可以
+
+## 创建dict
+
+
+
+使用大括号，`key:value`的方式，key-value之间使用逗号分隔
+
+`{key1:value1, key2:value2, ... }`
+
+例如班级人数,一班50人，二班49人，三班30人。
+
+这里使用`class_x`的字符串来做key，储存班级的人数。这个dict的作用是，可以通过班级的名称来获取班级的人数。
+
+```{python}
+
+class_size = {'class_1':50, 'class_2':49,'class_3':39}
+print(class_size)
+
+```
+
+我们建立了一系列的映射，从字符串（本例中就是班级名称），到键值（本例中是班级人数的整型）
+
+`"class_1" -> 50`
+
+`"class_2" -> 49`
+
+`"class_3" -> 39`
+ 
+### 访问字典数据
+
+
+字典数据的访问，和List或者Tuple一样，都是用中括号`[]`，但提供的数据的索引index，而是key（键名）
+
+```{python}
+# 获取一班的人数：
+# 一班的key是"class_1"
+print(class_size['class_1'])
+
+# 当然3班也一样
+print(class_size['class_3'])
+```
+
+修改其值也一样，直接赋值即可
+
+```{python}
+class_size['class_3'] = 40
+print(class_size)
+
+```
+
+实际上，添加键值的方法就是**直接赋值**
+
+例如，四班，key为class_4，人数为45，则：
+
+```{python}
+class_size['class_4'] = 45
+print(class_size)
+```
+
+同样，删除键值的函数是`del`，和删除一个变量一样。
+
+删除`'class_4'`。
+```{python}
+del class_size['class_4'] 
+print(class_size)
+```
+
+### 获得所有键值
+
+获得全部的key，使用`.keys()`方法。注意是复数，有个s。
+
+```{python}
+print(class_size.keys())
+```
+
+注意，`.keys()`方法返回的不是一个List，所以我们一般还是转为List，便于进行其他操作。转换也是直接采用`list()`函数即可。
+
+```{python}
+keys = list(class_size.keys())
+print(keys)
+```
+
+### 所有的value
+
+获得全部的value，使用`.values()`方法。
+
+```{python}
+print(class_size.values()) #同样是复数，有个s。
+```
+
+同样，我们可以转换为List。
+```{python}
+values = list(class_size.values())
+print(values)
+```
+
+### 其他操作
+
+和List一样，dict也可以用`len()`函数获得数据的长度
+
+```{python}
+print(len(class_size))
+```
+
+### 别名与拷贝
+
+和List一样，如果用一个dict为另一个dict赋值，那么2个变量和指向同一个数据，对其中一个数据的修改，会使得另一个变量中的数据也改变（毕竟只是同一个数据的2个名字）
+
+要避免这一点，同样使用`.copy()`函数，拷贝一个dict。具体和List一样，这里不再重复。
+
+
+### 不存在的key
+
+如果我们直接读取一个不存在的key，会报错
+
+```{python eval=FALSE}
+class_size['class_9']
+```
+
+key错误：即找不到'class_9'这key
+```
+KeyError: 'class_9'
+```
+
+但是，某些时候，我们想，如果key不存在，则返回一个默认值，而不要因为报错而中断程序。
+
+这个时候可以使用`.get()`方法：如果key存在，则返回对应的value。如果不存在，则返回我们前面说过的`None`。
+
+```{python}
+print(class_size.get('class_1')) # 获取一个存在的key
+print(class_size.get('class_9')) # 获取一个不存在的key
+
+```
+
+对于可能不存在的key，我们也可以使用自己指定的值。具体到本例，班级人数不可能是0，所以我们可以考虑用`0`来表示这个key（班级名称）不存在，或者你打错字了。
+
+`.get()`这个方法的第二个参数，则是找不到key的时候的默认值。
+
+```{python}
+print(class_size.get('class_9', 0)) 
+```
+
+### key是否存在
+
+判断一个key是否存在， 也是用`in`。
+
+```{python}
+print('class_1' in class_size) # class_1是存在的
+print('class_9' in class_size) # class_9是不存在的
+```
+
+
 
 ## 类型提示Type Hints
 
