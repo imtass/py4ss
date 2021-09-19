@@ -232,7 +232,7 @@ print(f'a is {a}\nb is {b}')
 
 ### List的切片
 
-如何获取一个List中的一段？
+如何获取（或者修改）一个List中的某一段？
 
 ```{python}
 a = list('abcdef')
@@ -312,9 +312,99 @@ a[1:6:2] is {a[1:6:2]}
 
 ```
 
+### 其他常用操作
+
+1. 原地排序`.sort()`,默认的排序方式是“从小到大”
+
+`r red("注意：")`这个方法会改变原List的顺序
+
+```{python}
+a = [5,3,4,2,1]
+a.sort()
+print(a)
+```
+
+也可以逆序：从大到小
+```{python}
+a.sort(reverse=True)
+print(a)
+```
+
+
+
+2. 排序`sorted()`，
+
+`r red("注意：")``sorted()`回返回一个新的、排序后的List，不会改变原List的顺序。
+
+```{python}
+a = [5,3,4,2,1]
+print(a)
+print(sorted(a)) # 打印排序的结果
+print(a) # 原list的顺序并未改变
+
+```
+也可以逆序排序（从大到小）
+```{python}
+b = [3,4,5,1,2]
+print(sorted(b, reverse=True))
+```
+
+
+3. 统计某个元素的数量
+
+`.count()`
+
+```{python}
+a = [1,2,2,2,3,3,5,5,5,5,5]
+
+print(a.count(3)) # a中的3有多少个？
+```
+
+4. 查找某个元素第一次出现的索引
+
+```{python}
+a = list('an apple')
+print(a)
+print(a.index('p'))
+```
+
+5. 获取的List的长度
+
+题外话：从长度可以知道，最后一个元素的索引号是长度-1
+
+```{python}
+a = list("apple")
+print(a)
+print(len(a))
+```
+
 
 ## 元组
+
+元组：同样是序列结构，可以视为“不可修改的列表”
+
+
+
+
+
 
 ## 字典
 
 ## 类型提示Type Hints
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
