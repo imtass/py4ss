@@ -61,7 +61,7 @@ list的切片
 访问元组的元素
 元组和列表的互转
 为什么要用tuple不用list
-字典dictionarydict
+字典dict
 创建dict
 访问字典数据
 获得所有键值

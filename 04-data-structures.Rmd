@@ -480,7 +480,7 @@ Tuple只有List的一半能力（只能读，不能改），只用List也可以�
 2. Tuple一般会比List节约内存，但我们一般不必考虑这一点
 
 
-## 字典Dictionary(dict)
+## 字典Dict
 
 1. 和List或者Tuple类似，dict是很多数据的集合体
 2. 和List或者Tuple不同，dict中的数据**不保证顺序**，
@@ -494,7 +494,7 @@ Tuple只有List的一半能力（只能读，不能改），只用List也可以�
 1. 通过这个字的拼音(即key)，找一个字的含义(value)
 2. 你一般不会通过这个字在字典中的第几个(index)来访问，虽然也不是不可以
 
-## 创建dict
+### 创建dict
 
 
 
