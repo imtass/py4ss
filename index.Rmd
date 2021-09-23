@@ -1,5 +1,5 @@
 --- 
-title: "写给文科生的Python入门和数据处理教程"
+title: "写给文科生的Python入门和数据处理教程(Python for Social Scientists)"
 author: "Li Weicheng @ gpnu"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site

@@ -646,9 +646,41 @@ print('class_9' in class_size) # class_9是不存在的
 ```
 
 
+### （键-值元组）
 
-## 类型提示Type Hints
+dict也可以视为一个类List的数据结构：其中每一个元素，是一个（键-值）对，即`(key, value)`的元组。
 
+```{python}
+class_size = {'class_1':50, 'class_2':49,'class_3':39}
+print(class_size)
+```
+
+可以使用`.items()`这个方法，获取一个dict的所有`(key, value)`对。
+
+```{python}
+print(class_size.items())
+```
+
+当然，我们也可以转为一个真正的List用`list()`函数
+
+```{python}
+all_items = list(class_size.items())
+print(all_items)
+```
+
+显然，这是3个`(key, value)`元组构成的List。
+
+注意
+
+1.最外层的中括号`[]`：这是一个List
+2.每一个元素的小括号`()`：每一个元素是一个Tuple
+
+看看第一个元素是什么？
+```{python}
+print(all_items[0])
+```
+
+易见，这就是一个（一班的名称, 一班的人数）组成的元组。
 
 
 

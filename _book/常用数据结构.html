@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>5 常用数据结构 | 写给文科生的Python入门和数据处理教程</title>
+  <title>5 常用数据结构 | 写给文科生的Python入门和数据处理教程(Python for Social Scientists)</title>
   <meta name="description" content="为人文社科类研究员和学生设计的的Python入门和数据处理教程" />
   <meta name="generator" content="bookdown 0.23 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="5 常用数据结构 | 写给文科生的Python入门和数据处理教程" />
+  <meta property="og:title" content="5 常用数据结构 | 写给文科生的Python入门和数据处理教程(Python for Social Scientists)" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="5 常用数据结构 | 写给文科生的Python入门和数据处理教程" />
+  <meta name="twitter:title" content="5 常用数据结构 | 写给文科生的Python入门和数据处理教程(Python for Social Scientists)" />
   
   <meta name="twitter:description" content="为人文社科类研究员和学生设计的的Python入门和数据处理教程" />
   
@@ -24,7 +24,7 @@
 <meta name="author" content="Li Weicheng @ gpnu" />
 
 
-<meta name="date" content="2021-09-20" />
+<meta name="date" content="2021-09-23" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -32,7 +32,7 @@
   
   
 <link rel="prev" href="变量和常用类型.html"/>
-<link rel="next" href="条件与循环.html"/>
+<link rel="next" href="条件与循环编写中.html"/>
 <script src="libs/header-attrs-2.10/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -245,13 +245,27 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="5.3.6" data-path="常用数据结构.html"><a href="常用数据结构.html#别名与拷贝"><i class="fa fa-check"></i><b>5.3.6</b> 别名与拷贝</a></li>
 <li class="chapter" data-level="5.3.7" data-path="常用数据结构.html"><a href="常用数据结构.html#不存在的key"><i class="fa fa-check"></i><b>5.3.7</b> 不存在的key</a></li>
 <li class="chapter" data-level="5.3.8" data-path="常用数据结构.html"><a href="常用数据结构.html#key是否存在"><i class="fa fa-check"></i><b>5.3.8</b> key是否存在</a></li>
+<li class="chapter" data-level="5.3.9" data-path="常用数据结构.html"><a href="常用数据结构.html#键-值元组"><i class="fa fa-check"></i><b>5.3.9</b> （键-值元组）</a></li>
 </ul></li>
-<li class="chapter" data-level="5.4" data-path="常用数据结构.html"><a href="常用数据结构.html#类型提示type-hints"><i class="fa fa-check"></i><b>5.4</b> 类型提示Type Hints</a></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="条件与循环.html"><a href="条件与循环.html"><i class="fa fa-check"></i><b>6</b> 条件与循环</a>
+<li class="chapter" data-level="6" data-path="条件与循环编写中.html"><a href="条件与循环编写中.html"><i class="fa fa-check"></i><b>6</b> 条件与循环（编写中）</a>
 <ul>
-<li class="chapter" data-level="6.1" data-path="条件与循环.html"><a href="条件与循环.html#条件if"><i class="fa fa-check"></i><b>6.1</b> 条件if</a></li>
-<li class="chapter" data-level="6.2" data-path="条件与循环.html"><a href="条件与循环.html#循环for"><i class="fa fa-check"></i><b>6.2</b> 循环for</a></li>
+<li class="chapter" data-level="6.1" data-path="条件与循环编写中.html"><a href="条件与循环编写中.html#条件if"><i class="fa fa-check"></i><b>6.1</b> 条件if</a>
+<ul>
+<li class="chapter" data-level="6.1.1" data-path="条件与循环编写中.html"><a href="条件与循环编写中.html#多行if"><i class="fa fa-check"></i><b>6.1.1</b> 多行if</a></li>
+<li class="chapter" data-level="6.1.2" data-path="条件与循环编写中.html"><a href="条件与循环编写中.html#单行if"><i class="fa fa-check"></i><b>6.1.2</b> 单行if</a></li>
+<li class="chapter" data-level="6.1.3" data-path="条件与循环编写中.html"><a href="条件与循环编写中.html#三元表达式"><i class="fa fa-check"></i><b>6.1.3</b> 三元表达式</a></li>
+</ul></li>
+<li class="chapter" data-level="6.2" data-path="条件与循环编写中.html"><a href="条件与循环编写中.html#循环for"><i class="fa fa-check"></i><b>6.2</b> 循环for</a>
+<ul>
+<li class="chapter" data-level="6.2.1" data-path="条件与循环编写中.html"><a href="条件与循环编写中.html#for-else"><i class="fa fa-check"></i><b>6.2.1</b> For-else</a></li>
+<li class="chapter" data-level="6.2.2" data-path="条件与循环编写中.html"><a href="条件与循环编写中.html#range的循环"><i class="fa fa-check"></i><b>6.2.2</b> range的循环</a></li>
+</ul></li>
+<li class="chapter" data-level="6.3" data-path="条件与循环编写中.html"><a href="条件与循环编写中.html#循环一个list"><i class="fa fa-check"></i><b>6.3</b> 循环一个List</a>
+<ul>
+<li class="chapter" data-level="6.3.1" data-path="条件与循环编写中.html"><a href="条件与循环编写中.html#列表推导式list-comprehension"><i class="fa fa-check"></i><b>6.3.1</b> 列表推导式List Comprehension</a></li>
+</ul></li>
+<li class="chapter" data-level="6.4" data-path="条件与循环编写中.html"><a href="条件与循环编写中.html#循环dict"><i class="fa fa-check"></i><b>6.4</b> 循环Dict</a></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="函数.html"><a href="函数.html"><i class="fa fa-check"></i><b>7</b> 函数</a></li>
 <li class="chapter" data-level="8" data-path="内置函数和常用库.html"><a href="内置函数和常用库.html"><i class="fa fa-check"></i><b>8</b> 内置函数和常用库</a></li>
@@ -267,7 +281,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">写给文科生的Python入门和数据处理教程</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">写给文科生的Python入门和数据处理教程(Python for Social Scientists)</a>
           </h1>
         </div>
 
@@ -735,10 +749,29 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="sourceCode" id="cb284"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb284-1"><a href="常用数据结构.html#cb284-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&#39;class_9&#39;</span> <span class="kw">in</span> class_size) <span class="co"># class_9是不存在的</span></span></code></pre></div>
 <pre><code>## False</code></pre>
 </div>
-</div>
-<div id="类型提示type-hints" class="section level2" number="5.4">
-<h2><span class="header-section-number">5.4</span> 类型提示Type Hints</h2>
+<div id="键-值元组" class="section level3" number="5.3.9">
+<h3><span class="header-section-number">5.3.9</span> （键-值元组）</h3>
+<p>dict也可以视为一个类List的数据结构：其中每一个元素，是一个（键-值）对，即<code>(key, value)</code>的元组。</p>
+<div class="sourceCode" id="cb286"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb286-1"><a href="常用数据结构.html#cb286-1" aria-hidden="true" tabindex="-1"></a>class_size <span class="op">=</span> {<span class="st">&#39;class_1&#39;</span>:<span class="dv">50</span>, <span class="st">&#39;class_2&#39;</span>:<span class="dv">49</span>,<span class="st">&#39;class_3&#39;</span>:<span class="dv">39</span>}</span>
+<span id="cb286-2"><a href="常用数据结构.html#cb286-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(class_size)</span></code></pre></div>
+<pre><code>## {&#39;class_1&#39;: 50, &#39;class_2&#39;: 49, &#39;class_3&#39;: 39}</code></pre>
+<p>可以使用<code>.items()</code>这个方法，获取一个dict的所有<code>(key, value)</code>对。</p>
+<div class="sourceCode" id="cb288"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb288-1"><a href="常用数据结构.html#cb288-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(class_size.items())</span></code></pre></div>
+<pre><code>## dict_items([(&#39;class_1&#39;, 50), (&#39;class_2&#39;, 49), (&#39;class_3&#39;, 39)])</code></pre>
+<p>当然，我们也可以转为一个真正的List用<code>list()</code>函数</p>
+<div class="sourceCode" id="cb290"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb290-1"><a href="常用数据结构.html#cb290-1" aria-hidden="true" tabindex="-1"></a>all_items <span class="op">=</span> <span class="bu">list</span>(class_size.items())</span>
+<span id="cb290-2"><a href="常用数据结构.html#cb290-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(all_items)</span></code></pre></div>
+<pre><code>## [(&#39;class_1&#39;, 50), (&#39;class_2&#39;, 49), (&#39;class_3&#39;, 39)]</code></pre>
+<p>显然，这是3个<code>(key, value)</code>元组构成的List。</p>
+<p>注意</p>
+<p>1.最外层的中括号<code>[]</code>：这是一个List
+2.每一个元素的小括号<code>()</code>：每一个元素是一个Tuple</p>
+<p>看看第一个元素是什么？</p>
+<div class="sourceCode" id="cb292"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb292-1"><a href="常用数据结构.html#cb292-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(all_items[<span class="dv">0</span>])</span></code></pre></div>
+<pre><code>## (&#39;class_1&#39;, 50)</code></pre>
+<p>易见，这就是一个（一班的名称, 一班的人数）组成的元组。</p>
 
+</div>
 </div>
 </div>
             </section>
@@ -747,7 +780,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
         </div>
       </div>
 <a href="变量和常用类型.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="条件与循环.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="条件与循环编写中.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

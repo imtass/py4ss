@@ -1,9 +1,104 @@
-# 条件与循环
+# 条件与循环（编写中）
 
 ## 条件if
 
+### 多行if
+```{python}
+price = 102
+if price <100:
+  print ('buy')
+elif price < 110:
+  print ('hold')
+elif price < 120:
+  print ('think about it')
+else:
+  print ('sell')
+
+```
+
+### 单行if
+```{python}
+price = 70
+if price<80: print('buy')
+
+```
+
+### 三元表达式
+
+```{python}
+price = 85
+'buy' if (price<80) else 'don\'t buy'
+```
+
 
 ## 循环for
+
+### For-else
+
+```{python}
+
+mylist = [1,2,3,4,5]
+
+for i in mylist:
+  print (i)
+else:
+  print('循环完成！')
+
+```
+
+
+break
+
+```{python}
+for i in mylist:
+  if i < 4:
+    print (i)
+  else:
+    print('从这里断开！')
+    break
+else:
+  print('循环完成！')
+
+```
+
+### range的循环
+```{python}
+for i in range (1,10,2):
+    print ('奇数是: ',i) 
+
+```
+
+## 循环一个List
+```{python}
+letters = ['a','b','c','d']
+for e in letters:
+    print ('Letter : ',e)
+
+```
+
+### 列表推导式List Comprehension
+
+遍历List，并进行某个操作
+```{python}
+s = ['abc','abcd','bcde','bcdee','cdefg']
+[x.upper() for x in s]
+```
+
+遍历List，找出符合条件的值，并对其进行某个操作
+```{python}
+old_list    = ['abc','abcd','bcde','bcdee','cdefg']
+matching = [ x.upper() for x in old_list if 'bcd' in x ]
+print( matching )
+```
+
+## 循环Dict
+```{python}
+d = {"x": 1, "y": 2}
+for key in d:
+  print(key, d[key])
+
+```
+
 
 # 函数
 

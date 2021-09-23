@@ -24,7 +24,7 @@
 <meta name="author" content="Li Weicheng @ gpnu" />
 
 
-<meta name="date" content="2021-09-20" />
+<meta name="date" content="2021-09-23" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -245,13 +245,27 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="5.3.6" data-path="常用数据结构.html"><a href="常用数据结构.html#别名与拷贝"><i class="fa fa-check"></i><b>5.3.6</b> 别名与拷贝</a></li>
 <li class="chapter" data-level="5.3.7" data-path="常用数据结构.html"><a href="常用数据结构.html#不存在的key"><i class="fa fa-check"></i><b>5.3.7</b> 不存在的key</a></li>
 <li class="chapter" data-level="5.3.8" data-path="常用数据结构.html"><a href="常用数据结构.html#key是否存在"><i class="fa fa-check"></i><b>5.3.8</b> key是否存在</a></li>
+<li class="chapter" data-level="5.3.9" data-path="常用数据结构.html"><a href="常用数据结构.html#键-值元组"><i class="fa fa-check"></i><b>5.3.9</b> （键-值元组）</a></li>
 </ul></li>
-<li class="chapter" data-level="5.4" data-path="常用数据结构.html"><a href="常用数据结构.html#类型提示type-hints"><i class="fa fa-check"></i><b>5.4</b> 类型提示Type Hints</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="条件与循环.html"><a href="条件与循环.html"><i class="fa fa-check"></i><b>6</b> 条件与循环</a>
 <ul>
-<li class="chapter" data-level="6.1" data-path="条件与循环.html"><a href="条件与循环.html#条件if"><i class="fa fa-check"></i><b>6.1</b> 条件if</a></li>
-<li class="chapter" data-level="6.2" data-path="条件与循环.html"><a href="条件与循环.html#循环for"><i class="fa fa-check"></i><b>6.2</b> 循环for</a></li>
+<li class="chapter" data-level="6.1" data-path="条件与循环.html"><a href="条件与循环.html#条件if"><i class="fa fa-check"></i><b>6.1</b> 条件if</a>
+<ul>
+<li class="chapter" data-level="6.1.1" data-path="条件与循环.html"><a href="条件与循环.html#多行if"><i class="fa fa-check"></i><b>6.1.1</b> 多行if</a></li>
+<li class="chapter" data-level="6.1.2" data-path="条件与循环.html"><a href="条件与循环.html#单行if"><i class="fa fa-check"></i><b>6.1.2</b> 单行if</a></li>
+<li class="chapter" data-level="6.1.3" data-path="条件与循环.html"><a href="条件与循环.html#三元表达式"><i class="fa fa-check"></i><b>6.1.3</b> 三元表达式</a></li>
+</ul></li>
+<li class="chapter" data-level="6.2" data-path="条件与循环.html"><a href="条件与循环.html#循环for"><i class="fa fa-check"></i><b>6.2</b> 循环for</a>
+<ul>
+<li class="chapter" data-level="6.2.1" data-path="条件与循环.html"><a href="条件与循环.html#for-else"><i class="fa fa-check"></i><b>6.2.1</b> For-else</a></li>
+<li class="chapter" data-level="6.2.2" data-path="条件与循环.html"><a href="条件与循环.html#range的循环"><i class="fa fa-check"></i><b>6.2.2</b> range的循环</a></li>
+</ul></li>
+<li class="chapter" data-level="6.3" data-path="条件与循环.html"><a href="条件与循环.html#循环一个list"><i class="fa fa-check"></i><b>6.3</b> 循环一个List</a>
+<ul>
+<li class="chapter" data-level="6.3.1" data-path="条件与循环.html"><a href="条件与循环.html#列表推导式list-comprehension"><i class="fa fa-check"></i><b>6.3.1</b> 列表推导式List Comprehension</a></li>
+</ul></li>
+<li class="chapter" data-level="6.4" data-path="条件与循环.html"><a href="条件与循环.html#循环dict"><i class="fa fa-check"></i><b>6.4</b> 循环Dict</a></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="函数.html"><a href="函数.html"><i class="fa fa-check"></i><b>7</b> 函数</a></li>
 <li class="chapter" data-level="8" data-path="内置函数和常用库.html"><a href="内置函数和常用库.html"><i class="fa fa-check"></i><b>8</b> 内置函数和常用库</a></li>
@@ -279,9 +293,103 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h1><span class="header-section-number">6</span> 条件与循环</h1>
 <div id="条件if" class="section level2" number="6.1">
 <h2><span class="header-section-number">6.1</span> 条件if</h2>
+<div id="多行if" class="section level3" number="6.1.1">
+<h3><span class="header-section-number">6.1.1</span> 多行if</h3>
+<div class="sourceCode" id="cb294"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb294-1"><a href="条件与循环.html#cb294-1" aria-hidden="true" tabindex="-1"></a>price <span class="op">=</span> <span class="dv">102</span></span>
+<span id="cb294-2"><a href="条件与循环.html#cb294-2" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> price <span class="op">&lt;</span><span class="dv">100</span>:</span>
+<span id="cb294-3"><a href="条件与循环.html#cb294-3" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span> (<span class="st">&#39;buy&#39;</span>)</span>
+<span id="cb294-4"><a href="条件与循环.html#cb294-4" aria-hidden="true" tabindex="-1"></a><span class="cf">elif</span> price <span class="op">&lt;</span> <span class="dv">110</span>:</span>
+<span id="cb294-5"><a href="条件与循环.html#cb294-5" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span> (<span class="st">&#39;hold&#39;</span>)</span>
+<span id="cb294-6"><a href="条件与循环.html#cb294-6" aria-hidden="true" tabindex="-1"></a><span class="cf">elif</span> price <span class="op">&lt;</span> <span class="dv">120</span>:</span>
+<span id="cb294-7"><a href="条件与循环.html#cb294-7" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span> (<span class="st">&#39;think about it&#39;</span>)</span>
+<span id="cb294-8"><a href="条件与循环.html#cb294-8" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
+<span id="cb294-9"><a href="条件与循环.html#cb294-9" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span> (<span class="st">&#39;sell&#39;</span>)</span></code></pre></div>
+<pre><code>## hold</code></pre>
+</div>
+<div id="单行if" class="section level3" number="6.1.2">
+<h3><span class="header-section-number">6.1.2</span> 单行if</h3>
+<div class="sourceCode" id="cb296"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb296-1"><a href="条件与循环.html#cb296-1" aria-hidden="true" tabindex="-1"></a>price <span class="op">=</span> <span class="dv">70</span></span>
+<span id="cb296-2"><a href="条件与循环.html#cb296-2" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> price<span class="op">&lt;</span><span class="dv">80</span>: <span class="bu">print</span>(<span class="st">&#39;buy&#39;</span>)</span></code></pre></div>
+<pre><code>## buy</code></pre>
+</div>
+<div id="三元表达式" class="section level3" number="6.1.3">
+<h3><span class="header-section-number">6.1.3</span> 三元表达式</h3>
+<div class="sourceCode" id="cb298"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb298-1"><a href="条件与循环.html#cb298-1" aria-hidden="true" tabindex="-1"></a>price <span class="op">=</span> <span class="dv">85</span></span>
+<span id="cb298-2"><a href="条件与循环.html#cb298-2" aria-hidden="true" tabindex="-1"></a><span class="co">&#39;buy&#39;</span> <span class="cf">if</span> (price<span class="op">&lt;</span><span class="dv">80</span>) <span class="cf">else</span> <span class="st">&#39;don</span><span class="ch">\&#39;</span><span class="st">t buy&#39;</span></span></code></pre></div>
+<pre><code>## &quot;don&#39;t buy&quot;</code></pre>
+</div>
 </div>
 <div id="循环for" class="section level2" number="6.2">
 <h2><span class="header-section-number">6.2</span> 循环for</h2>
+<div id="for-else" class="section level3" number="6.2.1">
+<h3><span class="header-section-number">6.2.1</span> For-else</h3>
+<div class="sourceCode" id="cb300"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb300-1"><a href="条件与循环.html#cb300-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb300-2"><a href="条件与循环.html#cb300-2" aria-hidden="true" tabindex="-1"></a>mylist <span class="op">=</span> [<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>]</span>
+<span id="cb300-3"><a href="条件与循环.html#cb300-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb300-4"><a href="条件与循环.html#cb300-4" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> mylist:</span>
+<span id="cb300-5"><a href="条件与循环.html#cb300-5" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span> (i)</span>
+<span id="cb300-6"><a href="条件与循环.html#cb300-6" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
+<span id="cb300-7"><a href="条件与循环.html#cb300-7" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(<span class="st">&#39;循环完成！&#39;</span>)</span></code></pre></div>
+<pre><code>## 1
+## 2
+## 3
+## 4
+## 5
+## 循环完成！</code></pre>
+<p>break</p>
+<div class="sourceCode" id="cb302"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb302-1"><a href="条件与循环.html#cb302-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> mylist:</span>
+<span id="cb302-2"><a href="条件与循环.html#cb302-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> i <span class="op">&lt;</span> <span class="dv">4</span>:</span>
+<span id="cb302-3"><a href="条件与循环.html#cb302-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span> (i)</span>
+<span id="cb302-4"><a href="条件与循环.html#cb302-4" aria-hidden="true" tabindex="-1"></a>  <span class="cf">else</span>:</span>
+<span id="cb302-5"><a href="条件与循环.html#cb302-5" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">&#39;从这里断开！&#39;</span>)</span>
+<span id="cb302-6"><a href="条件与循环.html#cb302-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">break</span></span>
+<span id="cb302-7"><a href="条件与循环.html#cb302-7" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
+<span id="cb302-8"><a href="条件与循环.html#cb302-8" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(<span class="st">&#39;循环完成！&#39;</span>)</span></code></pre></div>
+<pre><code>## 1
+## 2
+## 3
+## 从这里断开！</code></pre>
+</div>
+<div id="range的循环" class="section level3" number="6.2.2">
+<h3><span class="header-section-number">6.2.2</span> range的循环</h3>
+<div class="sourceCode" id="cb304"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb304-1"><a href="条件与循环.html#cb304-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span> (<span class="dv">1</span>,<span class="dv">10</span>,<span class="dv">2</span>):</span>
+<span id="cb304-2"><a href="条件与循环.html#cb304-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span> (<span class="st">&#39;奇数是: &#39;</span>,i) </span></code></pre></div>
+<pre><code>## 奇数是:  1
+## 奇数是:  3
+## 奇数是:  5
+## 奇数是:  7
+## 奇数是:  9</code></pre>
+</div>
+</div>
+<div id="循环一个list" class="section level2" number="6.3">
+<h2><span class="header-section-number">6.3</span> 循环一个List</h2>
+<div class="sourceCode" id="cb306"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb306-1"><a href="条件与循环.html#cb306-1" aria-hidden="true" tabindex="-1"></a>letters <span class="op">=</span> [<span class="st">&#39;a&#39;</span>,<span class="st">&#39;b&#39;</span>,<span class="st">&#39;c&#39;</span>,<span class="st">&#39;d&#39;</span>]</span>
+<span id="cb306-2"><a href="条件与循环.html#cb306-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> e <span class="kw">in</span> letters:</span>
+<span id="cb306-3"><a href="条件与循环.html#cb306-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span> (<span class="st">&#39;Letter : &#39;</span>,e)</span></code></pre></div>
+<pre><code>## Letter :  a
+## Letter :  b
+## Letter :  c
+## Letter :  d</code></pre>
+<div id="列表推导式list-comprehension" class="section level3" number="6.3.1">
+<h3><span class="header-section-number">6.3.1</span> 列表推导式List Comprehension</h3>
+<p>遍历List，并进行某个操作</p>
+<div class="sourceCode" id="cb308"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb308-1"><a href="条件与循环.html#cb308-1" aria-hidden="true" tabindex="-1"></a>s <span class="op">=</span> [<span class="st">&#39;abc&#39;</span>,<span class="st">&#39;abcd&#39;</span>,<span class="st">&#39;bcde&#39;</span>,<span class="st">&#39;bcdee&#39;</span>,<span class="st">&#39;cdefg&#39;</span>]</span>
+<span id="cb308-2"><a href="条件与循环.html#cb308-2" aria-hidden="true" tabindex="-1"></a>[x.upper() <span class="cf">for</span> x <span class="kw">in</span> s]</span></code></pre></div>
+<pre><code>## [&#39;ABC&#39;, &#39;ABCD&#39;, &#39;BCDE&#39;, &#39;BCDEE&#39;, &#39;CDEFG&#39;]</code></pre>
+<p>遍历List，找出符合条件的值，并对其进行某个操作</p>
+<div class="sourceCode" id="cb310"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb310-1"><a href="条件与循环.html#cb310-1" aria-hidden="true" tabindex="-1"></a>old_list    <span class="op">=</span> [<span class="st">&#39;abc&#39;</span>,<span class="st">&#39;abcd&#39;</span>,<span class="st">&#39;bcde&#39;</span>,<span class="st">&#39;bcdee&#39;</span>,<span class="st">&#39;cdefg&#39;</span>]</span>
+<span id="cb310-2"><a href="条件与循环.html#cb310-2" aria-hidden="true" tabindex="-1"></a>matching <span class="op">=</span> [ x.upper() <span class="cf">for</span> x <span class="kw">in</span> old_list <span class="cf">if</span> <span class="st">&#39;bcd&#39;</span> <span class="kw">in</span> x ]</span>
+<span id="cb310-3"><a href="条件与循环.html#cb310-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( matching )</span></code></pre></div>
+<pre><code>## [&#39;ABCD&#39;, &#39;BCDE&#39;, &#39;BCDEE&#39;]</code></pre>
+</div>
+</div>
+<div id="循环dict" class="section level2" number="6.4">
+<h2><span class="header-section-number">6.4</span> 循环Dict</h2>
+<div class="sourceCode" id="cb312"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb312-1"><a href="条件与循环.html#cb312-1" aria-hidden="true" tabindex="-1"></a>d <span class="op">=</span> {<span class="st">&quot;x&quot;</span>: <span class="dv">1</span>, <span class="st">&quot;y&quot;</span>: <span class="dv">2</span>}</span>
+<span id="cb312-2"><a href="条件与循环.html#cb312-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> key <span class="kw">in</span> d:</span>
+<span id="cb312-3"><a href="条件与循环.html#cb312-3" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(key, d[key])</span></code></pre></div>
+<pre><code>## x 1
+## y 2</code></pre>
 </div>
 </div>
             </section>
