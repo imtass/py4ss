@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>4 变量和常用类型 | 写给文科生的Python入门和数据处理教程(Python for Social Scientists)</title>
+  <title>4 变量和常用类型 | 写给文科生的Python入门和数据处理教程</title>
   <meta name="description" content="为人文社科类研究员和学生设计的的Python入门和数据处理教程" />
-  <meta name="generator" content="bookdown 0.23 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="4 变量和常用类型 | 写给文科生的Python入门和数据处理教程(Python for Social Scientists)" />
+  <meta property="og:title" content="4 变量和常用类型 | 写给文科生的Python入门和数据处理教程" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="4 变量和常用类型 | 写给文科生的Python入门和数据处理教程(Python for Social Scientists)" />
+  <meta name="twitter:title" content="4 变量和常用类型 | 写给文科生的Python入门和数据处理教程" />
   
   <meta name="twitter:description" content="为人文社科类研究员和学生设计的的Python入门和数据处理教程" />
   
@@ -24,7 +24,7 @@
 <meta name="author" content="Li Weicheng @ gpnu" />
 
 
-<meta name="date" content="2021-09-23" />
+<meta name="date" content="2021-10-06" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,8 +33,9 @@
   
 <link rel="prev" href="使用spyder编程环境.html"/>
 <link rel="next" href="常用数据结构.html"/>
-<script src="libs/header-attrs-2.10/header-attrs.js"></script>
+<script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -42,7 +43,6 @@
 <link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
-
 
 
 
@@ -248,30 +248,73 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="5.3.9" data-path="常用数据结构.html"><a href="常用数据结构.html#键-值元组"><i class="fa fa-check"></i><b>5.3.9</b> （键-值元组）</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="条件与循环编写中.html"><a href="条件与循环编写中.html"><i class="fa fa-check"></i><b>6</b> 条件与循环（编写中）</a>
+<li class="chapter" data-level="6" data-path="条件与循环施工中.html"><a href="条件与循环施工中.html"><i class="fa fa-check"></i><b>6</b> 条件与循环（施工中）</a>
 <ul>
-<li class="chapter" data-level="6.1" data-path="条件与循环编写中.html"><a href="条件与循环编写中.html#条件if"><i class="fa fa-check"></i><b>6.1</b> 条件if</a>
+<li class="chapter" data-level="6.1" data-path="条件与循环施工中.html"><a href="条件与循环施工中.html#条件if"><i class="fa fa-check"></i><b>6.1</b> 条件if</a>
 <ul>
-<li class="chapter" data-level="6.1.1" data-path="条件与循环编写中.html"><a href="条件与循环编写中.html#多行if"><i class="fa fa-check"></i><b>6.1.1</b> 多行if</a></li>
-<li class="chapter" data-level="6.1.2" data-path="条件与循环编写中.html"><a href="条件与循环编写中.html#单行if"><i class="fa fa-check"></i><b>6.1.2</b> 单行if</a></li>
-<li class="chapter" data-level="6.1.3" data-path="条件与循环编写中.html"><a href="条件与循环编写中.html#三元表达式"><i class="fa fa-check"></i><b>6.1.3</b> 三元表达式</a></li>
+<li class="chapter" data-level="6.1.1" data-path="条件与循环施工中.html"><a href="条件与循环施工中.html#多行if"><i class="fa fa-check"></i><b>6.1.1</b> 多行if</a></li>
+<li class="chapter" data-level="6.1.2" data-path="条件与循环施工中.html"><a href="条件与循环施工中.html#单行if"><i class="fa fa-check"></i><b>6.1.2</b> 单行if</a></li>
+<li class="chapter" data-level="6.1.3" data-path="条件与循环施工中.html"><a href="条件与循环施工中.html#三元表达式"><i class="fa fa-check"></i><b>6.1.3</b> 三元表达式</a></li>
+<li class="chapter" data-level="6.1.4" data-path="条件与循环施工中.html"><a href="条件与循环施工中.html#练习"><i class="fa fa-check"></i><b>6.1.4</b> 练习</a></li>
+<li class="chapter" data-level="6.1.5" data-path="条件与循环施工中.html"><a href="条件与循环施工中.html#嵌套if"><i class="fa fa-check"></i><b>6.1.5</b> 嵌套if</a></li>
+<li class="chapter" data-level="6.1.6" data-path="条件与循环施工中.html"><a href="条件与循环施工中.html#练习-1"><i class="fa fa-check"></i><b>6.1.6</b> 练习</a></li>
 </ul></li>
-<li class="chapter" data-level="6.2" data-path="条件与循环编写中.html"><a href="条件与循环编写中.html#循环for"><i class="fa fa-check"></i><b>6.2</b> 循环for</a>
+<li class="chapter" data-level="6.2" data-path="条件与循环施工中.html"><a href="条件与循环施工中.html#while循环"><i class="fa fa-check"></i><b>6.2</b> while循环</a>
 <ul>
-<li class="chapter" data-level="6.2.1" data-path="条件与循环编写中.html"><a href="条件与循环编写中.html#for-else"><i class="fa fa-check"></i><b>6.2.1</b> For-else</a></li>
-<li class="chapter" data-level="6.2.2" data-path="条件与循环编写中.html"><a href="条件与循环编写中.html#range的循环"><i class="fa fa-check"></i><b>6.2.2</b> range的循环</a></li>
+<li class="chapter" data-level="6.2.1" data-path="条件与循环施工中.html"><a href="条件与循环施工中.html#举例打印-1到10"><i class="fa fa-check"></i><b>6.2.1</b> 举例：打印 1到10</a></li>
+<li class="chapter" data-level="6.2.2" data-path="条件与循环施工中.html"><a href="条件与循环施工中.html#练习-2"><i class="fa fa-check"></i><b>6.2.2</b> 练习</a></li>
 </ul></li>
-<li class="chapter" data-level="6.3" data-path="条件与循环编写中.html"><a href="条件与循环编写中.html#循环一个list"><i class="fa fa-check"></i><b>6.3</b> 循环一个List</a>
+<li class="chapter" data-level="6.3" data-path="条件与循环施工中.html"><a href="条件与循环施工中.html#for循环"><i class="fa fa-check"></i><b>6.3</b> for循环</a>
 <ul>
-<li class="chapter" data-level="6.3.1" data-path="条件与循环编写中.html"><a href="条件与循环编写中.html#列表推导式list-comprehension"><i class="fa fa-check"></i><b>6.3.1</b> 列表推导式List Comprehension</a></li>
+<li class="chapter" data-level="6.3.1" data-path="条件与循环施工中.html"><a href="条件与循环施工中.html#range的循环"><i class="fa fa-check"></i><b>6.3.1</b> range的循环</a></li>
 </ul></li>
-<li class="chapter" data-level="6.4" data-path="条件与循环编写中.html"><a href="条件与循环编写中.html#循环dict"><i class="fa fa-check"></i><b>6.4</b> 循环Dict</a></li>
+<li class="chapter" data-level="6.4" data-path="条件与循环施工中.html"><a href="条件与循环施工中.html#更多练习"><i class="fa fa-check"></i><b>6.4</b> 更多练习</a>
+<ul>
+<li class="chapter" data-level="6.4.1" data-path="条件与循环施工中.html"><a href="条件与循环施工中.html#列表推导式list-comprehension"><i class="fa fa-check"></i><b>6.4.1</b> 列表推导式List Comprehension</a></li>
 </ul></li>
-<li class="chapter" data-level="7" data-path="函数.html"><a href="函数.html"><i class="fa fa-check"></i><b>7</b> 函数</a></li>
-<li class="chapter" data-level="8" data-path="内置函数和常用库.html"><a href="内置函数和常用库.html"><i class="fa fa-check"></i><b>8</b> 内置函数和常用库</a></li>
-<li class="chapter" data-level="9" data-path="numpy.html"><a href="numpy.html"><i class="fa fa-check"></i><b>9</b> Numpy</a></li>
-<li class="chapter" data-level="10" data-path="pandas.html"><a href="pandas.html"><i class="fa fa-check"></i><b>10</b> Pandas</a></li>
-<li class="chapter" data-level="11" data-path="综合数据处理.html"><a href="综合数据处理.html"><i class="fa fa-check"></i><b>11</b> 综合数据处理</a></li>
+<li class="chapter" data-level="6.5" data-path="条件与循环施工中.html"><a href="条件与循环施工中.html#循环dict"><i class="fa fa-check"></i><b>6.5</b> 循环Dict</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="函数施工中.html"><a href="函数施工中.html"><i class="fa fa-check"></i><b>7</b> 函数（施工中）</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="函数施工中.html"><a href="函数施工中.html#定义一个函数"><i class="fa fa-check"></i><b>7.1</b> 定义一个函数</a>
+<ul>
+<li class="chapter" data-level="7.1.1" data-path="函数施工中.html"><a href="函数施工中.html#例加法函数"><i class="fa fa-check"></i><b>7.1.1</b> 例：加法函数</a></li>
+<li class="chapter" data-level="7.1.2" data-path="函数施工中.html"><a href="函数施工中.html#例求两个数的最大值"><i class="fa fa-check"></i><b>7.1.2</b> 例：求两个数的最大值</a></li>
+<li class="chapter" data-level="7.1.3" data-path="函数施工中.html"><a href="函数施工中.html#例计算圆的面积"><i class="fa fa-check"></i><b>7.1.3</b> 例：计算圆的面积</a></li>
+<li class="chapter" data-level="7.1.4" data-path="函数施工中.html"><a href="函数施工中.html#什么也不做的函数"><i class="fa fa-check"></i><b>7.1.4</b> 什么也不做的函数</a></li>
+</ul></li>
+<li class="chapter" data-level="7.2" data-path="函数施工中.html"><a href="函数施工中.html#参数"><i class="fa fa-check"></i><b>7.2</b> 参数</a>
+<ul>
+<li class="chapter" data-level="7.2.1" data-path="函数施工中.html"><a href="函数施工中.html#使用参数名"><i class="fa fa-check"></i><b>7.2.1</b> 使用参数名</a></li>
+<li class="chapter" data-level="7.2.2" data-path="函数施工中.html"><a href="函数施工中.html#例使用参数名称传递参数"><i class="fa fa-check"></i><b>7.2.2</b> 例：使用参数名称传递参数</a></li>
+<li class="chapter" data-level="7.2.3" data-path="函数施工中.html"><a href="函数施工中.html#默认参数"><i class="fa fa-check"></i><b>7.2.3</b> 默认参数</a></li>
+<li class="chapter" data-level="7.2.4" data-path="函数施工中.html"><a href="函数施工中.html#例乘方函数n次方"><i class="fa fa-check"></i><b>7.2.4</b> 例：乘方函数（n次方）</a></li>
+<li class="chapter" data-level="7.2.5" data-path="函数施工中.html"><a href="函数施工中.html#不定长参数进阶"><i class="fa fa-check"></i><b>7.2.5</b> 不定长参数（进阶）</a></li>
+</ul></li>
+<li class="chapter" data-level="7.3" data-path="函数施工中.html"><a href="函数施工中.html#变量作用域"><i class="fa fa-check"></i><b>7.3</b> 变量作用域</a>
+<ul>
+<li class="chapter" data-level="7.3.1" data-path="函数施工中.html"><a href="函数施工中.html#局部作用域"><i class="fa fa-check"></i><b>7.3.1</b> 局部作用域</a></li>
+<li class="chapter" data-level="7.3.2" data-path="函数施工中.html"><a href="函数施工中.html#全局作用域"><i class="fa fa-check"></i><b>7.3.2</b> 全局作用域</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="函数式编程入门.html"><a href="函数式编程入门.html"><i class="fa fa-check"></i><b>8</b> 函数式编程入门</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="函数式编程入门.html"><a href="函数式编程入门.html#map和filter"><i class="fa fa-check"></i><b>8.1</b> map和filter</a>
+<ul>
+<li class="chapter" data-level="8.1.1" data-path="函数式编程入门.html"><a href="函数式编程入门.html#map"><i class="fa fa-check"></i><b>8.1.1</b> map</a></li>
+<li class="chapter" data-level="8.1.2" data-path="函数式编程入门.html"><a href="函数式编程入门.html#filter"><i class="fa fa-check"></i><b>8.1.2</b> filter</a></li>
+<li class="chapter" data-level="8.1.3" data-path="函数式编程入门.html"><a href="函数式编程入门.html#混合map和filter"><i class="fa fa-check"></i><b>8.1.3</b> 混合map和filter</a></li>
+<li class="chapter" data-level="8.1.4" data-path="函数式编程入门.html"><a href="函数式编程入门.html#匿名函数-lambda"><i class="fa fa-check"></i><b>8.1.4</b> 匿名函数 lambda</a></li>
+</ul></li>
+<li class="chapter" data-level="8.2" data-path="函数式编程入门.html"><a href="函数式编程入门.html#高阶函数进阶施工中"><i class="fa fa-check"></i><b>8.2</b> 高阶函数（进阶）（施工中）</a>
+<ul>
+<li class="chapter" data-level="8.2.1" data-path="函数式编程入门.html"><a href="函数式编程入门.html#函数生成器用参数来生成不同的函数"><i class="fa fa-check"></i><b>8.2.1</b> “函数生成器”，用参数来生成不同的函数</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="内置函数和常用库.html"><a href="内置函数和常用库.html"><i class="fa fa-check"></i><b>9</b> 内置函数和常用库</a></li>
+<li class="chapter" data-level="10" data-path="numpy.html"><a href="numpy.html"><i class="fa fa-check"></i><b>10</b> Numpy</a></li>
+<li class="chapter" data-level="11" data-path="pandas.html"><a href="pandas.html"><i class="fa fa-check"></i><b>11</b> Pandas</a></li>
+<li class="chapter" data-level="12" data-path="综合数据处理.html"><a href="综合数据处理.html"><i class="fa fa-check"></i><b>12</b> 综合数据处理</a></li>
 </ul>
 
       </nav>
@@ -281,7 +324,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">写给文科生的Python入门和数据处理教程(Python for Social Scientists)</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">写给文科生的Python入门和数据处理教程</a>
           </h1>
         </div>
 
@@ -521,9 +564,9 @@ c的值是: 3</code></pre>
 <pre><code>## c的值是:3
 ## a的值是:1
 ## b的值是:2</code></pre>
-<p>还有更简洁的办法“f-string”：需要python3.6版本或以上</p>
+<p>还有更简洁的办法”f-string”：需要python3.6版本或以上</p>
 <ol style="list-style-type: decimal">
-<li>变量的开头（单引号或者双引号之前），加<code>f</code>，形成<code>f''</code>，即所谓“f-string”。</li>
+<li>变量的开头（单引号或者双引号之前），加<code>f</code>，形成<code>f''</code>，即所谓”f-string”。</li>
 <li>这种字符串在打印的时候，python会自动把对应的变量填充进去。</li>
 <li>在中括号里直接填变量名</li>
 </ol>
@@ -669,7 +712,7 @@ NameError: name &#39;age&#39; is not defined</code></pre>
 </ol>
 <p><strong>一般情况下</strong>，Python不会为你自动转换类型（不会“隐式类型转换”）。</p>
 <p>如一个很热门的语言JavaScript，大家现在上网看到的多数网站，其页面都是js语言写的。</p>
-<p>在js中，一个字符“0”加一个数字1，js会自动（隐式地）把后者转换为字符串，然后进行拼接。</p>
+<p>在js中，一个字符”0”加一个数字1，js会自动（隐式地）把后者转换为字符串，然后进行拼接。</p>
 <pre><code>&quot;0&quot; + 1; // &quot;01&quot;</code></pre>
 <p>这其实对你的代码质量（如类型的检验）提出了更高要求，比如你的本意可能是要2个数字相加。</p>
 <p>但这段代码会在你毫无知觉的情况下，一直运行下去，导致你可能要在无数代码执行过后，才发现问题。</p>
@@ -692,7 +735,6 @@ NameError: name &#39;age&#39; is not defined</code></pre>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -733,7 +775,7 @@ gitbook.start({
 },
 "download": null,
 "search": {
-"engine": "lunr",
+"engine": "fuse",
 "options": null
 },
 "toc": {

@@ -4,14 +4,4 @@ bookdown::gitbook:
     toc:
       before: |
         <li><a href="./">写给文科生的Python入门和数据处理教程</a></li>
-    #   after: |
-    #     <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
-    # edit: https://github.com/USERNAME/REPO/edit/BRANCH/%s
-    # download: ["pdf", "epub"]
-#bookdown::pdf_book:
-#  includes:
-#    in_header: preamble.tex
-#  latex_engine: xelatex
-#  citation_package: natbib
-#  keep_tex: yes
-#bookdown::epub_book: default
+

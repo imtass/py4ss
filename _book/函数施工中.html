@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>写给文科生的Python入门和数据处理教程</title>
+  <title>7 函数（施工中） | 写给文科生的Python入门和数据处理教程</title>
   <meta name="description" content="为人文社科类研究员和学生设计的的Python入门和数据处理教程" />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="写给文科生的Python入门和数据处理教程" />
+  <meta property="og:title" content="7 函数（施工中） | 写给文科生的Python入门和数据处理教程" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="写给文科生的Python入门和数据处理教程" />
+  <meta name="twitter:title" content="7 函数（施工中） | 写给文科生的Python入门和数据处理教程" />
   
   <meta name="twitter:description" content="为人文社科类研究员和学生设计的的Python入门和数据处理教程" />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-
-<link rel="next" href="python程序的执行.html"/>
+<link rel="prev" href="条件与循环施工中.html"/>
+<link rel="next" href="函数式编程入门.html"/>
 <script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -332,63 +332,224 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">写给文科生的Python入门和数据处理教程</h1>
-<h2 class="subtitle"><em>Python for Social Scientists</em></h2>
-<p class="author"><em>Li Weicheng @ gpnu</em></p>
-<p class="date"><em>2021-10-06</em></p>
-</div>
-<div id="引言" class="section level1" number="1">
-<h1><span class="header-section-number">1</span> 引言</h1>
-<p>本文是Python入门和数据处理教程，基于经管类本科课堂教学用的讲义，以供同学们自学和参考。</p>
-<p><em>p.s.</em> 本文使用RStudio以及R的Bookdown包写成。</p>
-<div id="本书目标" class="section level2" number="1.1">
-<h2><span class="header-section-number">1.1</span> 本书目标</h2>
+<div id="函数施工中" class="section level1" number="7">
+<h1><span class="header-section-number">7</span> 函数（施工中）</h1>
+<p>一个函数，就是一个包装好的代码：你给它一些输入（参数），函数给你一个结果（返回值）：</p>
+<p>比如，如果把<strong>电饭锅</strong>看成是一个函数，那么参数就是“<strong>米，水，电，时间</strong>”，你把“<strong>米，水，电，时间</strong>”给<strong>电饭锅</strong>，<strong>电饭锅</strong>返回给你一锅“<strong>米饭</strong>”。</p>
+<p>写成代码，大概是：</p>
+<div class="sourceCode" id="cb331"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb331-1"><a href="函数施工中.html#cb331-1" aria-hidden="true" tabindex="-1"></a>米饭 <span class="op">=</span> 电饭锅(米，水，电，时间)</span></code></pre></div>
+<p>这完全可以看成一个转换，或者映射
+<span class="math display">\[
+(米，水，电，时间) \longmapsto 米饭
+\]</span></p>
+<p>我们面前已经用过的，比如求List的长度：</p>
+<div class="sourceCode" id="cb332"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb332-1"><a href="函数施工中.html#cb332-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> [<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>]</span>
+<span id="cb332-2"><a href="函数施工中.html#cb332-2" aria-hidden="true" tabindex="-1"></a>a_size <span class="op">=</span> <span class="bu">len</span>(a)</span>
+<span id="cb332-3"><a href="函数施工中.html#cb332-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(a_size)</span></code></pre></div>
+<pre><code>## 5</code></pre>
+<p>看<code>a_size = len(a)</code>这个代码</p>
 <ol style="list-style-type: decimal">
-<li>负基础Python入门</li>
+<li><code>len()</code> ：函数名</li>
+<li><code>len(a)</code> ：其中<code>a</code>是参数，即“你提供给这个函数的东西”</li>
+<li><code>a_size = len(a)</code>：会返回<code>a</code>的长度（元素的数量），你把这个结果放在变量<code>a_size</code>之中</li>
 </ol>
-<p>对于首次接触编程的人，可能对计算机和操作系统的有关知识（如“命令行”，“路径”等）缺乏了解。本文尽量把有关的知识都介绍到，争取做到“会打字就能学Python”。</p>
-<ol start="2" style="list-style-type: decimal">
-<li>Python数据处理</li>
+<div id="定义一个函数" class="section level2" number="7.1">
+<h2><span class="header-section-number">7.1</span> 定义一个函数</h2>
+<p>在python中</p>
+<ol style="list-style-type: decimal">
+<li>定义一个函数的关键字是<code>def</code>，</li>
+<li><code>def</code>后，是函数名，小括号内是参数（这个函数要接收的东西），最后是冒号</li>
+<li>函数体，要有“1个缩进”</li>
+<li>返回关键词是<code>return</code>。如果函数执行完都没有遇到<code>return</code>，则返回<code>none</code></li>
 </ol>
+<p><img src="https://www.runoob.com/wp-content/uploads/2014/05/py-tup-10-26-1.png" /></p>
+<div id="例加法函数" class="section level3" number="7.1.1">
+<h3><span class="header-section-number">7.1.1</span> 例：加法函数</h3>
+<p>举一个最简单的例子，我们要写一个加法函数，其作用就是把2个变量相加。或者说，你给这个函数“传递2个参数”，这个函数会返回他们的和。</p>
+<div class="sourceCode" id="cb334"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb334-1"><a href="函数施工中.html#cb334-1" aria-hidden="true" tabindex="-1"></a><span class="co">#%% 定义一个加法函数</span></span>
+<span id="cb334-2"><a href="函数施工中.html#cb334-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> add(x, y):</span>
+<span id="cb334-3"><a href="函数施工中.html#cb334-3" aria-hidden="true" tabindex="-1"></a>  z <span class="op">=</span> x <span class="op">+</span> y</span>
+<span id="cb334-4"><a href="函数施工中.html#cb334-4" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> z</span></code></pre></div>
+<p>逐行解释一下</p>
+<p>第一行： <code>def add(x, y):</code></p>
+<ol style="list-style-type: decimal">
+<li>定义一个函数，由<code>def</code>开头</li>
+<li>接着是你给这个函数起的名字<code>add</code></li>
+<li>名字后面是小括号，里面包含了这个函数的“参数”。这里是2个参数，命名为<code>x</code>和<code>y</code>。显然，这就是你调用这个函数的时候，要给函数的东西。</li>
+<li>最后是冒号，不要忘记</li>
+</ol>
+<p><strong>注意</strong>：关于参数，2个参数的名字你可以自己定义，不一定是<code>x</code>和<code>y</code>。这2个参数的名字，如同一切变量名一样，最终会”指向”2个值，所以你在函数的内部，就可以用这2个名字，来引用这2个值</p>
+<p>第二行：<code>z = x + y</code></p>
+<ol style="list-style-type: decimal">
+<li>注意，前面有“1个”缩进，指示这个语句比函数本身低一级</li>
+<li><code>z = x + y</code>，一目了然。需要说明的是，函数体内的2个参数，调用的时候已经有指向的目的地了。所以不会出现类似x不存在之类的错误。</li>
+</ol>
+<p>第三行：<code>return z</code></p>
+<ol style="list-style-type: decimal">
+<li>前面还是“1个”缩进，这是和<code>z = x + y</code>同一个层级的代码。</li>
+<li>返回使用<code>return</code>语句。这里把和<code>z</code>，返回给上一层。</li>
+</ol>
+<p>定义好之后，我们可以像使用任何函数一样调用它</p>
+<p>我们来一个很熟悉的代码。</p>
+<div class="sourceCode" id="cb335"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb335-1"><a href="函数施工中.html#cb335-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb335-2"><a href="函数施工中.html#cb335-2" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> <span class="dv">2</span></span>
+<span id="cb335-3"><a href="函数施工中.html#cb335-3" aria-hidden="true" tabindex="-1"></a>c <span class="op">=</span> add(a, b) </span>
+<span id="cb335-4"><a href="函数施工中.html#cb335-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(c)</span></code></pre></div>
+<pre><code>## 3</code></pre>
+</div>
+<div id="例求两个数的最大值" class="section level3" number="7.1.2">
+<h3><span class="header-section-number">7.1.2</span> 例：求两个数的最大值</h3>
+<p>思路：</p>
+<ol style="list-style-type: decimal">
+<li>如果x &gt; y，则返回x。</li>
+<li>否则返回y。（x &lt;= y，此时返回y也是最大值）</li>
+</ol>
+<div class="sourceCode" id="cb337"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb337-1"><a href="函数施工中.html#cb337-1" aria-hidden="true" tabindex="-1"></a><span class="co">#%% 定义一个函数，接收两个参数，返回其最大值</span></span>
+<span id="cb337-2"><a href="函数施工中.html#cb337-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> my_max(a, b):</span>
+<span id="cb337-3"><a href="函数施工中.html#cb337-3" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> a <span class="op">&gt;=</span> b:</span>
+<span id="cb337-4"><a href="函数施工中.html#cb337-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> a  <span class="co"># 返回a</span></span>
+<span id="cb337-5"><a href="函数施工中.html#cb337-5" aria-hidden="true" tabindex="-1"></a>  <span class="cf">else</span>:</span>
+<span id="cb337-6"><a href="函数施工中.html#cb337-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> b  <span class="co"># 返回b  </span></span>
+<span id="cb337-7"><a href="函数施工中.html#cb337-7" aria-hidden="true" tabindex="-1"></a>      </span>
+<span id="cb337-8"><a href="函数施工中.html#cb337-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(my_max(<span class="dv">3</span>,<span class="dv">5</span>))</span></code></pre></div>
+<pre><code>## 5</code></pre>
+</div>
+<div id="例计算圆的面积" class="section level3" number="7.1.3">
+<h3><span class="header-section-number">7.1.3</span> 例：计算圆的面积</h3>
+<p>另一个例子，已知：圆的半径是<span class="math inline">\(r\)</span>，我们要计算圆的面积，公式就是<span class="math inline">\(y = \pi r^2\)</span>。</p>
+<p>我们准备写一个函数来做这件事：</p>
+<ol style="list-style-type: decimal">
+<li>这个函数会根据我们提供的半径<span class="math inline">\(r\)</span>，返回一个圆的面积给我们。</li>
+<li>显然，这个函数必然是接受<code>r</code>作为参数</li>
+<li>我们做的，是算出面积，然后返回一下</li>
+</ol>
+<div class="sourceCode" id="cb339"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb339-1"><a href="函数施工中.html#cb339-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> calc_area(r): </span>
+<span id="cb339-2"><a href="函数施工中.html#cb339-2" aria-hidden="true" tabindex="-1"></a>  area <span class="op">=</span> <span class="fl">3.14159</span> <span class="op">*</span> (r <span class="op">**</span> <span class="dv">2</span>) </span>
+<span id="cb339-3"><a href="函数施工中.html#cb339-3" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> area</span></code></pre></div>
+<p>]</p>
+<div class="sourceCode" id="cb340"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb340-1"><a href="函数施工中.html#cb340-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">5</span> </span>
+<span id="cb340-2"><a href="函数施工中.html#cb340-2" aria-hidden="true" tabindex="-1"></a>area <span class="op">=</span> calc_area(x)</span>
+<span id="cb340-3"><a href="函数施工中.html#cb340-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb340-4"><a href="函数施工中.html#cb340-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f&quot;半径为</span><span class="sc">{x}</span><span class="ss">的圆，其面积为</span><span class="sc">{</span>area<span class="sc">:0.2f}</span><span class="ss">&quot;</span>)</span></code></pre></div>
+<pre><code>## 半径为5的圆，其面积为78.54</code></pre>
+</div>
+<div id="什么也不做的函数" class="section level3" number="7.1.4">
+<h3><span class="header-section-number">7.1.4</span> 什么也不做的函数</h3>
+<p>有时候需要先占用函数名，但是函数的内容想以后再写，此时可以写一个空函数。函数体内只需要使用<code>pass</code>语句。</p>
+<p>特别地，没有<code>return</code>语句（例如现在这种情况），或者<code>return</code>语句不返回值的时候，函数会返回一个<code>none</code>。</p>
+<div class="sourceCode" id="cb342"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb342-1"><a href="函数施工中.html#cb342-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> do_noting():</span>
+<span id="cb342-2"><a href="函数施工中.html#cb342-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">pass</span></span>
+<span id="cb342-3"><a href="函数施工中.html#cb342-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb342-4"><a href="函数施工中.html#cb342-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(do_noting())</span></code></pre></div>
+<pre><code>## None</code></pre>
+</div>
+</div>
+<div id="参数" class="section level2" number="7.2">
+<h2><span class="header-section-number">7.2</span> 参数</h2>
+<div id="使用参数名" class="section level3" number="7.2.1">
+<h3><span class="header-section-number">7.2.1</span> 使用参数名</h3>
+<p>把参数传递给函数，可以按参数的顺序，也可以使用参数的名称</p>
+</div>
+<div id="例使用参数名称传递参数" class="section level3" number="7.2.2">
+<h3><span class="header-section-number">7.2.2</span> 例：使用参数名称传递参数</h3>
+<div class="sourceCode" id="cb344"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb344-1"><a href="函数施工中.html#cb344-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> print_info(name, age):</span>
+<span id="cb344-2"><a href="函数施工中.html#cb344-2" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(<span class="st">&quot;姓名: &quot;</span>, name)</span>
+<span id="cb344-3"><a href="函数施工中.html#cb344-3" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(<span class="st">&quot;年龄: &quot;</span>, age)</span>
+<span id="cb344-4"><a href="函数施工中.html#cb344-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb344-5"><a href="函数施工中.html#cb344-5" aria-hidden="true" tabindex="-1"></a>print_info(<span class="st">&#39;alex&#39;</span>,<span class="dv">20</span>) <span class="co"># 按参数顺序：姓名，年龄</span></span></code></pre></div>
+<pre><code>## 姓名:  alex
+## 年龄:  20</code></pre>
+<div class="sourceCode" id="cb346"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb346-1"><a href="函数施工中.html#cb346-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (<span class="st">&quot;------------------------&quot;</span>)</span></code></pre></div>
+<pre><code>## ------------------------</code></pre>
+<div class="sourceCode" id="cb348"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb348-1"><a href="函数施工中.html#cb348-1" aria-hidden="true" tabindex="-1"></a>print_info(age <span class="op">=</span> <span class="dv">21</span>, name <span class="op">=</span> <span class="st">&quot;bob&quot;</span>) <span class="co"># 按参数名，此时不用考虑参数的顺序</span></span></code></pre></div>
+<pre><code>## 姓名:  bob
+## 年龄:  21</code></pre>
+</div>
+<div id="默认参数" class="section level3" number="7.2.3">
+<h3><span class="header-section-number">7.2.3</span> 默认参数</h3>
+<p>定义函数的时候，可以给某些参数定义一个默认值。</p>
+<p><strong>默认参数必须定义在最后。</strong></p>
+</div>
+<div id="例乘方函数n次方" class="section level3" number="7.2.4">
+<h3><span class="header-section-number">7.2.4</span> 例：乘方函数（n次方）</h3>
+<div class="sourceCode" id="cb350"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb350-1"><a href="函数施工中.html#cb350-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> power(x, n<span class="op">=</span><span class="dv">2</span>):  <span class="co"># n有默认值</span></span>
+<span id="cb350-2"><a href="函数施工中.html#cb350-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> x <span class="op">**</span> n</span>
+<span id="cb350-3"><a href="函数施工中.html#cb350-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb350-4"><a href="函数施工中.html#cb350-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(power(<span class="dv">5</span>))  <span class="co"># 调用函数不传递n的值，使用默认值，结果为25</span></span></code></pre></div>
+<pre><code>## 25</code></pre>
+<div class="sourceCode" id="cb352"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb352-1"><a href="函数施工中.html#cb352-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(power(<span class="dv">3</span>, <span class="dv">3</span>))  <span class="co"># 调用函数传递n的值，使用传递值，结果为27</span></span></code></pre></div>
+<pre><code>## 27</code></pre>
+</div>
+<div id="不定长参数进阶" class="section level3" number="7.2.5">
+<h3><span class="header-section-number">7.2.5</span> 不定长参数（进阶）</h3>
+<p>函数可以接受<strong>任意多个参数</strong>，例如求最大值的函数<code>max()</code></p>
+<div class="sourceCode" id="cb354"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb354-1"><a href="函数施工中.html#cb354-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">max</span>(<span class="dv">4</span>,<span class="dv">1</span>,<span class="dv">5</span>,<span class="dv">2</span>))</span></code></pre></div>
+<pre><code>## 5</code></pre>
+<p>你要写一个这样的函数，那么可创建一个新的参数，前面带一个<code>*</code>号。那么不在参数列表里的参数，会组成一个tuple，并且绑定带这个带<code>*</code>号的变量名。</p>
+<div class="sourceCode" id="cb356"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb356-1"><a href="函数施工中.html#cb356-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 第一个参数是class_id，从第二个参数起，不定数量个参数，都会组成一个tuple，并命名为`students`(没有*)</span></span>
+<span id="cb356-2"><a href="函数施工中.html#cb356-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> print_students(class_id, <span class="op">*</span>students): </span>
+<span id="cb356-3"><a href="函数施工中.html#cb356-3" aria-hidden="true" tabindex="-1"></a>  <span class="co">&#39;打印班级号，和同学的姓名&#39;</span></span>
+<span id="cb356-4"><a href="函数施工中.html#cb356-4" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(<span class="st">&quot;班级:&quot;</span>,class_id)</span>
+<span id="cb356-5"><a href="函数施工中.html#cb356-5" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(<span class="st">&quot;学生包括:&quot;</span>, students) </span>
+<span id="cb356-6"><a href="函数施工中.html#cb356-6" aria-hidden="true" tabindex="-1"></a>   </span>
+<span id="cb356-7"><a href="函数施工中.html#cb356-7" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> s <span class="kw">in</span> students: <span class="co"># 也可以逐一打印</span></span>
+<span id="cb356-8"><a href="函数施工中.html#cb356-8" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span> (s)</span>
+<span id="cb356-9"><a href="函数施工中.html#cb356-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb356-10"><a href="函数施工中.html#cb356-10" aria-hidden="true" tabindex="-1"></a>print_students(<span class="dv">5</span> ,<span class="st">&quot;alex&quot;</span>,<span class="st">&quot;bob&quot;</span>,<span class="st">&quot;clare&quot;</span>)</span></code></pre></div>
+<pre><code>## 班级: 5
+## 学生包括: (&#39;alex&#39;, &#39;bob&#39;, &#39;clare&#39;)
+## alex
+## bob
+## clare</code></pre>
+</div>
+</div>
+<div id="变量作用域" class="section level2" number="7.3">
+<h2><span class="header-section-number">7.3</span> 变量作用域</h2>
+<p>你在函数里调用了一个变量名，python会“从里到外”找这个变量，顺序是LEGB</p>
+<p>LEGB含义解释：（暂时不用管）</p>
 <ul>
-<li>基本目标：替代Excel</li>
-<li>进阶目标：对科研常用数据，如Wind和CSMAR数据库、CFPS和CHIP等微观调查数据、统计局数据、oTree实验数据等，按照研究要求进行清洗、剪裁、整合以及绘图，为进一步分析（如回归）制作出合适的数据集。</li>
+<li>L-Local(function)即局部名称；函数内的名字空间</li>
+<li>E-Enclosing function locals即函数中嵌套函数的外部；外部嵌套函数的名字空间(例如closure)</li>
+<li>G-Global(module)即全局名称；函数定义所在模块（文件）的名字空间</li>
+<li>B-Builtin(Python)即内置名称；Python内置模块的名字空间</li>
 </ul>
-<ol start="3" style="list-style-type: decimal">
-<li>金融数据分析</li>
-</ol>
-<p>待定：视教学情况。</p>
+<div id="局部作用域" class="section level3" number="7.3.1">
+<h3><span class="header-section-number">7.3.1</span> 局部作用域</h3>
+<div class="sourceCode" id="cb358"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb358-1"><a href="函数施工中.html#cb358-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="dv">10</span>      <span class="co"># 全局变量a</span></span>
+<span id="cb358-2"><a href="函数施工中.html#cb358-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> func():</span>
+<span id="cb358-3"><a href="函数施工中.html#cb358-3" aria-hidden="true" tabindex="-1"></a>  a <span class="op">=</span> <span class="dv">20</span>    <span class="co"># 局部变量a。在定义了局部变量a之后。后面使用a这个变量名，将会首先找到这个变量（即从里到外找）</span></span>
+<span id="cb358-4"><a href="函数施工中.html#cb358-4" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(a)  <span class="co"># 应该是20</span></span>
+<span id="cb358-5"><a href="函数施工中.html#cb358-5" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb358-6"><a href="函数施工中.html#cb358-6" aria-hidden="true" tabindex="-1"></a>func()</span></code></pre></div>
+<pre><code>## 20</code></pre>
+<div class="sourceCode" id="cb360"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb360-1"><a href="函数施工中.html#cb360-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="dv">10</span>      <span class="co"># 全局变量a</span></span>
+<span id="cb360-2"><a href="函数施工中.html#cb360-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> func():</span>
+<span id="cb360-3"><a href="函数施工中.html#cb360-3" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(a)  <span class="co"># 在函数内部，没有变量a，那么就往外一层找，因此会找到全局变量`a`，应该等于10</span></span>
+<span id="cb360-4"><a href="函数施工中.html#cb360-4" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb360-5"><a href="函数施工中.html#cb360-5" aria-hidden="true" tabindex="-1"></a>func()</span></code></pre></div>
+<pre><code>## 10</code></pre>
+<p><span style="color: red;">注:</span>：函数內部和外部变量重名的情况，要额外小心。因此第二个例子可能是你“<strong>忘记了在函数内部定义a</strong>”，而不是你想要“引用全局变量a”，但是因为有一个全局的变量a，所以忘记定义<code>a</code>这个问题可能会被隐藏。</p>
 </div>
-<div id="本书不足" class="section level2" number="1.2">
-<h2><span class="header-section-number">1.2</span> 本书不足</h2>
-<ol style="list-style-type: decimal">
-<li>由于课时非常紧张，有很多有意义的内容不得不舍弃，包括但不限于：</li>
-</ol>
-<ul>
-<li>函数式编程和数据流思想</li>
-<li>面向对象编程</li>
-<li>单元测试</li>
-</ul>
-<ol start="2" style="list-style-type: decimal">
-<li>作者水平有限，很多内容未必是最优做法，只能争取尽量清晰和明确。</li>
-<li>要顾及同学们的计算机基础有高有低，有些地方不得不写得比较啰嗦。</li>
-</ol>
+<div id="全局作用域" class="section level3" number="7.3.2">
+<h3><span class="header-section-number">7.3.2</span> 全局作用域</h3>
+<p>特别地，函数内部的赋值语句，其中的变量会被python看作一个local变量，如果内部未定义，就可能出错。</p>
+<div class="sourceCode" id="cb362"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb362-1"><a href="函数施工中.html#cb362-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="dv">100</span>      <span class="co"># 全局变量a</span></span>
+<span id="cb362-2"><a href="函数施工中.html#cb362-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> func():</span>
+<span id="cb362-3"><a href="函数施工中.html#cb362-3" aria-hidden="true" tabindex="-1"></a>  a <span class="op">=</span> a <span class="op">+</span> <span class="dv">1</span>  <span class="co"># a + 1这个a系统认为是局部变量，但这个函数没有局部的a</span></span>
+<span id="cb362-4"><a href="函数施工中.html#cb362-4" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(a)   <span class="co"># 全局变量a</span></span>
+<span id="cb362-5"><a href="函数施工中.html#cb362-5" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb362-6"><a href="函数施工中.html#cb362-6" aria-hidden="true" tabindex="-1"></a>func()</span></code></pre></div>
+<pre><code>UnboundLocalError: local variable &#39;a&#39; referenced before assignment</code></pre>
+<p>所以，如果你明确地要用一个函数外的变量，那么可以使用<code>global</code>关键字</p>
+<div class="sourceCode" id="cb364"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb364-1"><a href="函数施工中.html#cb364-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="dv">100</span>      <span class="co"># 全局变量a</span></span>
+<span id="cb364-2"><a href="函数施工中.html#cb364-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> func():</span>
+<span id="cb364-3"><a href="函数施工中.html#cb364-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">global</span> a <span class="co"># 说明：a这个变量名，指向的是全局变量a</span></span>
+<span id="cb364-4"><a href="函数施工中.html#cb364-4" aria-hidden="true" tabindex="-1"></a>  a <span class="op">=</span> a <span class="op">+</span> <span class="dv">1</span>  </span>
+<span id="cb364-5"><a href="函数施工中.html#cb364-5" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(a)   <span class="co"># 全局变量a</span></span>
+<span id="cb364-6"><a href="函数施工中.html#cb364-6" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb364-7"><a href="函数施工中.html#cb364-7" aria-hidden="true" tabindex="-1"></a>func()</span></code></pre></div>
+<pre><code>## 101</code></pre>
 </div>
-<div id="使用的程序和版本" class="section level2" number="1.3">
-<h2><span class="header-section-number">1.3</span> 使用的程序和版本</h2>
-<ol style="list-style-type: decimal">
-<li>使用Anaconda以及附带的Spyder作为主要的编程环境</li>
-<li>Python版本3.6或以上。（涉及Type Hints和f-string等）</li>
-</ol>
-</div>
-<div id="把python安装到你的电脑里" class="section level2" number="1.4">
-<h2><span class="header-section-number">1.4</span> 把Python安装到你的电脑里</h2>
-<p>要完成任何一个编程任务，首先要借助Python现有的巨大的程序库（一般可称为库Library，或者包Package）。本课程主要针对经济类数据分析，涉及的包比较多。为了避免逐个安装，我们采用比较简单的做法，直接安装Anaconda。这是一个所谓“Python发行版”，里面包含了Python的执行程序（解释器等），以及大量的科学计算用包。一般的数据分析工作，直接安装这个即可。</p>
-<p>下载地址：<a href="https://www.anaconda.com/products/individual#Downloads" class="uri">https://www.anaconda.com/products/individual#Downloads</a></p>
-<p>直接百度Anaconda也能找到这个链接。按照你自己的操作系统下载 ，一般选择<strong>最新版</strong>，现在的电脑一般选择<strong>64bit</strong>的安装文件，安装过程采用<strong>默认选项</strong>即可。</p>
-<p><img src="images/anaconda_download.png" title="下载anaconda" /></p>
-
 </div>
 </div>
             </section>
@@ -396,8 +557,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           </div>
         </div>
       </div>
-
-<a href="python程序的执行.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="条件与循环施工中.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="函数式编程入门.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

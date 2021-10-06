@@ -1,0 +1,477 @@
+
+
+# 函数（施工中）
+
+一个函数，就是一个包装好的代码：你给它一些输入（参数），函数给你一个结果（返回值）：
+
+比如，如果把**电饭锅**看成是一个函数，那么参数就是“**米，水，电，时间**”，你把“**米，水，电，时间**”给**电饭锅**，**电饭锅**返回给你一锅“**米饭**”。
+
+写成代码，大概是：
+```{python eval=FALSE}
+米饭 = 电饭锅(米，水，电，时间)
+```
+
+
+这完全可以看成一个转换，或者映射
+$$
+(米，水，电，时间) \longmapsto 米饭
+$$
+
+
+我们面前已经用过的，比如求List的长度：
+
+
+```{python}
+a = [1,2,3,4,5]
+a_size = len(a)
+print(a_size)
+```
+看`a_size = len(a)`这个代码
+
+1. `len()` ：函数名
+2. `len(a)` ：其中`a`是参数，即“你提供给这个函数的东西”
+3. `a_size = len(a)`：会返回`a`的长度（元素的数量），你把这个结果放在变量`a_size`之中
+
+
+
+## 定义一个函数
+
+
+
+在python中
+
+1. 定义一个函数的关键字是`def`，
+2. `def`后，是函数名，小括号内是参数（这个函数要接收的东西），最后是冒号
+3. 函数体，要有“1个缩进”
+4. 返回关键词是`return`。如果函数执行完都没有遇到`return`，则返回`none`
+
+
+
+![](https://www.runoob.com/wp-content/uploads/2014/05/py-tup-10-26-1.png)
+
+
+
+
+### 例：加法函数
+
+举一个最简单的例子，我们要写一个加法函数，其作用就是把2个变量相加。或者说，你给这个函数“传递2个参数”，这个函数会返回他们的和。
+
+
+```{python}
+#%% 定义一个加法函数
+def add(x, y):
+  z = x + y
+  return z
+
+```
+逐行解释一下
+
+第一行： `def add(x, y):`
+
+1. 定义一个函数，由`def`开头
+2. 接着是你给这个函数起的名字`add`
+3. 名字后面是小括号，里面包含了这个函数的“参数”。这里是2个参数，命名为`x`和`y`。显然，这就是你调用这个函数的时候，要给函数的东西。
+4. 最后是冒号，不要忘记
+
+**注意**：关于参数，2个参数的名字你可以自己定义，不一定是`x`和`y`。这2个参数的名字，如同一切变量名一样，最终会"指向"2个值，所以你在函数的内部，就可以用这2个名字，来引用这2个值
+
+
+第二行：`  z = x + y`
+
+1. 注意，前面有“1个”缩进，指示这个语句比函数本身低一级
+2. `z = x + y`，一目了然。需要说明的是，函数体内的2个参数，调用的时候已经有指向的目的地了。所以不会出现类似x不存在之类的错误。
+
+第三行：`  return z`
+
+1. 前面还是“1个”缩进，这是和`  z = x + y`同一个层级的代码。
+2. 返回使用`return`语句。这里把和`z`，返回给上一层。
+
+
+定义好之后，我们可以像使用任何函数一样调用它
+
+我们来一个很熟悉的代码。
+
+```{python}
+a = 1
+b = 2
+c = add(a, b) 
+print(c)
+```
+
+### 例：求两个数的最大值
+ 
+
+思路：
+
+1. 如果x > y，则返回x。
+2. 否则返回y。（x <= y，此时返回y也是最大值）
+
+
+```{python}
+#%% 定义一个函数，接收两个参数，返回其最大值
+def my_max(a, b):
+  if a >= b:
+    return a  # 返回a
+  else:
+    return b  # 返回b  
+      
+print(my_max(3,5))
+```
+
+### 例：计算圆的面积
+
+
+另一个例子，已知：圆的半径是$r$，我们要计算圆的面积，公式就是$y = \pi r^2$。
+
+我们准备写一个函数来做这件事：
+
+1. 这个函数会根据我们提供的半径$r$，返回一个圆的面积给我们。
+2. 显然，这个函数必然是接受`r`作为参数
+3. 我们做的，是算出面积，然后返回一下
+
+
+```{python}
+def calc_area(r): 
+  area = 3.14159 * (r ** 2) 
+  return area
+
+```
+]
+
+
+```{python}
+x = 5 
+area = calc_area(x)
+
+print(f"半径为{x}的圆，其面积为{area:0.2f}")
+
+```
+
+
+### 什么也不做的函数
+
+有时候需要先占用函数名，但是函数的内容想以后再写，此时可以写一个空函数。函数体内只需要使用`pass`语句。
+
+特别地，没有`return`语句（例如现在这种情况），或者`return`语句不返回值的时候，函数会返回一个`none`。
+
+
+```{python}
+def do_noting():
+  pass
+
+print(do_noting())
+```
+
+
+## 参数
+
+### 使用参数名
+
+把参数传递给函数，可以按参数的顺序，也可以使用参数的名称
+
+
+### 例：使用参数名称传递参数
+
+```{python}
+def print_info(name, age):
+  print("姓名: ", name)
+  print("年龄: ", age)
+
+print_info('alex',20) # 按参数顺序：姓名，年龄
+print ("------------------------")
+print_info(age = 21, name = "bob") # 按参数名，此时不用考虑参数的顺序
+```
+
+### 默认参数
+
+定义函数的时候，可以给某些参数定义一个默认值。
+
+
+**默认参数必须定义在最后。**
+
+
+### 例：乘方函数（n次方）
+
+```{python}
+def power(x, n=2):  # n有默认值
+  return x ** n
+
+print(power(5))  # 调用函数不传递n的值，使用默认值，结果为25
+print(power(3, 3))  # 调用函数传递n的值，使用传递值，结果为27
+
+```
+
+### 不定长参数（进阶）
+
+
+函数可以接受**任意多个参数**，例如求最大值的函数`max()`
+
+
+```{python}
+print(max(4,1,5,2))
+```
+你要写一个这样的函数，那么可创建一个新的参数，前面带一个`*`号。那么不在参数列表里的参数，会组成一个tuple，并且绑定带这个带`*`号的变量名。
+
+
+```{python}
+# 第一个参数是class_id，从第二个参数起，不定数量个参数，都会组成一个tuple，并命名为`students`(没有*)
+def print_students(class_id, *students): 
+  '打印班级号，和同学的姓名'
+  print("班级:",class_id)
+  print("学生包括:", students) 
+   
+  for s in students: # 也可以逐一打印
+    print (s)
+
+print_students(5 ,"alex","bob","clare")
+```
+
+
+
+## 变量作用域
+
+你在函数里调用了一个变量名，python会“从里到外”找这个变量，顺序是LEGB
+
+
+LEGB含义解释：（暂时不用管）
+
+* L-Local(function)即局部名称；函数内的名字空间
+* E-Enclosing function locals即函数中嵌套函数的外部；外部嵌套函数的名字空间(例如closure)
+* G-Global(module)即全局名称；函数定义所在模块（文件）的名字空间
+* B-Builtin(Python)即内置名称；Python内置模块的名字空间
+
+### 局部作用域
+
+```{python}
+a = 10      # 全局变量a
+def func():
+  a = 20    # 局部变量a。在定义了局部变量a之后。后面使用a这个变量名，将会首先找到这个变量（即从里到外找）
+  print(a)  # 应该是20
+  
+func()
+```
+
+
+
+```{python}
+a = 10      # 全局变量a
+def func():
+  print(a)  # 在函数内部，没有变量a，那么就往外一层找，因此会找到全局变量`a`，应该等于10
+  
+func()
+```
+`r red("注:")`：函数內部和外部变量重名的情况，要额外小心。因此第二个例子可能是你“**忘记了在函数内部定义a**”，而不是你想要“引用全局变量a”，但是因为有一个全局的变量a，所以忘记定义`a`这个问题可能会被隐藏。
+
+
+### 全局作用域
+
+特别地，函数内部的赋值语句，其中的变量会被python看作一个local变量，如果内部未定义，就可能出错。
+
+```{python eval=FALSE}
+a = 100      # 全局变量a
+def func():
+  a = a + 1  # a + 1这个a系统认为是局部变量，但这个函数没有局部的a
+  print(a)   # 全局变量a
+    
+func()
+```
+
+
+```
+UnboundLocalError: local variable 'a' referenced before assignment
+```
+
+所以，如果你明确地要用一个函数外的变量，那么可以使用`global`关键字
+
+```{python}
+a = 100      # 全局变量a
+def func():
+  global a # 说明：a这个变量名，指向的是全局变量a
+  a = a + 1  
+  print(a)   # 全局变量a
+    
+func()
+```
+
+# 函数式编程入门
+
+
+
+## map和filter
+### map
+
+
+有一个List，`a = [1,2,3,4,5]`，你现在要把其中的每一个元素都乘以2，并保存在一个新的List中。用现有的知识，可以这样
+
+1. 建立一个空的List用来保存结果`result = []`
+2. 循环`a`中的所有元素，并且乘以2，添加到`result`的末端
+
+```{python}
+a = [1,2,3,4,5]
+print(a)
+```
+
+
+```{python}
+result = []
+for i in a:
+  result.append(i*2)
+
+print(result)
+```
+
+
+
+`map`函数，可以把一个函数，应用到List中的所有元素上。
+
+```{python}
+def do_double(x):
+  '翻倍函数'
+  return x * 2
+
+print(do_double(3))
+```
+把do_dobule函数，应用到列表a中的每一个元素里。
+
+```{python}
+result = map(do_double, a) # 把do_dobule函数，应用到列表a中的每一个元素里。
+
+print(list(result))
+```
+
+也可用列表推导
+
+```{python}
+result = [i * 2 for i in a]
+print(result)
+
+result = [do_double(i) for i in a]
+print(result)
+```
+
+把a里的元素，全部转换为str
+```{python}
+result = map(str, a) # 把str函数，应用到列表a中的每一个元素里。
+
+print(list(result))
+```
+
+
+
+### filter
+
+
+有一个List，`a = [1,2,3,4,5]`，你现在要选出符合特定条件的元素，例如选出其中的基数，组成一个新的List。用循环做：
+
+
+```{python}
+a = [1,2,3,4,5]
+
+result = []
+
+for i in a:
+  if i % 2 == 1:
+    result.append(i)
+    
+print(result)
+```
+和map一样，定义一个is_odd函数，作为filter的过滤条件，应该返回布尔值(`True/False`)，作为是否符合条件的结果。
+
+```{python}
+def is_odd(x):
+  return x % 2 == 1
+
+print(is_odd(3))
+print(is_odd(6))
+```
+filter(判断函数, List)
+
+```{python}
+resutl = filter(is_odd, a)
+print(list(result))
+```
+
+当然，也可以用列表推导
+
+```{python}
+[i for i in a if is_odd(i)]
+```
+
+### 混合map和filter
+
+选出a中的基数，并乘以2
+
+
+map 和 filter的做法
+
+```{python}
+result = list(map(do_double, filter(is_odd, a)))
+print(result)
+```
+列表推导的做法
+
+```{python}
+result = [do_double(i) for i in a if is_odd(i)]
+print(result)
+```
+
+注：
+
+1. 多数情况下，列表推导和map/filter函数几乎可以相互替代
+2. 列表更加符合Python的“风格”
+3. 但超级巨大List时，用map/filter性能更好：map/filter是一个lazy（惰性）函数，只有在你引用其中的值时，才会把函数**真正**应用上去。
+4. map/filter的结果，最后要转为list
+
+所以
+
+1. 清晰性：列表推导 > map/filter函数 > 循环
+2. 性能：map/filter函数 > 列表推导 > 循环
+
+从逻辑上来讲，应该是先有`map/filer`：要把一个函数应用到List中的所有元素/过滤元素，这是个基础性的需求，大多数编程语言都有做这件事的办法。我们一般把这种操作统称为`map/filter`。Python的列表推导，可以看成是一个Python优化版的`map/filter`。
+
+
+
+### 匿名函数 lambda
+
+使用`lambda`关键字，一个表达式，直接返回这个表达式的结果，不用写`return`。
+
+注：
+
+对于初学者，建议还是把具体的操作起一个可以“顾名思义”的名字。
+
+```{python}
+result =  map(do_double, a)
+print(list(result))
+```
+
+```{python}
+result =  map(lambda x:x * 2,a)
+print(list(result))
+```
+
+## 高阶函数（进阶）（施工中）
+
+
+在python中，函数是一等公民（头等函数，first-class function）。
+
+一个函数，可以和一般变量一样，绑定一个名字（函数名），也可以换一个名字（从绑定），也可以作为参数传递给另一个函数（函数作为参数传另一个函数），也可以作为一个函数的返回值（函数返回另一个函数）。
+
+
+### “函数生成器”，用参数来生成不同的函数
+
+```{python}
+
+
+```
+
+
+
+
+
+# 内置函数和常用库
+
+# Numpy
+
+# Pandas
+
+# 综合数据处理
