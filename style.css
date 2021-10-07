@@ -14,3 +14,9 @@ pre code {
 }
 
 p{ text-indent:2em;}
+
+pre.numberSource code > span > a:first-child::before {
+  left: -0.4em;
+  text-decoration: none; 
+
+}

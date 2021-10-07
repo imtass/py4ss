@@ -13,6 +13,14 @@ link-citations: yes
 # github-repo: rstudio/bookdown-demo
 ---
 
+
+```{r, include=FALSE}
+# knitr::opts_chunk$set(
+#   attr.source = ".numberLines"
+# )
+```
+
+
 ```{r}
 colorize <- function(x, color) {
   if (knitr::is_latex_output()) {

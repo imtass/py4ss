@@ -67,8 +67,6 @@ weight = 80.5
 
 ```{python}
 year = 2005 # 或者任何一年
-
-
 ```
 
 
@@ -85,24 +83,24 @@ year = 2005 # 或者任何一年
 
 ```{python}
 a = 4
-b = 2
-c = 9
-
+b = 9
+c = 2
 
 if a>b:
-    if a>c:
-        max_value=a
-    else:
-        max_value=c
+  if a>c:
+     max_value=a
+  else:
+    max_value=c
 else:
-    if b>c:
-        max_value=b
-    else:
-        max_value=c
-        
+  if b>c:
+    max_value=b
+  else:
+    max_value=c
+  
 print(f"最大值是{max_value}")     
 ```
 
+<iframe width="800" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=a%20%3D%204%0Ab%20%3D%209%0Ac%20%3D%202%0A%0Aif%20a%3Eb%3A%0A%20%20if%20a%3Ec%3A%0A%20%20%20%20max_value%3Da%0A%20%20else%3A%0A%20%20%20%20max_value%3Dc%0Aelse%3A%0A%20%20if%20b%3Ec%3A%0A%20%20%20%20max_value%3Db%0A%20%20else%3A%0A%20%20%20%20max_value%3Dc%0A%20%20%0Aprint%28f%22%E6%9C%80%E5%A4%A7%E5%80%BC%E6%98%AF%7Bmax_value%7D%22%29%20%20%20%20%20&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=7&heapPrimitives=nevernest&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
 
 ### 练习
 
@@ -160,14 +158,17 @@ print(i)
 ```
 
 
-设计一个从1到10的循环
+设计一个从1到5的循环
 ```{python}
 i = 1
-while i <= 10:
+while i <= 5:
   print(i)
   i +=1 
-
+else:
+  print("循环结束")
 ```
+
+<iframe width="800" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=i%20%3D%201%0Awhile%20i%20%3C%3D%205%3A%0A%20%20print%28i%29%0A%20%20i%20%2B%3D1%20%0Aelse%3A%0A%20%20print%28%22%E5%BE%AA%E7%8E%AF%E7%BB%93%E6%9D%9F%22%29&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
 
 ### 练习
 
@@ -308,10 +309,9 @@ target = 30
 ```
 
 
-
-
-
 ### 列表推导式List Comprehension
+
+更详细的内容见后。
 
 遍历List，并进行某个操作
 ```{python}

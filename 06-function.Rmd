@@ -62,7 +62,6 @@ print(a_size)
 def add(x, y):
   z = x + y
   return z
-
 ```
 逐行解释一下
 
@@ -145,6 +144,23 @@ area = calc_area(x)
 
 print(f"半径为{x}的圆，其面积为{area:0.2f}")
 
+```
+
+### 不返回值
+
+若函数不需要返回任何值，不写`return`语句，或者`return`语句后不返回任何值
+
+```{python}
+#%% 这2种都是可以的
+def hello():
+  print("hello") # 不写return
+  
+def hello2():
+  print("hello")
+  return # 写return但不包括返回值
+
+hello()
+hello2()
 ```
 
 
@@ -452,26 +468,126 @@ print(list(result))
 ## 高阶函数（进阶）（施工中）
 
 
+
 在python中，函数是一等公民（头等函数，first-class function）。
 
 一个函数，可以和任何变量或者对象一样，绑定一个名字（函数名），也可以换一个名字（重绑定），也可以作为参数传递给另一个函数（函数作为参数传另一个函数），也可以作为一个函数的返回值（函数返回另一个函数）。
 
 
-### “函数生成器”，用参数来生成不同的函数
+### 函数是一等公民
 
 ```{python}
+def add(x,y):
+  return x + y
 
+print(add(1,2))
+```
+
+函数和变量一样，其名字也可以重新绑定.
+
+`dda = add`之后，`dda`和`add`指向同一个函数（加法函数），`dda()`也可以正常调用。
+
+```{python}
+dda = add
+
+print(dda(1,2))
+
+```
+### 函数作为参数
+
+例如map，可以把一个指定的函数，应用到List的每一个元素上。
+
+`map()`函数的第一参数，就是你要应用到List元素上的函数， 比如前例中乘以2`do_double`，这里是把函数`do_double`作为参数传递给了`map`。第二个参数，就是你要处理的List。
+
+
+
+```{python}
+result = map(do_double, [1,2,3,4,5])
+print(list(result))
 
 ```
 
 
 
+### “函数生成器”
+
+用参数来生成不同的函数。
+
+这个函数，可以根据你给的参数`n`，生成另一个函数：n次方函数生成器
+
+```{python}
+def power(n):
+
+  def fun(x):
+    return x ** n
+  
+  return fun
+```
 
 
-# 内置函数和常用库
+```{python}
+square = power(2)
+'''
+n = 2
+def fun(x):
+  return x ** n
 
-# Numpy
+square = fun
+'''
+```
 
-# Pandas
 
-# 综合数据处理
+```{python}
+cube = power(3)
+
+```
+
+
+```{python}
+print(square(3))
+
+print(cube(2))
+
+```
+### 闭包Closure
+
+
+一个闭包closure，可以认为是一个函数，但除了函数体本身，包含了定义闭包时的数据。
+
+例如
+
+```{python}
+def power(n):
+
+  def fun(x):
+    return x ** n
+  
+  return fun
+```
+
+
+这个代码里，调用`power()`函数，会返回另一个函数`fun()`。
+
+这个函数里面调用了变量`n`，但`n`不在`fun()`的函数体内，而在上一层。`fun()`函数，会把生产自己的坏境中的变量，也包括在里面：闭包是一个附带数据的函数。
+
+
+这段代码发生了什么？
+```{python}
+square = power(2) 
+```
+
+`square`函数，相当于一个附带了`n=2`的`fun`函数
+
+1. `power(n = 2)`，其中`n = 2`
+2. 在`power()`函数的内部，`fun(x)`是可以看见这个`n=2`的
+3. `return fun`的时候，会把`n=2`，一并返回到外层
+4. `square = power(2) `,此时我们把`square`这个名字，绑定给`fun`这个函数（闭包），而后者同时还附带了`n=2`
+
+
+
+前面讲变量作用域，python找一个名称，是从内到外
+
+1. L局部作用域：即函数体内。例如本例中`fun`函数的`x`
+2. Enclosing function locals：函数中嵌套函数的外部：例如本例中`fun`函数的`n`
+3. G全局：代码的最外层
+4. B内置名称：python的一些内置的名称，如`max`函数
