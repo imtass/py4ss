@@ -1,0 +1,100 @@
+# 综合应用
+
+
+## 从数据开始
+
+例如，我们要一个程序来处理班级同学的信息。每个同学起码有这几个信息：
+
+1. 学号
+2. 姓名
+3. 专业
+4. 班级号
+
+用现在所学的信息，我们可以用字典dict来表示任何一个同学。
+
+```{python}
+student_1 = {'student_id':2021001, 'name':'Alex', 'major': 'finance', 'class_id':1}
+
+student_2 = {'student_id':2021002, 'name':'Bob', 'major': 'finance', 'class_id':1}
+
+student_3 = {'student_id':2021003, 'name':'Clare', 'major': 'finance', 'class_id':2}
+
+
+print(student_1)
+print(student_2)
+print(student_3)
+```
+显然，同类数据，我们可以组成一个List，或者另一个Dict。
+
+
+```{python}
+# List版本
+
+student_info = [
+  student_1,
+  student_2,
+  student_3
+]
+
+print(student_info)
+```
+
+## 编写功能
+
+做几个查找：
+
+1. 找出Alex的信息，既然student_info是一个列表，那我们就用列表推导。
+
+```{python}
+
+result = [s for s in student_info if s['name'] == "Alex"]
+
+print(result)
+```
+注意：列表推导的结果，也是一个列表，即使其中只有1个元素。看打印的最2边是中括号。
+
+那么有多少个同学叫Alex?
+
+```{python}
+len(result)
+```
+
+那我们可以获得Alex的信息，例如学号和专业
+
+```{python}
+print(result[0]['student_id'])
+print(result[0]['major'])
+```
+
+按人名查找，是一个特别常用的功能，那我们写一个函数
+
+```{python}
+def find_student_by_name(x, name):
+  result = [s for s in x if s['name'] == name]
+  return result
+
+result = find_student_by_name(student_info,"Alex")
+print(result)
+```
+### 练习
+
+
+
+
+# 面向对象初步
+
+面向对象：数据和操作数据的方法（函数）绑定在一起。
+
+
+类和对象的关系：
+
+1. 类Class：月饼的模子
+2. 对象Object：月饼
+
+# Numpy
+
+# Pandas
+
+# 综合数据处理
+
+

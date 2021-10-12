@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>11 Pandas | 写给文科生的Python入门和数据处理教程</title>
+  <title>13 Pandas | 写给文科生的Python入门和数据处理教程</title>
   <meta name="description" content="为人文社科类研究员和学生设计的的Python入门和数据处理教程" />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="11 Pandas | 写给文科生的Python入门和数据处理教程" />
+  <meta property="og:title" content="13 Pandas | 写给文科生的Python入门和数据处理教程" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="11 Pandas | 写给文科生的Python入门和数据处理教程" />
+  <meta name="twitter:title" content="13 Pandas | 写给文科生的Python入门和数据处理教程" />
   
   <meta name="twitter:description" content="为人文社科类研究员和学生设计的的Python入门和数据处理教程" />
   
@@ -24,7 +24,7 @@
 <meta name="author" content="Li Weicheng @ gpnu" />
 
 
-<meta name="date" content="2021-10-07" />
+<meta name="date" content="2021-10-12" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -53,6 +53,7 @@
 
 <link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<script async defer src="https://hypothes.is/embed.js"></script>
 
 
 <style type="text/css">
@@ -137,7 +138,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><a href="./">写给文科生的Python入门和数据处理教程</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> url: your book url like <span>https://bookdown.org/yihui/bookdown</span></a>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> 引言</a>
 <ul>
 <li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#本书目标"><i class="fa fa-check"></i><b>1.1</b> 本书目标</a></li>
 <li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#本书不足"><i class="fa fa-check"></i><b>1.2</b> 本书不足</a></li>
@@ -258,6 +259,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="6.1.4" data-path="条件与循环施工中.html"><a href="条件与循环施工中.html#练习"><i class="fa fa-check"></i><b>6.1.4</b> 练习</a></li>
 <li class="chapter" data-level="6.1.5" data-path="条件与循环施工中.html"><a href="条件与循环施工中.html#嵌套if"><i class="fa fa-check"></i><b>6.1.5</b> 嵌套if</a></li>
 <li class="chapter" data-level="6.1.6" data-path="条件与循环施工中.html"><a href="条件与循环施工中.html#练习-1"><i class="fa fa-check"></i><b>6.1.6</b> 练习</a></li>
+<li class="chapter" data-level="6.1.7" data-path="条件与循环施工中.html"><a href="条件与循环施工中.html#再谈布尔值"><i class="fa fa-check"></i><b>6.1.7</b> 再谈布尔值</a></li>
 </ul></li>
 <li class="chapter" data-level="6.2" data-path="条件与循环施工中.html"><a href="条件与循环施工中.html#while循环"><i class="fa fa-check"></i><b>6.2</b> while循环</a>
 <ul>
@@ -266,13 +268,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="6.3" data-path="条件与循环施工中.html"><a href="条件与循环施工中.html#for循环"><i class="fa fa-check"></i><b>6.3</b> for循环</a>
 <ul>
-<li class="chapter" data-level="6.3.1" data-path="条件与循环施工中.html"><a href="条件与循环施工中.html#range的循环"><i class="fa fa-check"></i><b>6.3.1</b> range的循环</a></li>
+<li class="chapter" data-level="6.3.1" data-path="条件与循环施工中.html"><a href="条件与循环施工中.html#如果没有for循环"><i class="fa fa-check"></i><b>6.3.1</b> 如果没有for循环</a></li>
+<li class="chapter" data-level="6.3.2" data-path="条件与循环施工中.html"><a href="条件与循环施工中.html#用while循环"><i class="fa fa-check"></i><b>6.3.2</b> 用while循环？</a></li>
+<li class="chapter" data-level="6.3.3" data-path="条件与循环施工中.html"><a href="条件与循环施工中.html#用for循环"><i class="fa fa-check"></i><b>6.3.3</b> 用for循环</a></li>
+<li class="chapter" data-level="6.3.4" data-path="条件与循环施工中.html"><a href="条件与循环施工中.html#比较"><i class="fa fa-check"></i><b>6.3.4</b> 比较</a></li>
+<li class="chapter" data-level="6.3.5" data-path="条件与循环施工中.html"><a href="条件与循环施工中.html#for循环-1"><i class="fa fa-check"></i><b>6.3.5</b> for循环</a></li>
+<li class="chapter" data-level="6.3.6" data-path="条件与循环施工中.html"><a href="条件与循环施工中.html#range的循环"><i class="fa fa-check"></i><b>6.3.6</b> range的循环</a></li>
 </ul></li>
-<li class="chapter" data-level="6.4" data-path="条件与循环施工中.html"><a href="条件与循环施工中.html#更多练习"><i class="fa fa-check"></i><b>6.4</b> 更多练习</a>
-<ul>
-<li class="chapter" data-level="6.4.1" data-path="条件与循环施工中.html"><a href="条件与循环施工中.html#列表推导式list-comprehension"><i class="fa fa-check"></i><b>6.4.1</b> 列表推导式List Comprehension</a></li>
-</ul></li>
-<li class="chapter" data-level="6.5" data-path="条件与循环施工中.html"><a href="条件与循环施工中.html#循环dict"><i class="fa fa-check"></i><b>6.5</b> 循环Dict</a></li>
+<li class="chapter" data-level="6.4" data-path="条件与循环施工中.html"><a href="条件与循环施工中.html#更多练习"><i class="fa fa-check"></i><b>6.4</b> 更多练习</a></li>
+<li class="chapter" data-level="6.5" data-path="条件与循环施工中.html"><a href="条件与循环施工中.html#列表推导式list-comprehension"><i class="fa fa-check"></i><b>6.5</b> 列表推导式List Comprehension</a></li>
+<li class="chapter" data-level="6.6" data-path="条件与循环施工中.html"><a href="条件与循环施工中.html#循环dict"><i class="fa fa-check"></i><b>6.6</b> 循环Dict</a></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="函数施工中.html"><a href="函数施工中.html"><i class="fa fa-check"></i><b>7</b> 函数（施工中）</a>
 <ul>
@@ -291,41 +296,57 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="7.2.3" data-path="函数施工中.html"><a href="函数施工中.html#默认参数"><i class="fa fa-check"></i><b>7.2.3</b> 默认参数</a></li>
 <li class="chapter" data-level="7.2.4" data-path="函数施工中.html"><a href="函数施工中.html#例乘方函数n次方"><i class="fa fa-check"></i><b>7.2.4</b> 例：乘方函数（n次方）</a></li>
 <li class="chapter" data-level="7.2.5" data-path="函数施工中.html"><a href="函数施工中.html#不定长参数进阶"><i class="fa fa-check"></i><b>7.2.5</b> 不定长参数（进阶）</a></li>
+<li class="chapter" data-level="7.2.6" data-path="函数施工中.html"><a href="函数施工中.html#可变参数以dict形式传递"><i class="fa fa-check"></i><b>7.2.6</b> 可变参数以dict形式传递</a></li>
 </ul></li>
-<li class="chapter" data-level="7.3" data-path="函数施工中.html"><a href="函数施工中.html#变量作用域"><i class="fa fa-check"></i><b>7.3</b> 变量作用域</a>
+<li class="chapter" data-level="7.3" data-path="函数施工中.html"><a href="函数施工中.html#参数作为可变类型和不可变类型"><i class="fa fa-check"></i><b>7.3</b> 参数作为可变类型和不可变类型</a></li>
+<li class="chapter" data-level="7.4" data-path="函数施工中.html"><a href="函数施工中.html#递归简介知道即可"><i class="fa fa-check"></i><b>7.4</b> 递归简介（知道即可）</a></li>
+<li class="chapter" data-level="7.5" data-path="函数施工中.html"><a href="函数施工中.html#变量作用域"><i class="fa fa-check"></i><b>7.5</b> 变量作用域</a>
 <ul>
-<li class="chapter" data-level="7.3.1" data-path="函数施工中.html"><a href="函数施工中.html#局部作用域"><i class="fa fa-check"></i><b>7.3.1</b> 局部作用域</a></li>
-<li class="chapter" data-level="7.3.2" data-path="函数施工中.html"><a href="函数施工中.html#全局作用域"><i class="fa fa-check"></i><b>7.3.2</b> 全局作用域</a></li>
+<li class="chapter" data-level="7.5.1" data-path="函数施工中.html"><a href="函数施工中.html#局部作用域"><i class="fa fa-check"></i><b>7.5.1</b> 局部作用域</a></li>
+<li class="chapter" data-level="7.5.2" data-path="函数施工中.html"><a href="函数施工中.html#全局作用域"><i class="fa fa-check"></i><b>7.5.2</b> 全局作用域</a></li>
 </ul></li>
-<li class="chapter" data-level="7.4" data-path="函数施工中.html"><a href="函数施工中.html#map和filter"><i class="fa fa-check"></i><b>7.4</b> map和filter</a>
+</ul></li>
+<li class="chapter" data-level="8" data-path="函数式编程入门.html"><a href="函数式编程入门.html"><i class="fa fa-check"></i><b>8</b> 函数式编程入门</a>
 <ul>
-<li class="chapter" data-level="7.4.1" data-path="函数施工中.html"><a href="函数施工中.html#map"><i class="fa fa-check"></i><b>7.4.1</b> map</a></li>
-<li class="chapter" data-level="7.4.2" data-path="函数施工中.html"><a href="函数施工中.html#filter"><i class="fa fa-check"></i><b>7.4.2</b> filter</a></li>
-<li class="chapter" data-level="7.4.3" data-path="函数施工中.html"><a href="函数施工中.html#混合map和filter"><i class="fa fa-check"></i><b>7.4.3</b> 混合map和filter</a></li>
-<li class="chapter" data-level="7.4.4" data-path="函数施工中.html"><a href="函数施工中.html#匿名函数-lambda"><i class="fa fa-check"></i><b>7.4.4</b> 匿名函数 lambda</a></li>
-</ul></li>
-<li class="chapter" data-level="7.5" data-path="函数施工中.html"><a href="函数施工中.html#高阶函数进阶施工中"><i class="fa fa-check"></i><b>7.5</b> 高阶函数（进阶）（施工中）</a>
+<li class="chapter" data-level="8.1" data-path="函数式编程入门.html"><a href="函数式编程入门.html#map和filter"><i class="fa fa-check"></i><b>8.1</b> map和filter</a>
 <ul>
-<li class="chapter" data-level="7.5.1" data-path="函数施工中.html"><a href="函数施工中.html#函数是一等公民"><i class="fa fa-check"></i><b>7.5.1</b> 函数是一等公民</a></li>
-<li class="chapter" data-level="7.5.2" data-path="函数施工中.html"><a href="函数施工中.html#函数作为参数"><i class="fa fa-check"></i><b>7.5.2</b> 函数作为参数</a></li>
-<li class="chapter" data-level="7.5.3" data-path="函数施工中.html"><a href="函数施工中.html#函数生成器"><i class="fa fa-check"></i><b>7.5.3</b> “函数生成器”</a></li>
-<li class="chapter" data-level="7.5.4" data-path="函数施工中.html"><a href="函数施工中.html#闭包closure"><i class="fa fa-check"></i><b>7.5.4</b> 闭包Closure</a></li>
+<li class="chapter" data-level="8.1.1" data-path="函数式编程入门.html"><a href="函数式编程入门.html#map"><i class="fa fa-check"></i><b>8.1.1</b> map</a></li>
+<li class="chapter" data-level="8.1.2" data-path="函数式编程入门.html"><a href="函数式编程入门.html#filter"><i class="fa fa-check"></i><b>8.1.2</b> filter</a></li>
+<li class="chapter" data-level="8.1.3" data-path="函数式编程入门.html"><a href="函数式编程入门.html#混合map和filter"><i class="fa fa-check"></i><b>8.1.3</b> 混合map和filter</a></li>
+<li class="chapter" data-level="8.1.4" data-path="函数式编程入门.html"><a href="函数式编程入门.html#匿名函数-lambda"><i class="fa fa-check"></i><b>8.1.4</b> 匿名函数 lambda</a></li>
+<li class="chapter" data-level="8.1.5" data-path="函数式编程入门.html"><a href="函数式编程入门.html#map和filter的结果惰性"><i class="fa fa-check"></i><b>8.1.5</b> map和filter的结果：惰性</a></li>
 </ul></li>
-</ul></li>
-<li class="chapter" data-level="8" data-path="模块module-施工中.html"><a href="模块module-施工中.html"><i class="fa fa-check"></i><b>8</b> 模块module （施工中）</a>
+<li class="chapter" data-level="8.2" data-path="函数式编程入门.html"><a href="函数式编程入门.html#高阶函数进阶施工中"><i class="fa fa-check"></i><b>8.2</b> 高阶函数（进阶）（施工中）</a>
 <ul>
-<li class="chapter" data-level="8.1" data-path="模块module-施工中.html"><a href="模块module-施工中.html#引入模块"><i class="fa fa-check"></i><b>8.1</b> 引入模块</a>
+<li class="chapter" data-level="8.2.1" data-path="函数式编程入门.html"><a href="函数式编程入门.html#函数是一等公民"><i class="fa fa-check"></i><b>8.2.1</b> 函数是一等公民</a></li>
+<li class="chapter" data-level="8.2.2" data-path="函数式编程入门.html"><a href="函数式编程入门.html#函数作为参数"><i class="fa fa-check"></i><b>8.2.2</b> 函数作为参数</a></li>
+<li class="chapter" data-level="8.2.3" data-path="函数式编程入门.html"><a href="函数式编程入门.html#函数生成器"><i class="fa fa-check"></i><b>8.2.3</b> “函数生成器”</a></li>
+<li class="chapter" data-level="8.2.4" data-path="函数式编程入门.html"><a href="函数式编程入门.html#reduce"><i class="fa fa-check"></i><b>8.2.4</b> reduce</a></li>
+<li class="chapter" data-level="8.2.5" data-path="函数式编程入门.html"><a href="函数式编程入门.html#闭包closure"><i class="fa fa-check"></i><b>8.2.5</b> 闭包Closure</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="模块module-施工中.html"><a href="模块module-施工中.html"><i class="fa fa-check"></i><b>9</b> 模块module （施工中）</a>
 <ul>
-<li class="chapter" data-level="8.1.1" data-path="模块module-施工中.html"><a href="模块module-施工中.html#import"><i class="fa fa-check"></i><b>8.1.1</b> import</a></li>
-<li class="chapter" data-level="8.1.2" data-path="模块module-施工中.html"><a href="模块module-施工中.html#引入到当前名字空间"><i class="fa fa-check"></i><b>8.1.2</b> 引入到当前名字空间</a></li>
+<li class="chapter" data-level="9.1" data-path="模块module-施工中.html"><a href="模块module-施工中.html#引入模块"><i class="fa fa-check"></i><b>9.1</b> 引入模块</a>
+<ul>
+<li class="chapter" data-level="9.1.1" data-path="模块module-施工中.html"><a href="模块module-施工中.html#import"><i class="fa fa-check"></i><b>9.1.1</b> import</a></li>
+<li class="chapter" data-level="9.1.2" data-path="模块module-施工中.html"><a href="模块module-施工中.html#引入到当前名字空间"><i class="fa fa-check"></i><b>9.1.2</b> 引入到当前名字空间</a></li>
 </ul></li>
-<li class="chapter" data-level="8.2" data-path="模块module-施工中.html"><a href="模块module-施工中.html#自定义模块"><i class="fa fa-check"></i><b>8.2</b> 自定义模块</a></li>
-<li class="chapter" data-level="8.3" data-path="模块module-施工中.html"><a href="模块module-施工中.html#包package"><i class="fa fa-check"></i><b>8.3</b> 包package</a></li>
+<li class="chapter" data-level="9.2" data-path="模块module-施工中.html"><a href="模块module-施工中.html#自定义模块"><i class="fa fa-check"></i><b>9.2</b> 自定义模块</a></li>
+<li class="chapter" data-level="9.3" data-path="模块module-施工中.html"><a href="模块module-施工中.html#包package"><i class="fa fa-check"></i><b>9.3</b> 包package</a></li>
 </ul></li>
-<li class="chapter" data-level="9" data-path="内置函数和常用库.html"><a href="内置函数和常用库.html"><i class="fa fa-check"></i><b>9</b> 内置函数和常用库</a></li>
-<li class="chapter" data-level="10" data-path="numpy.html"><a href="numpy.html"><i class="fa fa-check"></i><b>10</b> Numpy</a></li>
-<li class="chapter" data-level="11" data-path="pandas.html"><a href="pandas.html"><i class="fa fa-check"></i><b>11</b> Pandas</a></li>
-<li class="chapter" data-level="12" data-path="综合数据处理.html"><a href="综合数据处理.html"><i class="fa fa-check"></i><b>12</b> 综合数据处理</a></li>
+<li class="chapter" data-level="10" data-path="综合应用.html"><a href="综合应用.html"><i class="fa fa-check"></i><b>10</b> 综合应用</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="综合应用.html"><a href="综合应用.html#从数据开始"><i class="fa fa-check"></i><b>10.1</b> 从数据开始</a></li>
+<li class="chapter" data-level="10.2" data-path="综合应用.html"><a href="综合应用.html#编写功能"><i class="fa fa-check"></i><b>10.2</b> 编写功能</a>
+<ul>
+<li class="chapter" data-level="10.2.1" data-path="综合应用.html"><a href="综合应用.html#练习-3"><i class="fa fa-check"></i><b>10.2.1</b> 练习</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="面向对象初步.html"><a href="面向对象初步.html"><i class="fa fa-check"></i><b>11</b> 面向对象初步</a></li>
+<li class="chapter" data-level="12" data-path="numpy.html"><a href="numpy.html"><i class="fa fa-check"></i><b>12</b> Numpy</a></li>
+<li class="chapter" data-level="13" data-path="pandas.html"><a href="pandas.html"><i class="fa fa-check"></i><b>13</b> Pandas</a></li>
+<li class="chapter" data-level="14" data-path="综合数据处理.html"><a href="综合数据处理.html"><i class="fa fa-check"></i><b>14</b> 综合数据处理</a></li>
 </ul>
 
       </nav>
@@ -343,8 +364,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="pandas" class="section level1" number="11">
-<h1><span class="header-section-number">11</span> Pandas</h1>
+<div class = rmdreview>
+  
+<p> 这本书添加了注释功能，<span style="background-color: #3297FD; color: white">左键选择任何文字</span>，就会弹出注释菜单。注释功能区在页面的右上角。
+<p> 注释有公共和私人两类。私人注释只有自己能看见，公共则所有人都能看见。</p>
+
+</div>
+<div id="pandas" class="section level1" number="13">
+<h1><span class="header-section-number">13</span> Pandas</h1>
 </div>
             </section>
 
@@ -406,6 +433,20 @@ gitbook.start({
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>

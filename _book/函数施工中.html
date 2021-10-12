@@ -24,7 +24,7 @@
 <meta name="author" content="Li Weicheng @ gpnu" />
 
 
-<meta name="date" content="2021-10-07" />
+<meta name="date" content="2021-10-12" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -53,6 +53,7 @@
 
 <link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<script async defer src="https://hypothes.is/embed.js"></script>
 
 
 <style type="text/css">
@@ -258,6 +259,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="6.1.4" data-path="条件与循环施工中.html"><a href="条件与循环施工中.html#练习"><i class="fa fa-check"></i><b>6.1.4</b> 练习</a></li>
 <li class="chapter" data-level="6.1.5" data-path="条件与循环施工中.html"><a href="条件与循环施工中.html#嵌套if"><i class="fa fa-check"></i><b>6.1.5</b> 嵌套if</a></li>
 <li class="chapter" data-level="6.1.6" data-path="条件与循环施工中.html"><a href="条件与循环施工中.html#练习-1"><i class="fa fa-check"></i><b>6.1.6</b> 练习</a></li>
+<li class="chapter" data-level="6.1.7" data-path="条件与循环施工中.html"><a href="条件与循环施工中.html#再谈布尔值"><i class="fa fa-check"></i><b>6.1.7</b> 再谈布尔值</a></li>
 </ul></li>
 <li class="chapter" data-level="6.2" data-path="条件与循环施工中.html"><a href="条件与循环施工中.html#while循环"><i class="fa fa-check"></i><b>6.2</b> while循环</a>
 <ul>
@@ -266,13 +268,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="6.3" data-path="条件与循环施工中.html"><a href="条件与循环施工中.html#for循环"><i class="fa fa-check"></i><b>6.3</b> for循环</a>
 <ul>
-<li class="chapter" data-level="6.3.1" data-path="条件与循环施工中.html"><a href="条件与循环施工中.html#range的循环"><i class="fa fa-check"></i><b>6.3.1</b> range的循环</a></li>
+<li class="chapter" data-level="6.3.1" data-path="条件与循环施工中.html"><a href="条件与循环施工中.html#如果没有for循环"><i class="fa fa-check"></i><b>6.3.1</b> 如果没有for循环</a></li>
+<li class="chapter" data-level="6.3.2" data-path="条件与循环施工中.html"><a href="条件与循环施工中.html#用while循环"><i class="fa fa-check"></i><b>6.3.2</b> 用while循环？</a></li>
+<li class="chapter" data-level="6.3.3" data-path="条件与循环施工中.html"><a href="条件与循环施工中.html#用for循环"><i class="fa fa-check"></i><b>6.3.3</b> 用for循环</a></li>
+<li class="chapter" data-level="6.3.4" data-path="条件与循环施工中.html"><a href="条件与循环施工中.html#比较"><i class="fa fa-check"></i><b>6.3.4</b> 比较</a></li>
+<li class="chapter" data-level="6.3.5" data-path="条件与循环施工中.html"><a href="条件与循环施工中.html#for循环-1"><i class="fa fa-check"></i><b>6.3.5</b> for循环</a></li>
+<li class="chapter" data-level="6.3.6" data-path="条件与循环施工中.html"><a href="条件与循环施工中.html#range的循环"><i class="fa fa-check"></i><b>6.3.6</b> range的循环</a></li>
 </ul></li>
-<li class="chapter" data-level="6.4" data-path="条件与循环施工中.html"><a href="条件与循环施工中.html#更多练习"><i class="fa fa-check"></i><b>6.4</b> 更多练习</a>
-<ul>
-<li class="chapter" data-level="6.4.1" data-path="条件与循环施工中.html"><a href="条件与循环施工中.html#列表推导式list-comprehension"><i class="fa fa-check"></i><b>6.4.1</b> 列表推导式List Comprehension</a></li>
-</ul></li>
-<li class="chapter" data-level="6.5" data-path="条件与循环施工中.html"><a href="条件与循环施工中.html#循环dict"><i class="fa fa-check"></i><b>6.5</b> 循环Dict</a></li>
+<li class="chapter" data-level="6.4" data-path="条件与循环施工中.html"><a href="条件与循环施工中.html#更多练习"><i class="fa fa-check"></i><b>6.4</b> 更多练习</a></li>
+<li class="chapter" data-level="6.5" data-path="条件与循环施工中.html"><a href="条件与循环施工中.html#列表推导式list-comprehension"><i class="fa fa-check"></i><b>6.5</b> 列表推导式List Comprehension</a></li>
+<li class="chapter" data-level="6.6" data-path="条件与循环施工中.html"><a href="条件与循环施工中.html#循环dict"><i class="fa fa-check"></i><b>6.6</b> 循环Dict</a></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="函数施工中.html"><a href="函数施工中.html"><i class="fa fa-check"></i><b>7</b> 函数（施工中）</a>
 <ul>
@@ -291,11 +296,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="7.2.3" data-path="函数施工中.html"><a href="函数施工中.html#默认参数"><i class="fa fa-check"></i><b>7.2.3</b> 默认参数</a></li>
 <li class="chapter" data-level="7.2.4" data-path="函数施工中.html"><a href="函数施工中.html#例乘方函数n次方"><i class="fa fa-check"></i><b>7.2.4</b> 例：乘方函数（n次方）</a></li>
 <li class="chapter" data-level="7.2.5" data-path="函数施工中.html"><a href="函数施工中.html#不定长参数进阶"><i class="fa fa-check"></i><b>7.2.5</b> 不定长参数（进阶）</a></li>
+<li class="chapter" data-level="7.2.6" data-path="函数施工中.html"><a href="函数施工中.html#可变参数以dict形式传递"><i class="fa fa-check"></i><b>7.2.6</b> 可变参数以dict形式传递</a></li>
 </ul></li>
-<li class="chapter" data-level="7.3" data-path="函数施工中.html"><a href="函数施工中.html#变量作用域"><i class="fa fa-check"></i><b>7.3</b> 变量作用域</a>
+<li class="chapter" data-level="7.3" data-path="函数施工中.html"><a href="函数施工中.html#参数作为可变类型和不可变类型"><i class="fa fa-check"></i><b>7.3</b> 参数作为可变类型和不可变类型</a></li>
+<li class="chapter" data-level="7.4" data-path="函数施工中.html"><a href="函数施工中.html#递归简介知道即可"><i class="fa fa-check"></i><b>7.4</b> 递归简介（知道即可）</a></li>
+<li class="chapter" data-level="7.5" data-path="函数施工中.html"><a href="函数施工中.html#变量作用域"><i class="fa fa-check"></i><b>7.5</b> 变量作用域</a>
 <ul>
-<li class="chapter" data-level="7.3.1" data-path="函数施工中.html"><a href="函数施工中.html#局部作用域"><i class="fa fa-check"></i><b>7.3.1</b> 局部作用域</a></li>
-<li class="chapter" data-level="7.3.2" data-path="函数施工中.html"><a href="函数施工中.html#全局作用域"><i class="fa fa-check"></i><b>7.3.2</b> 全局作用域</a></li>
+<li class="chapter" data-level="7.5.1" data-path="函数施工中.html"><a href="函数施工中.html#局部作用域"><i class="fa fa-check"></i><b>7.5.1</b> 局部作用域</a></li>
+<li class="chapter" data-level="7.5.2" data-path="函数施工中.html"><a href="函数施工中.html#全局作用域"><i class="fa fa-check"></i><b>7.5.2</b> 全局作用域</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="函数式编程入门.html"><a href="函数式编程入门.html"><i class="fa fa-check"></i><b>8</b> 函数式编程入门</a>
@@ -306,13 +314,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="8.1.2" data-path="函数式编程入门.html"><a href="函数式编程入门.html#filter"><i class="fa fa-check"></i><b>8.1.2</b> filter</a></li>
 <li class="chapter" data-level="8.1.3" data-path="函数式编程入门.html"><a href="函数式编程入门.html#混合map和filter"><i class="fa fa-check"></i><b>8.1.3</b> 混合map和filter</a></li>
 <li class="chapter" data-level="8.1.4" data-path="函数式编程入门.html"><a href="函数式编程入门.html#匿名函数-lambda"><i class="fa fa-check"></i><b>8.1.4</b> 匿名函数 lambda</a></li>
+<li class="chapter" data-level="8.1.5" data-path="函数式编程入门.html"><a href="函数式编程入门.html#map和filter的结果惰性"><i class="fa fa-check"></i><b>8.1.5</b> map和filter的结果：惰性</a></li>
 </ul></li>
 <li class="chapter" data-level="8.2" data-path="函数式编程入门.html"><a href="函数式编程入门.html#高阶函数进阶施工中"><i class="fa fa-check"></i><b>8.2</b> 高阶函数（进阶）（施工中）</a>
 <ul>
 <li class="chapter" data-level="8.2.1" data-path="函数式编程入门.html"><a href="函数式编程入门.html#函数是一等公民"><i class="fa fa-check"></i><b>8.2.1</b> 函数是一等公民</a></li>
 <li class="chapter" data-level="8.2.2" data-path="函数式编程入门.html"><a href="函数式编程入门.html#函数作为参数"><i class="fa fa-check"></i><b>8.2.2</b> 函数作为参数</a></li>
 <li class="chapter" data-level="8.2.3" data-path="函数式编程入门.html"><a href="函数式编程入门.html#函数生成器"><i class="fa fa-check"></i><b>8.2.3</b> “函数生成器”</a></li>
-<li class="chapter" data-level="8.2.4" data-path="函数式编程入门.html"><a href="函数式编程入门.html#闭包closure"><i class="fa fa-check"></i><b>8.2.4</b> 闭包Closure</a></li>
+<li class="chapter" data-level="8.2.4" data-path="函数式编程入门.html"><a href="函数式编程入门.html#reduce"><i class="fa fa-check"></i><b>8.2.4</b> reduce</a></li>
+<li class="chapter" data-level="8.2.5" data-path="函数式编程入门.html"><a href="函数式编程入门.html#闭包closure"><i class="fa fa-check"></i><b>8.2.5</b> 闭包Closure</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="9" data-path="模块module-施工中.html"><a href="模块module-施工中.html"><i class="fa fa-check"></i><b>9</b> 模块module （施工中）</a>
@@ -323,11 +333,20 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="9.1.2" data-path="模块module-施工中.html"><a href="模块module-施工中.html#引入到当前名字空间"><i class="fa fa-check"></i><b>9.1.2</b> 引入到当前名字空间</a></li>
 </ul></li>
 <li class="chapter" data-level="9.2" data-path="模块module-施工中.html"><a href="模块module-施工中.html#自定义模块"><i class="fa fa-check"></i><b>9.2</b> 自定义模块</a></li>
+<li class="chapter" data-level="9.3" data-path="模块module-施工中.html"><a href="模块module-施工中.html#包package"><i class="fa fa-check"></i><b>9.3</b> 包package</a></li>
 </ul></li>
-<li class="chapter" data-level="10" data-path="内置函数和常用库.html"><a href="内置函数和常用库.html"><i class="fa fa-check"></i><b>10</b> 内置函数和常用库</a></li>
-<li class="chapter" data-level="11" data-path="numpy.html"><a href="numpy.html"><i class="fa fa-check"></i><b>11</b> Numpy</a></li>
-<li class="chapter" data-level="12" data-path="pandas.html"><a href="pandas.html"><i class="fa fa-check"></i><b>12</b> Pandas</a></li>
-<li class="chapter" data-level="13" data-path="综合数据处理.html"><a href="综合数据处理.html"><i class="fa fa-check"></i><b>13</b> 综合数据处理</a></li>
+<li class="chapter" data-level="10" data-path="综合应用.html"><a href="综合应用.html"><i class="fa fa-check"></i><b>10</b> 综合应用</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="综合应用.html"><a href="综合应用.html#从数据开始"><i class="fa fa-check"></i><b>10.1</b> 从数据开始</a></li>
+<li class="chapter" data-level="10.2" data-path="综合应用.html"><a href="综合应用.html#编写功能"><i class="fa fa-check"></i><b>10.2</b> 编写功能</a>
+<ul>
+<li class="chapter" data-level="10.2.1" data-path="综合应用.html"><a href="综合应用.html#练习-3"><i class="fa fa-check"></i><b>10.2.1</b> 练习</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="面向对象初步.html"><a href="面向对象初步.html"><i class="fa fa-check"></i><b>11</b> 面向对象初步</a></li>
+<li class="chapter" data-level="12" data-path="numpy.html"><a href="numpy.html"><i class="fa fa-check"></i><b>12</b> Numpy</a></li>
+<li class="chapter" data-level="13" data-path="pandas.html"><a href="pandas.html"><i class="fa fa-check"></i><b>13</b> Pandas</a></li>
+<li class="chapter" data-level="14" data-path="综合数据处理.html"><a href="综合数据处理.html"><i class="fa fa-check"></i><b>14</b> 综合数据处理</a></li>
 </ul>
 
       </nav>
@@ -345,20 +364,26 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
+<div class = rmdreview>
+  
+<p> 这本书添加了注释功能，<span style="background-color: #3297FD; color: white">左键选择任何文字</span>，就会弹出注释菜单。注释功能区在页面的右上角。
+<p> 注释有公共和私人两类。私人注释只有自己能看见，公共则所有人都能看见。</p>
+
+</div>
 <div id="函数施工中" class="section level1" number="7">
 <h1><span class="header-section-number">7</span> 函数（施工中）</h1>
 <p>一个函数，就是一个包装好的代码：你给它一些输入（参数），函数给你一个结果（返回值）：</p>
 <p>比如，如果把<strong>电饭锅</strong>看成是一个函数，那么参数就是“<strong>米，水，电，时间</strong>”，你把“<strong>米，水，电，时间</strong>”给<strong>电饭锅</strong>，<strong>电饭锅</strong>返回给你一锅“<strong>米饭</strong>”。</p>
 <p>写成代码，大概是：</p>
-<div class="sourceCode" id="cb331"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb331-1"><a href="函数施工中.html#cb331-1" aria-hidden="true" tabindex="-1"></a>米饭 <span class="op">=</span> 电饭锅(米，水，电，时间)</span></code></pre></div>
+<div class="sourceCode" id="cb358"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb358-1"><a href="函数施工中.html#cb358-1" aria-hidden="true" tabindex="-1"></a>米饭 <span class="op">=</span> 电饭锅(米，水，电，时间)</span></code></pre></div>
 <p>这完全可以看成一个转换，或者映射
 <span class="math display">\[
 (米，水，电，时间) \longmapsto 米饭
 \]</span></p>
 <p>我们面前已经用过的，比如求List的长度：</p>
-<div class="sourceCode" id="cb332"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb332-1"><a href="函数施工中.html#cb332-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> [<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>]</span>
-<span id="cb332-2"><a href="函数施工中.html#cb332-2" aria-hidden="true" tabindex="-1"></a>a_size <span class="op">=</span> <span class="bu">len</span>(a)</span>
-<span id="cb332-3"><a href="函数施工中.html#cb332-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(a_size)</span></code></pre></div>
+<div class="sourceCode" id="cb359"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb359-1"><a href="函数施工中.html#cb359-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> [<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>]</span>
+<span id="cb359-2"><a href="函数施工中.html#cb359-2" aria-hidden="true" tabindex="-1"></a>a_size <span class="op">=</span> <span class="bu">len</span>(a)</span>
+<span id="cb359-3"><a href="函数施工中.html#cb359-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(a_size)</span></code></pre></div>
 <pre><code>## 5</code></pre>
 <p>看<code>a_size = len(a)</code>这个代码</p>
 <ol style="list-style-type: decimal">
@@ -379,10 +404,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="例加法函数" class="section level3" number="7.1.1">
 <h3><span class="header-section-number">7.1.1</span> 例：加法函数</h3>
 <p>举一个最简单的例子，我们要写一个加法函数，其作用就是把2个变量相加。或者说，你给这个函数“传递2个参数”，这个函数会返回他们的和。</p>
-<div class="sourceCode" id="cb334"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb334-1"><a href="函数施工中.html#cb334-1" aria-hidden="true" tabindex="-1"></a><span class="co">#%% 定义一个加法函数</span></span>
-<span id="cb334-2"><a href="函数施工中.html#cb334-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> add(x, y):</span>
-<span id="cb334-3"><a href="函数施工中.html#cb334-3" aria-hidden="true" tabindex="-1"></a>  z <span class="op">=</span> x <span class="op">+</span> y</span>
-<span id="cb334-4"><a href="函数施工中.html#cb334-4" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> z</span></code></pre></div>
+<div class="sourceCode" id="cb361"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb361-1"><a href="函数施工中.html#cb361-1" aria-hidden="true" tabindex="-1"></a><span class="co">#%% 定义一个加法函数</span></span>
+<span id="cb361-2"><a href="函数施工中.html#cb361-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> add(x, y):</span>
+<span id="cb361-3"><a href="函数施工中.html#cb361-3" aria-hidden="true" tabindex="-1"></a>  z <span class="op">=</span> x <span class="op">+</span> y</span>
+<span id="cb361-4"><a href="函数施工中.html#cb361-4" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> z</span></code></pre></div>
 <p>逐行解释一下</p>
 <p>第一行： <code>def add(x, y):</code></p>
 <ol style="list-style-type: decimal">
@@ -404,10 +429,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ol>
 <p>定义好之后，我们可以像使用任何函数一样调用它</p>
 <p>我们来一个很熟悉的代码。</p>
-<div class="sourceCode" id="cb335"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb335-1"><a href="函数施工中.html#cb335-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="dv">1</span></span>
-<span id="cb335-2"><a href="函数施工中.html#cb335-2" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> <span class="dv">2</span></span>
-<span id="cb335-3"><a href="函数施工中.html#cb335-3" aria-hidden="true" tabindex="-1"></a>c <span class="op">=</span> add(a, b) </span>
-<span id="cb335-4"><a href="函数施工中.html#cb335-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(c)</span></code></pre></div>
+<div class="sourceCode" id="cb362"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb362-1"><a href="函数施工中.html#cb362-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb362-2"><a href="函数施工中.html#cb362-2" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> <span class="dv">2</span></span>
+<span id="cb362-3"><a href="函数施工中.html#cb362-3" aria-hidden="true" tabindex="-1"></a>c <span class="op">=</span> add(a, b) </span>
+<span id="cb362-4"><a href="函数施工中.html#cb362-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(c)</span></code></pre></div>
 <pre><code>## 3</code></pre>
 </div>
 <div id="例求两个数的最大值" class="section level3" number="7.1.2">
@@ -417,14 +442,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>如果x &gt; y，则返回x。</li>
 <li>否则返回y。（x &lt;= y，此时返回y也是最大值）</li>
 </ol>
-<div class="sourceCode" id="cb337"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb337-1"><a href="函数施工中.html#cb337-1" aria-hidden="true" tabindex="-1"></a><span class="co">#%% 定义一个函数，接收两个参数，返回其最大值</span></span>
-<span id="cb337-2"><a href="函数施工中.html#cb337-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> my_max(a, b):</span>
-<span id="cb337-3"><a href="函数施工中.html#cb337-3" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> a <span class="op">&gt;=</span> b:</span>
-<span id="cb337-4"><a href="函数施工中.html#cb337-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> a  <span class="co"># 返回a</span></span>
-<span id="cb337-5"><a href="函数施工中.html#cb337-5" aria-hidden="true" tabindex="-1"></a>  <span class="cf">else</span>:</span>
-<span id="cb337-6"><a href="函数施工中.html#cb337-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> b  <span class="co"># 返回b  </span></span>
-<span id="cb337-7"><a href="函数施工中.html#cb337-7" aria-hidden="true" tabindex="-1"></a>      </span>
-<span id="cb337-8"><a href="函数施工中.html#cb337-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(my_max(<span class="dv">3</span>,<span class="dv">5</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb364"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb364-1"><a href="函数施工中.html#cb364-1" aria-hidden="true" tabindex="-1"></a><span class="co">#%% 定义一个函数，接收两个参数，返回其最大值</span></span>
+<span id="cb364-2"><a href="函数施工中.html#cb364-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> my_max(a, b):</span>
+<span id="cb364-3"><a href="函数施工中.html#cb364-3" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> a <span class="op">&gt;=</span> b:</span>
+<span id="cb364-4"><a href="函数施工中.html#cb364-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> a  <span class="co"># 返回a</span></span>
+<span id="cb364-5"><a href="函数施工中.html#cb364-5" aria-hidden="true" tabindex="-1"></a>  <span class="cf">else</span>:</span>
+<span id="cb364-6"><a href="函数施工中.html#cb364-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> b  <span class="co"># 返回b  </span></span>
+<span id="cb364-7"><a href="函数施工中.html#cb364-7" aria-hidden="true" tabindex="-1"></a>      </span>
+<span id="cb364-8"><a href="函数施工中.html#cb364-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(my_max(<span class="dv">3</span>,<span class="dv">5</span>))</span></code></pre></div>
 <pre><code>## 5</code></pre>
 </div>
 <div id="例计算圆的面积" class="section level3" number="7.1.3">
@@ -436,40 +461,40 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>显然，这个函数必然是接受<code>r</code>作为参数</li>
 <li>我们做的，是算出面积，然后返回一下</li>
 </ol>
-<div class="sourceCode" id="cb339"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb339-1"><a href="函数施工中.html#cb339-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> calc_area(r): </span>
-<span id="cb339-2"><a href="函数施工中.html#cb339-2" aria-hidden="true" tabindex="-1"></a>  area <span class="op">=</span> <span class="fl">3.14159</span> <span class="op">*</span> (r <span class="op">**</span> <span class="dv">2</span>) </span>
-<span id="cb339-3"><a href="函数施工中.html#cb339-3" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> area</span></code></pre></div>
+<div class="sourceCode" id="cb366"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb366-1"><a href="函数施工中.html#cb366-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> calc_area(r): </span>
+<span id="cb366-2"><a href="函数施工中.html#cb366-2" aria-hidden="true" tabindex="-1"></a>  area <span class="op">=</span> <span class="fl">3.14159</span> <span class="op">*</span> (r <span class="op">**</span> <span class="dv">2</span>) </span>
+<span id="cb366-3"><a href="函数施工中.html#cb366-3" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> area</span></code></pre></div>
 <p>]</p>
-<div class="sourceCode" id="cb340"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb340-1"><a href="函数施工中.html#cb340-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">5</span> </span>
-<span id="cb340-2"><a href="函数施工中.html#cb340-2" aria-hidden="true" tabindex="-1"></a>area <span class="op">=</span> calc_area(x)</span>
-<span id="cb340-3"><a href="函数施工中.html#cb340-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb340-4"><a href="函数施工中.html#cb340-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f&quot;半径为</span><span class="sc">{x}</span><span class="ss">的圆，其面积为</span><span class="sc">{</span>area<span class="sc">:0.2f}</span><span class="ss">&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb367"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb367-1"><a href="函数施工中.html#cb367-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">5</span> </span>
+<span id="cb367-2"><a href="函数施工中.html#cb367-2" aria-hidden="true" tabindex="-1"></a>area <span class="op">=</span> calc_area(x)</span>
+<span id="cb367-3"><a href="函数施工中.html#cb367-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb367-4"><a href="函数施工中.html#cb367-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f&quot;半径为</span><span class="sc">{x}</span><span class="ss">的圆，其面积为</span><span class="sc">{</span>area<span class="sc">:0.2f}</span><span class="ss">&quot;</span>)</span></code></pre></div>
 <pre><code>## 半径为5的圆，其面积为78.54</code></pre>
 </div>
 <div id="不返回值" class="section level3" number="7.1.4">
 <h3><span class="header-section-number">7.1.4</span> 不返回值</h3>
 <p>若函数不需要返回任何值，不写<code>return</code>语句，或者<code>return</code>语句后不返回任何值</p>
-<div class="sourceCode" id="cb342"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb342-1"><a href="函数施工中.html#cb342-1" aria-hidden="true" tabindex="-1"></a><span class="co">#%% 这2种都是可以的</span></span>
-<span id="cb342-2"><a href="函数施工中.html#cb342-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> hello():</span>
-<span id="cb342-3"><a href="函数施工中.html#cb342-3" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(<span class="st">&quot;hello&quot;</span>) <span class="co"># 不写return</span></span>
-<span id="cb342-4"><a href="函数施工中.html#cb342-4" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb342-5"><a href="函数施工中.html#cb342-5" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> hello2():</span>
-<span id="cb342-6"><a href="函数施工中.html#cb342-6" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(<span class="st">&quot;hello&quot;</span>)</span>
-<span id="cb342-7"><a href="函数施工中.html#cb342-7" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> <span class="co"># 写return但不包括返回值</span></span>
-<span id="cb342-8"><a href="函数施工中.html#cb342-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb342-9"><a href="函数施工中.html#cb342-9" aria-hidden="true" tabindex="-1"></a>hello()</span></code></pre></div>
+<div class="sourceCode" id="cb369"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb369-1"><a href="函数施工中.html#cb369-1" aria-hidden="true" tabindex="-1"></a><span class="co">#%% 这2种都是可以的</span></span>
+<span id="cb369-2"><a href="函数施工中.html#cb369-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> hello():</span>
+<span id="cb369-3"><a href="函数施工中.html#cb369-3" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(<span class="st">&quot;hello&quot;</span>) <span class="co"># 不写return</span></span>
+<span id="cb369-4"><a href="函数施工中.html#cb369-4" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb369-5"><a href="函数施工中.html#cb369-5" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> hello2():</span>
+<span id="cb369-6"><a href="函数施工中.html#cb369-6" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(<span class="st">&quot;hello&quot;</span>)</span>
+<span id="cb369-7"><a href="函数施工中.html#cb369-7" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> <span class="co"># 写return但不包括返回值</span></span>
+<span id="cb369-8"><a href="函数施工中.html#cb369-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb369-9"><a href="函数施工中.html#cb369-9" aria-hidden="true" tabindex="-1"></a>hello()</span></code></pre></div>
 <pre><code>## hello</code></pre>
-<div class="sourceCode" id="cb344"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb344-1"><a href="函数施工中.html#cb344-1" aria-hidden="true" tabindex="-1"></a>hello2()</span></code></pre></div>
+<div class="sourceCode" id="cb371"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb371-1"><a href="函数施工中.html#cb371-1" aria-hidden="true" tabindex="-1"></a>hello2()</span></code></pre></div>
 <pre><code>## hello</code></pre>
 </div>
 <div id="什么也不做的函数" class="section level3" number="7.1.5">
 <h3><span class="header-section-number">7.1.5</span> 什么也不做的函数</h3>
 <p>有时候需要先占用函数名，但是函数的内容想以后再写，此时可以写一个空函数。函数体内只需要使用<code>pass</code>语句。</p>
 <p>特别地，没有<code>return</code>语句（例如现在这种情况），或者<code>return</code>语句不返回值的时候，函数会返回一个<code>none</code>。</p>
-<div class="sourceCode" id="cb346"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb346-1"><a href="函数施工中.html#cb346-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> do_noting():</span>
-<span id="cb346-2"><a href="函数施工中.html#cb346-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">pass</span></span>
-<span id="cb346-3"><a href="函数施工中.html#cb346-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb346-4"><a href="函数施工中.html#cb346-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(do_noting())</span></code></pre></div>
+<div class="sourceCode" id="cb373"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb373-1"><a href="函数施工中.html#cb373-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> do_noting():</span>
+<span id="cb373-2"><a href="函数施工中.html#cb373-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">pass</span></span>
+<span id="cb373-3"><a href="函数施工中.html#cb373-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb373-4"><a href="函数施工中.html#cb373-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(do_noting())</span></code></pre></div>
 <pre><code>## None</code></pre>
 </div>
 </div>
@@ -481,16 +506,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div id="例使用参数名称传递参数" class="section level3" number="7.2.2">
 <h3><span class="header-section-number">7.2.2</span> 例：使用参数名称传递参数</h3>
-<div class="sourceCode" id="cb348"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb348-1"><a href="函数施工中.html#cb348-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> print_info(name, age):</span>
-<span id="cb348-2"><a href="函数施工中.html#cb348-2" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(<span class="st">&quot;姓名: &quot;</span>, name)</span>
-<span id="cb348-3"><a href="函数施工中.html#cb348-3" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(<span class="st">&quot;年龄: &quot;</span>, age)</span>
-<span id="cb348-4"><a href="函数施工中.html#cb348-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb348-5"><a href="函数施工中.html#cb348-5" aria-hidden="true" tabindex="-1"></a>print_info(<span class="st">&#39;alex&#39;</span>,<span class="dv">20</span>) <span class="co"># 按参数顺序：姓名，年龄</span></span></code></pre></div>
+<div class="sourceCode" id="cb375"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb375-1"><a href="函数施工中.html#cb375-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> print_info(name, age):</span>
+<span id="cb375-2"><a href="函数施工中.html#cb375-2" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(<span class="st">&quot;姓名: &quot;</span>, name)</span>
+<span id="cb375-3"><a href="函数施工中.html#cb375-3" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(<span class="st">&quot;年龄: &quot;</span>, age)</span>
+<span id="cb375-4"><a href="函数施工中.html#cb375-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb375-5"><a href="函数施工中.html#cb375-5" aria-hidden="true" tabindex="-1"></a>print_info(<span class="st">&#39;alex&#39;</span>,<span class="dv">20</span>) <span class="co"># 按参数顺序：姓名，年龄</span></span></code></pre></div>
 <pre><code>## 姓名:  alex
 ## 年龄:  20</code></pre>
-<div class="sourceCode" id="cb350"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb350-1"><a href="函数施工中.html#cb350-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (<span class="st">&quot;------------------------&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb377"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb377-1"><a href="函数施工中.html#cb377-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (<span class="st">&quot;------------------------&quot;</span>)</span></code></pre></div>
 <pre><code>## ------------------------</code></pre>
-<div class="sourceCode" id="cb352"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb352-1"><a href="函数施工中.html#cb352-1" aria-hidden="true" tabindex="-1"></a>print_info(age <span class="op">=</span> <span class="dv">21</span>, name <span class="op">=</span> <span class="st">&quot;bob&quot;</span>) <span class="co"># 按参数名，此时不用考虑参数的顺序</span></span></code></pre></div>
+<div class="sourceCode" id="cb379"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb379-1"><a href="函数施工中.html#cb379-1" aria-hidden="true" tabindex="-1"></a>print_info(age <span class="op">=</span> <span class="dv">21</span>, name <span class="op">=</span> <span class="st">&quot;bob&quot;</span>) <span class="co"># 按参数名，此时不用考虑参数的顺序</span></span></code></pre></div>
 <pre><code>## 姓名:  bob
 ## 年龄:  21</code></pre>
 </div>
@@ -501,39 +526,149 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div id="例乘方函数n次方" class="section level3" number="7.2.4">
 <h3><span class="header-section-number">7.2.4</span> 例：乘方函数（n次方）</h3>
-<div class="sourceCode" id="cb354"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb354-1"><a href="函数施工中.html#cb354-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> power(x, n<span class="op">=</span><span class="dv">2</span>):  <span class="co"># n有默认值</span></span>
-<span id="cb354-2"><a href="函数施工中.html#cb354-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> x <span class="op">**</span> n</span>
-<span id="cb354-3"><a href="函数施工中.html#cb354-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb354-4"><a href="函数施工中.html#cb354-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(power(<span class="dv">5</span>))  <span class="co"># 调用函数不传递n的值，使用默认值，结果为25</span></span></code></pre></div>
+<div class="sourceCode" id="cb381"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb381-1"><a href="函数施工中.html#cb381-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> power(x, n<span class="op">=</span><span class="dv">2</span>):  <span class="co"># n有默认值</span></span>
+<span id="cb381-2"><a href="函数施工中.html#cb381-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> x <span class="op">**</span> n</span>
+<span id="cb381-3"><a href="函数施工中.html#cb381-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb381-4"><a href="函数施工中.html#cb381-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(power(<span class="dv">5</span>))  <span class="co"># 调用函数不传递n的值，使用默认值，结果为25</span></span></code></pre></div>
 <pre><code>## 25</code></pre>
-<div class="sourceCode" id="cb356"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb356-1"><a href="函数施工中.html#cb356-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(power(<span class="dv">3</span>, <span class="dv">3</span>))  <span class="co"># 调用函数传递n的值，使用传递值，结果为27</span></span></code></pre></div>
+<div class="sourceCode" id="cb383"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb383-1"><a href="函数施工中.html#cb383-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(power(<span class="dv">3</span>, <span class="dv">3</span>))  <span class="co"># 调用函数传递n的值，使用传递值，结果为27</span></span></code></pre></div>
 <pre><code>## 27</code></pre>
 </div>
 <div id="不定长参数进阶" class="section level3" number="7.2.5">
 <h3><span class="header-section-number">7.2.5</span> 不定长参数（进阶）</h3>
 <p>函数可以接受<strong>任意多个参数</strong>，例如求最大值的函数<code>max()</code></p>
-<div class="sourceCode" id="cb358"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb358-1"><a href="函数施工中.html#cb358-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">max</span>(<span class="dv">4</span>,<span class="dv">1</span>,<span class="dv">5</span>,<span class="dv">2</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb385"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb385-1"><a href="函数施工中.html#cb385-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">max</span>(<span class="dv">4</span>,<span class="dv">1</span>,<span class="dv">5</span>,<span class="dv">2</span>))</span></code></pre></div>
 <pre><code>## 5</code></pre>
 <p>你要写一个这样的函数，那么可创建一个新的参数，前面带一个<code>*</code>号。那么不在参数列表里的参数，会组成一个tuple，并且绑定带这个带<code>*</code>号的变量名。</p>
-<div class="sourceCode" id="cb360"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb360-1"><a href="函数施工中.html#cb360-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 第一个参数是class_id，从第二个参数起，不定数量个参数，都会组成一个tuple，并命名为`students`(没有*)</span></span>
-<span id="cb360-2"><a href="函数施工中.html#cb360-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> print_students(class_id, <span class="op">*</span>students): </span>
-<span id="cb360-3"><a href="函数施工中.html#cb360-3" aria-hidden="true" tabindex="-1"></a>  <span class="co">&#39;打印班级号，和同学的姓名&#39;</span></span>
-<span id="cb360-4"><a href="函数施工中.html#cb360-4" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(<span class="st">&quot;班级:&quot;</span>,class_id)</span>
-<span id="cb360-5"><a href="函数施工中.html#cb360-5" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(<span class="st">&quot;学生包括:&quot;</span>, students) </span>
-<span id="cb360-6"><a href="函数施工中.html#cb360-6" aria-hidden="true" tabindex="-1"></a>   </span>
-<span id="cb360-7"><a href="函数施工中.html#cb360-7" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> s <span class="kw">in</span> students: <span class="co"># 也可以逐一打印</span></span>
-<span id="cb360-8"><a href="函数施工中.html#cb360-8" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span> (s)</span>
-<span id="cb360-9"><a href="函数施工中.html#cb360-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb360-10"><a href="函数施工中.html#cb360-10" aria-hidden="true" tabindex="-1"></a>print_students(<span class="dv">5</span> ,<span class="st">&quot;alex&quot;</span>,<span class="st">&quot;bob&quot;</span>,<span class="st">&quot;clare&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb387"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb387-1"><a href="函数施工中.html#cb387-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 第一个参数是class_id，从第二个参数起，不定数量个参数，都会组成一个tuple，并命名为`students`(没有*)</span></span>
+<span id="cb387-2"><a href="函数施工中.html#cb387-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> print_students(class_id, <span class="op">*</span>students): </span>
+<span id="cb387-3"><a href="函数施工中.html#cb387-3" aria-hidden="true" tabindex="-1"></a>  <span class="co">&#39;打印班级号，和同学的姓名&#39;</span></span>
+<span id="cb387-4"><a href="函数施工中.html#cb387-4" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(<span class="st">&quot;班级:&quot;</span>,class_id)</span>
+<span id="cb387-5"><a href="函数施工中.html#cb387-5" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(<span class="st">&quot;学生包括:&quot;</span>, students) </span>
+<span id="cb387-6"><a href="函数施工中.html#cb387-6" aria-hidden="true" tabindex="-1"></a>   </span>
+<span id="cb387-7"><a href="函数施工中.html#cb387-7" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> s <span class="kw">in</span> students: <span class="co"># 也可以逐一打印</span></span>
+<span id="cb387-8"><a href="函数施工中.html#cb387-8" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span> (s)</span>
+<span id="cb387-9"><a href="函数施工中.html#cb387-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb387-10"><a href="函数施工中.html#cb387-10" aria-hidden="true" tabindex="-1"></a>print_students(<span class="dv">5</span> ,<span class="st">&quot;alex&quot;</span>,<span class="st">&quot;bob&quot;</span>,<span class="st">&quot;clare&quot;</span>)</span></code></pre></div>
 <pre><code>## 班级: 5
 ## 学生包括: (&#39;alex&#39;, &#39;bob&#39;, &#39;clare&#39;)
 ## alex
 ## bob
 ## clare</code></pre>
+<p>实际上，如果你有可变参数的函数，如<code>print_students</code>，但是你拿到的数据是一个List，怎么办？</p>
+<p>土办法，把列表元素一个个拿出来，传给函数</p>
+<div class="sourceCode" id="cb389"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb389-1"><a href="函数施工中.html#cb389-1" aria-hidden="true" tabindex="-1"></a>students_list  <span class="op">=</span> [<span class="st">&quot;alex&quot;</span>,<span class="st">&quot;bob&quot;</span>,<span class="st">&quot;clare&quot;</span>] <span class="co"># 这已经是一个list</span></span>
+<span id="cb389-2"><a href="函数施工中.html#cb389-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb389-3"><a href="函数施工中.html#cb389-3" aria-hidden="true" tabindex="-1"></a>print_students(<span class="dv">5</span>, students_list[<span class="dv">0</span>],students_list[<span class="dv">1</span>],students_list[<span class="dv">2</span>])</span></code></pre></div>
+<pre><code>## 班级: 5
+## 学生包括: (&#39;alex&#39;, &#39;bob&#39;, &#39;clare&#39;)
+## alex
+## bob
+## clare</code></pre>
+<p>当然，也简单的办法，变量在传递给函数时，前面加个*，python会自动帮你拆开</p>
+<div class="sourceCode" id="cb391"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb391-1"><a href="函数施工中.html#cb391-1" aria-hidden="true" tabindex="-1"></a>students_list  <span class="op">=</span> [<span class="st">&quot;alex&quot;</span>,<span class="st">&quot;bob&quot;</span>,<span class="st">&quot;clare&quot;</span>] <span class="co"># 这已经是一个list</span></span>
+<span id="cb391-2"><a href="函数施工中.html#cb391-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb391-3"><a href="函数施工中.html#cb391-3" aria-hidden="true" tabindex="-1"></a>print_students(<span class="dv">5</span>, <span class="op">*</span>students_list) <span class="co"># 自动把students_list这个List，拆成多个元素</span></span></code></pre></div>
+<pre><code>## 班级: 5
+## 学生包括: (&#39;alex&#39;, &#39;bob&#39;, &#39;clare&#39;)
+## alex
+## bob
+## clare</code></pre>
+<p>练习：利用不定数量参数，写一个函数<code>my_sum()</code>，可以求任意个变量的和。</p>
+<div class="sourceCode" id="cb393"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb393-1"><a href="函数施工中.html#cb393-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> my_sum(<span class="op">*</span>numbers):</span>
+<span id="cb393-2"><a href="函数施工中.html#cb393-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">pass</span> <span class="co"># 内容由你填写</span></span>
+<span id="cb393-3"><a href="函数施工中.html#cb393-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb393-4"><a href="函数施工中.html#cb393-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(my_sum(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>)) <span class="co"># 10</span></span></code></pre></div>
+<pre><code>## None</code></pre>
+<div class="sourceCode" id="cb395"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb395-1"><a href="函数施工中.html#cb395-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(my_sum(<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>))   <span class="co"># 12</span></span></code></pre></div>
+<pre><code>## None</code></pre>
+<iframe width="800" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=def%20my_sum%28*numbers%29%3A%0A%20%20total%20%3D%200%0A%20%20for%20i%20in%20numbers%3A%0A%20%20%20%20total%20%2B%3D%20i%20%0A%20%20return%20total%0A%20%20%0Aprint%28my_sum%281,2,3,4%29%29&amp;codeDivHeight=400&amp;codeDivWidth=350&amp;cumulative=false&amp;curInstr=0&amp;heapPrimitives=nevernest&amp;origin=opt-frontend.js&amp;py=3&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false">
+</iframe>
+</div>
+<div id="可变参数以dict形式传递" class="section level3" number="7.2.6">
+<h3><span class="header-section-number">7.2.6</span> 可变参数以dict形式传递</h3>
+<p>参数前加1个*，可变参数就会组成一个元组tuple，进入函数。2个**，就会以字典dict进入函数</p>
+<p>（略）</p>
 </div>
 </div>
-<div id="变量作用域" class="section level2" number="7.3">
-<h2><span class="header-section-number">7.3</span> 变量作用域</h2>
+<div id="参数作为可变类型和不可变类型" class="section level2" number="7.3">
+<h2><span class="header-section-number">7.3</span> 参数作为可变类型和不可变类型</h2>
+<p>前面提到，多个变量名指向同一个可变对象（例如List，Dict），针对其中一个变量的修改，会引起所有指向同一个数据的变量都发生改变。</p>
+<p>把List等，作为参数传递个一个函数，也有类似的后果。</p>
+<p>下例中，</p>
+<ol style="list-style-type: decimal">
+<li>把a_list作为参数x，转递给函数<code>do_change(x)</code>，那么在函数内部，变量x和外部a_list指向的是同一个数据，或者说，x成了a_list的别名。</li>
+<li>把x作为函数的返回值，返回到外层，并赋予b_list，那么b_list, x, a_list，三个名字，实际上都指向了内存中的同一块数据。</li>
+<li>当然，x只在函数体内可见。</li>
+</ol>
+<div class="sourceCode" id="cb397"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb397-1"><a href="函数施工中.html#cb397-1" aria-hidden="true" tabindex="-1"></a>a_list <span class="op">=</span> <span class="bu">list</span>(<span class="st">&#39;apple&#39;</span>) <span class="co"># a_list -&gt; [&#39;a&#39;, &#39;p&#39;, &#39;p&#39;, &#39;l&#39;, &#39;e&#39;]</span></span>
+<span id="cb397-2"><a href="函数施工中.html#cb397-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb397-3"><a href="函数施工中.html#cb397-3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> do_change(x):</span>
+<span id="cb397-4"><a href="函数施工中.html#cb397-4" aria-hidden="true" tabindex="-1"></a>  x[<span class="dv">0</span>] <span class="op">=</span> <span class="st">&#39;B&#39;</span></span>
+<span id="cb397-5"><a href="函数施工中.html#cb397-5" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> x</span>
+<span id="cb397-6"><a href="函数施工中.html#cb397-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb397-7"><a href="函数施工中.html#cb397-7" aria-hidden="true" tabindex="-1"></a>b_list <span class="op">=</span> do_change(a_list) <span class="co"># 把a_list作为参数，则函数的参数 x -&gt; a_list </span></span>
+<span id="cb397-8"><a href="函数施工中.html#cb397-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb397-9"><a href="函数施工中.html#cb397-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(b_list)</span></code></pre></div>
+<pre><code>## [&#39;B&#39;, &#39;p&#39;, &#39;p&#39;, &#39;l&#39;, &#39;e&#39;]</code></pre>
+<div class="sourceCode" id="cb399"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb399-1"><a href="函数施工中.html#cb399-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(a_list)</span></code></pre></div>
+<pre><code>## [&#39;B&#39;, &#39;p&#39;, &#39;p&#39;, &#39;l&#39;, &#39;e&#39;]</code></pre>
+<iframe width="800" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=a_list%20%3D%20list%28&#39;apple&#39;%29%0A%0Adef%20make_some_changes%28x%29%3A%0A%20%20x%5B0%5D%20%3D%20&#39;B&#39;%0A%20%20return%20x%0A%0Ab_list%20%3D%20make_some_changes%28a_list%29%0A%0Aprint%28b_list%29%0Aprint%28a_list%29&amp;codeDivHeight=400&amp;codeDivWidth=350&amp;cumulative=false&amp;curInstr=0&amp;heapPrimitives=nevernest&amp;origin=opt-frontend.js&amp;py=3&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false">
+</iframe>
+<p>同意，如果你的设计意图并非“原地修改”，原变量必须保持不变，则可以把x拷贝一份。</p>
+<div class="sourceCode" id="cb401"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb401-1"><a href="函数施工中.html#cb401-1" aria-hidden="true" tabindex="-1"></a>a_list <span class="op">=</span> <span class="bu">list</span>(<span class="st">&#39;apple&#39;</span>) <span class="co"># a_list -&gt; [&#39;a&#39;, &#39;p&#39;, &#39;p&#39;, &#39;l&#39;, &#39;e&#39;]</span></span>
+<span id="cb401-2"><a href="函数施工中.html#cb401-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb401-3"><a href="函数施工中.html#cb401-3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> do_change(x):</span>
+<span id="cb401-4"><a href="函数施工中.html#cb401-4" aria-hidden="true" tabindex="-1"></a>  y <span class="op">=</span> x.copy() <span class="co"># 把x拷贝一份，对y进行修改，那么x就保持不变了</span></span>
+<span id="cb401-5"><a href="函数施工中.html#cb401-5" aria-hidden="true" tabindex="-1"></a>  y[<span class="dv">0</span>] <span class="op">=</span> <span class="st">&#39;B&#39;</span></span>
+<span id="cb401-6"><a href="函数施工中.html#cb401-6" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> y</span>
+<span id="cb401-7"><a href="函数施工中.html#cb401-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb401-8"><a href="函数施工中.html#cb401-8" aria-hidden="true" tabindex="-1"></a>b_list <span class="op">=</span> do_change(a_list) <span class="co"># 把a_list作为参数，则函数的参数 x -&gt; a_list </span></span>
+<span id="cb401-9"><a href="函数施工中.html#cb401-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb401-10"><a href="函数施工中.html#cb401-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(b_list)</span></code></pre></div>
+<pre><code>## [&#39;B&#39;, &#39;p&#39;, &#39;p&#39;, &#39;l&#39;, &#39;e&#39;]</code></pre>
+<div class="sourceCode" id="cb403"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb403-1"><a href="函数施工中.html#cb403-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(a_list)</span></code></pre></div>
+<pre><code>## [&#39;a&#39;, &#39;p&#39;, &#39;p&#39;, &#39;l&#39;, &#39;e&#39;]</code></pre>
+<iframe width="800" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=a_list%20%3D%20list%28&#39;apple&#39;%29%20%23%20a_list%20-%3E%20%5B&#39;a&#39;,%20&#39;p&#39;,%20&#39;p&#39;,%20&#39;l&#39;,%20&#39;e&#39;%5D%0A%0Adef%20do_change%28x%29%3A%0A%20%20y%20%3D%20x.copy%28%29%20%23%20%E6%8A%8Ax%E6%8B%B7%E8%B4%9D%E4%B8%80%E4%BB%BD%EF%BC%8C%E5%AF%B9y%E8%BF%9B%E8%A1%8C%E4%BF%AE%E6%94%B9%EF%BC%8C%E9%82%A3%E4%B9%88x%E5%B0%B1%E4%BF%9D%E6%8C%81%E4%B8%8D%E5%8F%98%E4%BA%86%0A%20%20y%5B0%5D%20%3D%20&#39;B&#39;%0A%20%20return%20y%0A%0Ab_list%20%3D%20do_change%28a_list%29%20%23%20%E6%8A%8Aa_list%E4%BD%9C%E4%B8%BA%E5%8F%82%E6%95%B0%EF%BC%8C%E5%88%99%E5%87%BD%E6%95%B0%E7%9A%84%E5%8F%82%E6%95%B0%20x%20-%3E%20a_list%20%0A%0Aprint%28b_list%29%0Aprint%28a_list%29&amp;codeDivHeight=400&amp;codeDivWidth=350&amp;cumulative=false&amp;curInstr=10&amp;heapPrimitives=nevernest&amp;origin=opt-frontend.js&amp;py=3&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false">
+</iframe>
+<p>若传递的参数是不可变类型，如int，str等，则对参数的修改会自动引发拷贝，没有上述问题。前面已经说过了。</p>
+</div>
+<div id="递归简介知道即可" class="section level2" number="7.4">
+<h2><span class="header-section-number">7.4</span> 递归简介（知道即可）</h2>
+<p>递归：函数自己调用自己调用自己调用自己调用自己 …</p>
+<p>例子，阶乘<span class="math inline">\(n! = n \times (n-1) \times (n-2) ... 2 \times 1\)</span></p>
+<p>如 <span class="math inline">\(5! = 5 \times 4 \times 3 \times 2 \times 1\)</span></p>
+<p>普通写法</p>
+<div class="sourceCode" id="cb405"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb405-1"><a href="函数施工中.html#cb405-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> f(n):</span>
+<span id="cb405-2"><a href="函数施工中.html#cb405-2" aria-hidden="true" tabindex="-1"></a>    result <span class="op">=</span> n</span>
+<span id="cb405-3"><a href="函数施工中.html#cb405-3" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb405-4"><a href="函数施工中.html#cb405-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, n): <span class="co"># 注意，range(1,n)，只到 n-1</span></span>
+<span id="cb405-5"><a href="函数施工中.html#cb405-5" aria-hidden="true" tabindex="-1"></a>        result <span class="op">*=</span> i</span>
+<span id="cb405-6"><a href="函数施工中.html#cb405-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> result</span>
+<span id="cb405-7"><a href="函数施工中.html#cb405-7" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb405-8"><a href="函数施工中.html#cb405-8" aria-hidden="true" tabindex="-1"></a>result <span class="op">=</span> f(<span class="dv">5</span>)</span>
+<span id="cb405-9"><a href="函数施工中.html#cb405-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(result)</span></code></pre></div>
+<pre><code>## 120</code></pre>
+<iframe width="800" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=def%20f%28n%29%3A%0A%20%20%20%20result%20%3D%20n%0A%20%20%20%20%0A%20%20%20%20for%20i%20in%20range%281,%20n%29%3A%20%23%20%E6%B3%A8%E6%84%8F%EF%BC%8Crange%281,n%29%EF%BC%8C%E5%8F%AA%E5%88%B0%20n-1%0A%20%20%20%20%20%20%20%20result%20*%3D%20i%0A%20%20%20%20return%20result%0A%20%0Aresult%20%3D%20f%285%29%0Aprint%28result%29&amp;codeDivHeight=400&amp;codeDivWidth=350&amp;cumulative=false&amp;curInstr=16&amp;heapPrimitives=nevernest&amp;origin=opt-frontend.js&amp;py=3&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false">
+</iframe>
+<p>递归的写法</p>
+<p><span class="math inline">\(f(n) = n * f(n-1)\)</span></p>
+<p><span class="math inline">\(f(n - 1) = (n - 1) * f(n - 2)\)</span></p>
+<p><span class="math inline">\(f(n) = n * (n - 1) * f(n - 2)\)</span></p>
+<div class="sourceCode" id="cb407"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb407-1"><a href="函数施工中.html#cb407-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> f(n):</span>
+<span id="cb407-2"><a href="函数施工中.html#cb407-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> n <span class="op">==</span> <span class="dv">1</span>:</span>
+<span id="cb407-3"><a href="函数施工中.html#cb407-3" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="dv">1</span>          <span class="co"># 递归终止条件</span></span>
+<span id="cb407-4"><a href="函数施工中.html#cb407-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb407-5"><a href="函数施工中.html#cb407-5" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> n <span class="op">*</span> f(n<span class="op">-</span><span class="dv">1</span>) <span class="co"># 递归：自己调用了自己</span></span>
+<span id="cb407-6"><a href="函数施工中.html#cb407-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb407-7"><a href="函数施工中.html#cb407-7" aria-hidden="true" tabindex="-1"></a>result <span class="op">=</span> f(<span class="dv">5</span>)</span>
+<span id="cb407-8"><a href="函数施工中.html#cb407-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(result)</span></code></pre></div>
+<pre><code>## 120</code></pre>
+<iframe width="800" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=def%20f%28n%29%3A%0A%20%20%20%20if%20n%20%3D%3D%201%3A%0A%20%20%20%20%20%20%20%20return%201%20%20%20%20%20%20%20%20%20%20%23%20%E9%80%92%E5%BD%92%E7%BB%88%E6%AD%A2%E6%9D%A1%E4%BB%B6%0A%20%20%20%20else%3A%0A%20%20%20%20%20%20%20%20return%20n%20*%20f%28n-1%29%20%23%20%E9%80%92%E5%BD%92%EF%BC%9A%E8%87%AA%E5%B7%B1%E8%B0%83%E7%94%A8%E4%BA%86%E8%87%AA%E5%B7%B1%0A%0Aresult%20%3D%20f%285%29%0Aprint%28result%29&amp;codeDivHeight=400&amp;codeDivWidth=350&amp;cumulative=false&amp;curInstr=0&amp;heapPrimitives=nevernest&amp;origin=opt-frontend.js&amp;py=3&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false">
+</iframe>
+</div>
+<div id="变量作用域" class="section level2" number="7.5">
+<h2><span class="header-section-number">7.5</span> 变量作用域</h2>
 <p>你在函数里调用了一个变量名，python会“从里到外”找这个变量，顺序是LEGB</p>
 <p>LEGB含义解释：（暂时不用管）</p>
 <ul>
@@ -542,41 +677,41 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>G-Global(module)即全局名称；函数定义所在模块（文件）的名字空间</li>
 <li>B-Builtin(Python)即内置名称；Python内置模块的名字空间</li>
 </ul>
-<div id="局部作用域" class="section level3" number="7.3.1">
-<h3><span class="header-section-number">7.3.1</span> 局部作用域</h3>
-<div class="sourceCode" id="cb362"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb362-1"><a href="函数施工中.html#cb362-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="dv">10</span>      <span class="co"># 全局变量a</span></span>
-<span id="cb362-2"><a href="函数施工中.html#cb362-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> func():</span>
-<span id="cb362-3"><a href="函数施工中.html#cb362-3" aria-hidden="true" tabindex="-1"></a>  a <span class="op">=</span> <span class="dv">20</span>    <span class="co"># 局部变量a。在定义了局部变量a之后。后面使用a这个变量名，将会首先找到这个变量（即从里到外找）</span></span>
-<span id="cb362-4"><a href="函数施工中.html#cb362-4" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(a)  <span class="co"># 应该是20</span></span>
-<span id="cb362-5"><a href="函数施工中.html#cb362-5" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb362-6"><a href="函数施工中.html#cb362-6" aria-hidden="true" tabindex="-1"></a>func()</span></code></pre></div>
+<div id="局部作用域" class="section level3" number="7.5.1">
+<h3><span class="header-section-number">7.5.1</span> 局部作用域</h3>
+<div class="sourceCode" id="cb409"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb409-1"><a href="函数施工中.html#cb409-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="dv">10</span>      <span class="co"># 全局变量a</span></span>
+<span id="cb409-2"><a href="函数施工中.html#cb409-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> func():</span>
+<span id="cb409-3"><a href="函数施工中.html#cb409-3" aria-hidden="true" tabindex="-1"></a>  a <span class="op">=</span> <span class="dv">20</span>    <span class="co"># 局部变量a。在定义了局部变量a之后。后面使用a这个变量名，将会首先找到这个变量（即从里到外找）</span></span>
+<span id="cb409-4"><a href="函数施工中.html#cb409-4" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(a)  <span class="co"># 应该是20</span></span>
+<span id="cb409-5"><a href="函数施工中.html#cb409-5" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb409-6"><a href="函数施工中.html#cb409-6" aria-hidden="true" tabindex="-1"></a>func()</span></code></pre></div>
 <pre><code>## 20</code></pre>
-<div class="sourceCode" id="cb364"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb364-1"><a href="函数施工中.html#cb364-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="dv">10</span>      <span class="co"># 全局变量a</span></span>
-<span id="cb364-2"><a href="函数施工中.html#cb364-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> func():</span>
-<span id="cb364-3"><a href="函数施工中.html#cb364-3" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(a)  <span class="co"># 在函数内部，没有变量a，那么就往外一层找，因此会找到全局变量`a`，应该等于10</span></span>
-<span id="cb364-4"><a href="函数施工中.html#cb364-4" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb364-5"><a href="函数施工中.html#cb364-5" aria-hidden="true" tabindex="-1"></a>func()</span></code></pre></div>
+<div class="sourceCode" id="cb411"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb411-1"><a href="函数施工中.html#cb411-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="dv">10</span>      <span class="co"># 全局变量a</span></span>
+<span id="cb411-2"><a href="函数施工中.html#cb411-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> func():</span>
+<span id="cb411-3"><a href="函数施工中.html#cb411-3" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(a)  <span class="co"># 在函数内部，没有变量a，那么就往外一层找，因此会找到全局变量`a`，应该等于10</span></span>
+<span id="cb411-4"><a href="函数施工中.html#cb411-4" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb411-5"><a href="函数施工中.html#cb411-5" aria-hidden="true" tabindex="-1"></a>func()</span></code></pre></div>
 <pre><code>## 10</code></pre>
 <p><span style="color: red;">注:</span>：函数內部和外部变量重名的情况，要额外小心。因此第二个例子可能是你“<strong>忘记了在函数内部定义a</strong>”，而不是你想要“引用全局变量a”，但是因为有一个全局的变量a，所以忘记定义<code>a</code>这个问题可能会被隐藏。</p>
 </div>
-<div id="全局作用域" class="section level3" number="7.3.2">
-<h3><span class="header-section-number">7.3.2</span> 全局作用域</h3>
+<div id="全局作用域" class="section level3" number="7.5.2">
+<h3><span class="header-section-number">7.5.2</span> 全局作用域</h3>
 <p>特别地，函数内部的赋值语句，其中的变量会被python看作一个local变量，如果内部未定义，就可能出错。</p>
-<div class="sourceCode" id="cb366"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb366-1"><a href="函数施工中.html#cb366-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="dv">100</span>      <span class="co"># 全局变量a</span></span>
-<span id="cb366-2"><a href="函数施工中.html#cb366-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> func():</span>
-<span id="cb366-3"><a href="函数施工中.html#cb366-3" aria-hidden="true" tabindex="-1"></a>  a <span class="op">=</span> a <span class="op">+</span> <span class="dv">1</span>  <span class="co"># a + 1这个a系统认为是局部变量，但这个函数没有局部的a</span></span>
-<span id="cb366-4"><a href="函数施工中.html#cb366-4" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(a)   <span class="co"># 全局变量a</span></span>
-<span id="cb366-5"><a href="函数施工中.html#cb366-5" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb366-6"><a href="函数施工中.html#cb366-6" aria-hidden="true" tabindex="-1"></a>func()</span></code></pre></div>
+<div class="sourceCode" id="cb413"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb413-1"><a href="函数施工中.html#cb413-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="dv">100</span>      <span class="co"># 全局变量a</span></span>
+<span id="cb413-2"><a href="函数施工中.html#cb413-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> func():</span>
+<span id="cb413-3"><a href="函数施工中.html#cb413-3" aria-hidden="true" tabindex="-1"></a>  a <span class="op">=</span> a <span class="op">+</span> <span class="dv">1</span>  <span class="co"># a + 1这个a系统认为是局部变量，但这个函数没有局部的a</span></span>
+<span id="cb413-4"><a href="函数施工中.html#cb413-4" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(a)   <span class="co"># 全局变量a</span></span>
+<span id="cb413-5"><a href="函数施工中.html#cb413-5" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb413-6"><a href="函数施工中.html#cb413-6" aria-hidden="true" tabindex="-1"></a>func()</span></code></pre></div>
 <pre><code>UnboundLocalError: local variable &#39;a&#39; referenced before assignment</code></pre>
 <p>所以，如果你明确地要用一个函数外的变量，那么可以使用<code>global</code>关键字</p>
-<div class="sourceCode" id="cb368"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb368-1"><a href="函数施工中.html#cb368-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="dv">100</span>      <span class="co"># 全局变量a</span></span>
-<span id="cb368-2"><a href="函数施工中.html#cb368-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> func():</span>
-<span id="cb368-3"><a href="函数施工中.html#cb368-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">global</span> a <span class="co"># 说明：a这个变量名，指向的是全局变量a</span></span>
-<span id="cb368-4"><a href="函数施工中.html#cb368-4" aria-hidden="true" tabindex="-1"></a>  a <span class="op">=</span> a <span class="op">+</span> <span class="dv">1</span>  </span>
-<span id="cb368-5"><a href="函数施工中.html#cb368-5" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(a)   <span class="co"># 全局变量a</span></span>
-<span id="cb368-6"><a href="函数施工中.html#cb368-6" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb368-7"><a href="函数施工中.html#cb368-7" aria-hidden="true" tabindex="-1"></a>func()</span></code></pre></div>
+<div class="sourceCode" id="cb415"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb415-1"><a href="函数施工中.html#cb415-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="dv">100</span>      <span class="co"># 全局变量a</span></span>
+<span id="cb415-2"><a href="函数施工中.html#cb415-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> func():</span>
+<span id="cb415-3"><a href="函数施工中.html#cb415-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">global</span> a <span class="co"># 说明：a这个变量名，指向的是全局变量a</span></span>
+<span id="cb415-4"><a href="函数施工中.html#cb415-4" aria-hidden="true" tabindex="-1"></a>  a <span class="op">=</span> a <span class="op">+</span> <span class="dv">1</span>  </span>
+<span id="cb415-5"><a href="函数施工中.html#cb415-5" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(a)   <span class="co"># 全局变量a</span></span>
+<span id="cb415-6"><a href="函数施工中.html#cb415-6" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb415-7"><a href="函数施工中.html#cb415-7" aria-hidden="true" tabindex="-1"></a>func()</span></code></pre></div>
 <pre><code>## 101</code></pre>
 </div>
 </div>

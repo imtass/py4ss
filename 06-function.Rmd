@@ -243,6 +243,147 @@ print_students(5 ,"alex","bob","clare")
 ```
 
 
+实际上，如果你有可变参数的函数，如`print_students`，但是你拿到的数据是一个List，怎么办？
+
+土办法，把列表元素一个个拿出来，传给函数
+```{python}
+students_list  = ["alex","bob","clare"] # 这已经是一个list
+
+print_students(5, students_list[0],students_list[1],students_list[2])
+
+
+```
+
+当然，也简单的办法，变量在传递给函数时，前面加个*，python会自动帮你拆开
+
+```{python}
+students_list  = ["alex","bob","clare"] # 这已经是一个list
+
+print_students(5, *students_list) # 自动把students_list这个List，拆成多个元素
+```
+
+
+
+
+练习：利用不定数量参数，写一个函数`my_sum()`，可以求任意个变量的和。
+
+```{python}
+def my_sum(*numbers):
+  pass # 内容由你填写
+
+print(my_sum(1,2,3,4)) # 10
+print(my_sum(3,4,5))   # 12
+```
+<iframe width="800" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=def%20my_sum%28*numbers%29%3A%0A%20%20total%20%3D%200%0A%20%20for%20i%20in%20numbers%3A%0A%20%20%20%20total%20%2B%3D%20i%20%0A%20%20return%20total%0A%20%20%0Aprint%28my_sum%281,2,3,4%29%29&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
+
+### 可变参数以dict形式传递
+
+参数前加1个\*，可变参数就会组成一个元组tuple，进入函数。2个\*\*，就会以字典dict进入函数
+
+（略）
+
+## 参数作为可变类型和不可变类型
+
+
+前面提到，多个变量名指向同一个可变对象（例如List，Dict），针对其中一个变量的修改，会引起所有指向同一个数据的变量都发生改变。
+
+
+把List等，作为参数传递个一个函数，也有类似的后果。
+
+下例中，
+
+1. 把a_list作为参数x，转递给函数`do_change(x)`，那么在函数内部，变量x和外部a_list指向的是同一个数据，或者说，x成了a_list的别名。
+2. 把x作为函数的返回值，返回到外层，并赋予b_list，那么b_list, x, a_list，三个名字，实际上都指向了内存中的同一块数据。
+3. 当然，x只在函数体内可见。
+
+
+
+
+```{python}
+a_list = list('apple') # a_list -> ['a', 'p', 'p', 'l', 'e']
+
+def do_change(x):
+  x[0] = 'B'
+  return x
+
+b_list = do_change(a_list) # 把a_list作为参数，则函数的参数 x -> a_list 
+
+print(b_list)
+print(a_list)
+```
+<iframe width="800" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=a_list%20%3D%20list%28'apple'%29%0A%0Adef%20make_some_changes%28x%29%3A%0A%20%20x%5B0%5D%20%3D%20'B'%0A%20%20return%20x%0A%0Ab_list%20%3D%20make_some_changes%28a_list%29%0A%0Aprint%28b_list%29%0Aprint%28a_list%29&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
+
+
+同意，如果你的设计意图并非“原地修改”，原变量必须保持不变，则可以把x拷贝一份。
+
+```{python}
+a_list = list('apple') # a_list -> ['a', 'p', 'p', 'l', 'e']
+
+def do_change(x):
+  y = x.copy() # 把x拷贝一份，对y进行修改，那么x就保持不变了
+  y[0] = 'B'
+  return y
+
+b_list = do_change(a_list) # 把a_list作为参数，则函数的参数 x -> a_list 
+
+print(b_list)
+print(a_list)
+```
+
+<iframe width="800" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=a_list%20%3D%20list%28'apple'%29%20%23%20a_list%20-%3E%20%5B'a',%20'p',%20'p',%20'l',%20'e'%5D%0A%0Adef%20do_change%28x%29%3A%0A%20%20y%20%3D%20x.copy%28%29%20%23%20%E6%8A%8Ax%E6%8B%B7%E8%B4%9D%E4%B8%80%E4%BB%BD%EF%BC%8C%E5%AF%B9y%E8%BF%9B%E8%A1%8C%E4%BF%AE%E6%94%B9%EF%BC%8C%E9%82%A3%E4%B9%88x%E5%B0%B1%E4%BF%9D%E6%8C%81%E4%B8%8D%E5%8F%98%E4%BA%86%0A%20%20y%5B0%5D%20%3D%20'B'%0A%20%20return%20y%0A%0Ab_list%20%3D%20do_change%28a_list%29%20%23%20%E6%8A%8Aa_list%E4%BD%9C%E4%B8%BA%E5%8F%82%E6%95%B0%EF%BC%8C%E5%88%99%E5%87%BD%E6%95%B0%E7%9A%84%E5%8F%82%E6%95%B0%20x%20-%3E%20a_list%20%0A%0Aprint%28b_list%29%0Aprint%28a_list%29&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=10&heapPrimitives=nevernest&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
+
+
+若传递的参数是不可变类型，如int，str等，则对参数的修改会自动引发拷贝，没有上述问题。前面已经说过了。
+
+
+## 递归简介（知道即可）
+
+递归：函数自己调用自己调用自己调用自己调用自己 ...
+
+例子，阶乘$n! = n \times (n-1) \times (n-2) ... 2 \times 1$
+
+如 $5! = 5 \times 4 \times 3 \times 2 \times 1$
+
+普通写法
+
+```{python}
+def f(n):
+    result = n
+    
+    for i in range(1, n): # 注意，range(1,n)，只到 n-1
+        result *= i
+    return result
+ 
+result = f(5)
+print(result)
+```
+<iframe width="800" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=def%20f%28n%29%3A%0A%20%20%20%20result%20%3D%20n%0A%20%20%20%20%0A%20%20%20%20for%20i%20in%20range%281,%20n%29%3A%20%23%20%E6%B3%A8%E6%84%8F%EF%BC%8Crange%281,n%29%EF%BC%8C%E5%8F%AA%E5%88%B0%20n-1%0A%20%20%20%20%20%20%20%20result%20*%3D%20i%0A%20%20%20%20return%20result%0A%20%0Aresult%20%3D%20f%285%29%0Aprint%28result%29&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=16&heapPrimitives=nevernest&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
+
+递归的写法
+
+$f(n) = n * f(n-1)$
+
+$f(n - 1) =  (n - 1) * f(n - 2)$
+
+$f(n) = n * (n - 1) * f(n - 2)$
+
+
+```{python}
+def f(n):
+    if n == 1:
+        return 1          # 递归终止条件
+    else:
+        return n * f(n-1) # 递归：自己调用了自己
+
+result = f(5)
+print(result)
+```
+
+
+<iframe width="800" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=def%20f%28n%29%3A%0A%20%20%20%20if%20n%20%3D%3D%201%3A%0A%20%20%20%20%20%20%20%20return%201%20%20%20%20%20%20%20%20%20%20%23%20%E9%80%92%E5%BD%92%E7%BB%88%E6%AD%A2%E6%9D%A1%E4%BB%B6%0A%20%20%20%20else%3A%0A%20%20%20%20%20%20%20%20return%20n%20*%20f%28n-1%29%20%23%20%E9%80%92%E5%BD%92%EF%BC%9A%E8%87%AA%E5%B7%B1%E8%B0%83%E7%94%A8%E4%BA%86%E8%87%AA%E5%B7%B1%0A%0Aresult%20%3D%20f%285%29%0Aprint%28result%29&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
+
+
+
 
 ## 变量作用域
 
@@ -266,6 +407,8 @@ def func():
   
 func()
 ```
+
+
 
 
 
@@ -377,7 +520,7 @@ print(list(result))
 ### filter
 
 
-有一个List，`a = [1,2,3,4,5]`，你现在要选出符合特定条件的元素，例如选出其中的基数，组成一个新的List。用循环做：
+有一个List，`a = [1,2,3,4,5]`，你现在要选出符合特定条件的元素，例如选出其中的奇数，组成一个新的List。用循环做：
 
 
 ```{python}
@@ -391,6 +534,10 @@ for i in a:
     
 print(result)
 ```
+
+
+<iframe width="800" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=a%20%3D%20%5B1,2,3,4,5%5D%0A%0Aresult%20%3D%20%5B%5D%0A%0Afor%20i%20in%20a%3A%0A%20%20if%20i%20%25%202%20%3D%3D%201%3A%0A%20%20%20%20result.append%28i%29%0A%20%20%0Aprint%28result%29&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=17&heapPrimitives=nevernest&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
+
 和map一样，定义一个is_odd函数，作为filter的过滤条件，应该返回布尔值(`True/False`)，作为是否符合条件的结果。
 
 ```{python}
@@ -415,7 +562,7 @@ print(list(result))
 
 ### 混合map和filter
 
-选出a中的基数，并乘以2
+选出a中的奇数，并乘以2
 
 
 map 和 filter的做法
@@ -449,21 +596,86 @@ print(result)
 
 ### 匿名函数 lambda
 
+
+在我们使用`map`、`filter`，或者列表推导的时候，如果要对列表做的操作**非常简单、一目了然**，并且可以**写进一行**（比如乘以二，或者取最后一个字母等等），那么我们可以不用专门写一个函数，而直接放一个匿名函数进去。
+
+
 使用`lambda`关键字，一个表达式，直接返回这个表达式的结果，不用写`return`。
 
-注：
+写法一般是：
 
-对于初学者，建议还是把具体的操作起一个可以“顾名思义”的名字。
+`lambda <参数列表>: <对参数的操作>`
+
+
+例如一个匿名版本的`add(a,b)`函数：
+
+`lambda a,b : a + b`
+
+或者一个匿名的翻倍函数：
+
+`lambda x: x * 2`
+
+
+
+
+以把一个列表所以元素翻倍为例：
+
+用普通函数：事先定义了一个do_double函数，这个函数返回参数x2
 
 ```{python}
 result =  map(do_double, a)
 print(list(result))
 ```
 
+用匿名函数：乘以2这类简单操作，用匿名函数即可，可以省下预先定义`do_double`函数。
+
 ```{python}
-result =  map(lambda x:x * 2,a)
+result =  map(lambda x : x * 2,a)
 print(list(result))
 ```
+
+
+注：
+
+对于初学者，如果不是一个超级简单的操作，建议还是应该用一个可以“顾名思义”的函数。
+
+
+### map和filter的结果：惰性
+
+如果我们直接打印map和filter的结果，我们会发现，它们的返回值不是一个List，而是一个`map object`或者`filter object`。
+
+
+这是因为`map`和`filter`，不会在你调用`map()/filter()`函数的时候马上进行计算，而是在你**读取其中的值的时候**，才进行具体计算。我们称之为“惰性求值”。
+
+例如，用前面的List翻倍的例子。
+
+```{python}
+a = [1,2,3,4,5]
+result = map(lambda x : x * 2,a) # 当你调用map的时候，并未真正地进行计算
+print(result)
+```
+
+所以，当你把`map()/filter()`函数的结果打印出来看的时候，python会告诉你，这是个map/filter object，即map/filter函数的结果。但是，里面具体的数据还没计算出来，所以没法直接使用
+
+
+要用，很简单，用`list()`函数转换为一个列表即可。
+```{python}
+print(list(result))
+```
+
+当然，如果你使用列表推导，那么结果直接就是一个List。
+
+```{python}
+result = [i * 2 for i in [1,2,3,4,5]]
+print(result)
+```
+
+```{python}
+def is_even(x):
+      return x & 1 != 0
+filter(is_even, [1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
+```
+
 
 ## 高阶函数（进阶）（施工中）
 
@@ -549,6 +761,42 @@ print(square(3))
 print(cube(2))
 
 ```
+
+### reduce 
+
+`reduce`和`map`一样，不单是一个具体的函数，同时也是“一种常用的操作”，所以放在大部分编程语言中，都有相同的含义。因此一般会与`map`并列，常称之为`map/reduce`。
+
+
+和`map`一样，`reduce`同样可以把一个函数应用到一个列表上，区别在于，你使用`reduce`的时候，你要运用的函数，例如`func(x,y)`，有2个参数。
+
+
+reduce会这么做：
+
+1. 取出你要处理的列表的头2个元素（`a[0]`和`a[1]`），传进`func(a[0], a[1])`中，并得到一个返回值，如`z1`
+2. 取出列表的第3个元素`a[2]`，和前一个结果，一起传入`func(z1,a[2])`，得到一个返回值，如`z2`
+3. 取出列表的第4个元素`a[3]`，和前一个结果，一起传入`func(z2,a[3])`，得到一个返回值，如`z3`
+4. ... 
+
+
+例如，我们对一个列表`a = [1,2,3,5,7,9]`，`reduce`一下应用我们前面写的`add()`函数。
+
+显然，这个操作大概是这个过程。
+
+![](images/reduce.png)
+
+`reduce`函数在`functools`模块中，模块我们后面会讲。要引入`reduce`函数，使用这行代码：
+
+`from functools import reduce`
+
+```{python}
+from functools import reduce
+a = [1,2,3,5,7,9]
+
+reduce(add,a)
+
+```
+
+
 ### 闭包Closure
 
 
@@ -568,7 +816,7 @@ def power(n):
 
 这个代码里，调用`power()`函数，会返回另一个函数`fun()`。
 
-这个函数里面调用了变量`n`，但`n`不在`fun()`的函数体内，而在上一层。`fun()`函数，会把生产自己的坏境中的变量，也包括在里面：闭包是一个附带数据的函数。
+这个函数里面调用了变量`n`，但`n`不在`fun()`的函数体内，而在上一层。`fun()`函数，会把生产自己的坏境中的变量（本例中即`n`），也包括在里面：**闭包是一个附带数据的函数**。
 
 
 这段代码发生了什么？
@@ -576,7 +824,7 @@ def power(n):
 square = power(2) 
 ```
 
-`square`函数，相当于一个附带了`n=2`的`fun`函数
+`square`函数，相当于一个**附带了`n=2`的`fun()`函数**
 
 1. `power(n = 2)`，其中`n = 2`
 2. 在`power()`函数的内部，`fun(x)`是可以看见这个`n=2`的
@@ -591,3 +839,8 @@ square = power(2)
 2. Enclosing function locals：函数中嵌套函数的外部：例如本例中`fun`函数的`n`
 3. G全局：代码的最外层
 4. B内置名称：python的一些内置的名称，如`max`函数
+
+现在可知，python查找变量名，先找局部作用域（函数内部），再找闭包的附带数据，再找全局变量，再找python的内置名称。
+
+
+

@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>3 使用Spyder编程环境 | 写给文科生的Python入门和数据处理教程</title>
+  <title>10 综合应用 | 写给文科生的Python入门和数据处理教程</title>
   <meta name="description" content="为人文社科类研究员和学生设计的的Python入门和数据处理教程" />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="3 使用Spyder编程环境 | 写给文科生的Python入门和数据处理教程" />
+  <meta property="og:title" content="10 综合应用 | 写给文科生的Python入门和数据处理教程" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="3 使用Spyder编程环境 | 写给文科生的Python入门和数据处理教程" />
+  <meta name="twitter:title" content="10 综合应用 | 写给文科生的Python入门和数据处理教程" />
   
   <meta name="twitter:description" content="为人文社科类研究员和学生设计的的Python入门和数据处理教程" />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="python程序的执行.html"/>
-<link rel="next" href="变量和常用类型.html"/>
+<link rel="prev" href="模块module-施工中.html"/>
+<link rel="next" href="面向对象初步.html"/>
 <script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -370,133 +370,73 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p> 注释有公共和私人两类。私人注释只有自己能看见，公共则所有人都能看见。</p>
 
 </div>
-<div id="使用spyder编程环境" class="section level1" number="3">
-<h1><span class="header-section-number">3</span> 使用Spyder编程环境</h1>
-<p>实际上，我们真正用python做数据分析的时候，一般会利用一个集成编程环境，例如我们<strong>本课程要用的Spyder</strong>，或者流行的PyCharm，或者jupyter notebook等等。</p>
-<p>这些集成编辑环境，通常会把.py文件的编辑和python的交互环境结合起来，让我们一边编辑py文件的同时，一边执行代码并查看结果。数据分析完毕时，代码同时也写成了。</p>
-<div id="界面" class="section level2" number="3.1">
-<h2><span class="header-section-number">3.1</span> 界面</h2>
-<p>打开Spyder</p>
-<p><img src="images/Spyder_icon.png" width="200"/></p>
-<p><img src="images/spyder_ui.png" /></p>
-<p>Spyder默认打开了一个临时的<code>.py</code>文件。</p>
+<div id="综合应用" class="section level1" number="10">
+<h1><span class="header-section-number">10</span> 综合应用</h1>
+<div id="从数据开始" class="section level2" number="10.1">
+<h2><span class="header-section-number">10.1</span> 从数据开始</h2>
+<p>例如，我们要一个程序来处理班级同学的信息。每个同学起码有这几个信息：</p>
 <ol style="list-style-type: decimal">
-<li>左边是一个<strong>文本编辑器</strong>（回忆前面我们编辑<code>add.py</code>文件所用的<strong>记事本</strong>）。</li>
-<li>文本编辑器的标签页，显示我们当前打开的文件是<code>temp.py</code>。如果文件名后带<code>*</code>号，表示这个文件修改了但尚未保存。</li>
-<li>标签页上方，显示了当前文件<code>temp.py</code>的<a href="python程序的执行.html#path">路径</a>。显然，这是一个绝对路径，显示了从根目录开始到这个文件的完整路径。</li>
-<li>右下角是Python的交互运行环境。这个环境叫<code>IPython</code>，比我们刚才运行<a href="python程序的执行.html#python_interactive">Python交互环境</a>要稍微先进一点，但本质上并无不同。</li>
-<li>工具栏，我们后面再说。</li>
+<li>学号</li>
+<li>姓名</li>
+<li>专业</li>
+<li>班级号</li>
 </ol>
+<p>用现在所学的信息，我们可以用字典dict来表示任何一个同学。</p>
+<div class="sourceCode" id="cb495"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb495-1"><a href="综合应用.html#cb495-1" aria-hidden="true" tabindex="-1"></a>student_1 <span class="op">=</span> {<span class="st">&#39;student_id&#39;</span>:<span class="dv">2021001</span>, <span class="st">&#39;name&#39;</span>:<span class="st">&#39;Alex&#39;</span>, <span class="st">&#39;major&#39;</span>: <span class="st">&#39;finance&#39;</span>, <span class="st">&#39;class_id&#39;</span>:<span class="dv">1</span>}</span>
+<span id="cb495-2"><a href="综合应用.html#cb495-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb495-3"><a href="综合应用.html#cb495-3" aria-hidden="true" tabindex="-1"></a>student_2 <span class="op">=</span> {<span class="st">&#39;student_id&#39;</span>:<span class="dv">2021002</span>, <span class="st">&#39;name&#39;</span>:<span class="st">&#39;Bob&#39;</span>, <span class="st">&#39;major&#39;</span>: <span class="st">&#39;finance&#39;</span>, <span class="st">&#39;class_id&#39;</span>:<span class="dv">1</span>}</span>
+<span id="cb495-4"><a href="综合应用.html#cb495-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb495-5"><a href="综合应用.html#cb495-5" aria-hidden="true" tabindex="-1"></a>student_3 <span class="op">=</span> {<span class="st">&#39;student_id&#39;</span>:<span class="dv">2021003</span>, <span class="st">&#39;name&#39;</span>:<span class="st">&#39;Clare&#39;</span>, <span class="st">&#39;major&#39;</span>: <span class="st">&#39;finance&#39;</span>, <span class="st">&#39;class_id&#39;</span>:<span class="dv">2</span>}</span>
+<span id="cb495-6"><a href="综合应用.html#cb495-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb495-7"><a href="综合应用.html#cb495-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb495-8"><a href="综合应用.html#cb495-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(student_1)</span></code></pre></div>
+<pre><code>## {&#39;student_id&#39;: 2021001, &#39;name&#39;: &#39;Alex&#39;, &#39;major&#39;: &#39;finance&#39;, &#39;class_id&#39;: 1}</code></pre>
+<div class="sourceCode" id="cb497"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb497-1"><a href="综合应用.html#cb497-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(student_2)</span></code></pre></div>
+<pre><code>## {&#39;student_id&#39;: 2021002, &#39;name&#39;: &#39;Bob&#39;, &#39;major&#39;: &#39;finance&#39;, &#39;class_id&#39;: 1}</code></pre>
+<div class="sourceCode" id="cb499"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb499-1"><a href="综合应用.html#cb499-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(student_3)</span></code></pre></div>
+<pre><code>## {&#39;student_id&#39;: 2021003, &#39;name&#39;: &#39;Clare&#39;, &#39;major&#39;: &#39;finance&#39;, &#39;class_id&#39;: 2}</code></pre>
+<p>显然，同类数据，我们可以组成一个List，或者另一个Dict。</p>
+<div class="sourceCode" id="cb501"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb501-1"><a href="综合应用.html#cb501-1" aria-hidden="true" tabindex="-1"></a><span class="co"># List版本</span></span>
+<span id="cb501-2"><a href="综合应用.html#cb501-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb501-3"><a href="综合应用.html#cb501-3" aria-hidden="true" tabindex="-1"></a>student_info <span class="op">=</span> [</span>
+<span id="cb501-4"><a href="综合应用.html#cb501-4" aria-hidden="true" tabindex="-1"></a>  student_1,</span>
+<span id="cb501-5"><a href="综合应用.html#cb501-5" aria-hidden="true" tabindex="-1"></a>  student_2,</span>
+<span id="cb501-6"><a href="综合应用.html#cb501-6" aria-hidden="true" tabindex="-1"></a>  student_3</span>
+<span id="cb501-7"><a href="综合应用.html#cb501-7" aria-hidden="true" tabindex="-1"></a>]</span>
+<span id="cb501-8"><a href="综合应用.html#cb501-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb501-9"><a href="综合应用.html#cb501-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(student_info)</span></code></pre></div>
+<pre><code>## [{&#39;student_id&#39;: 2021001, &#39;name&#39;: &#39;Alex&#39;, &#39;major&#39;: &#39;finance&#39;, &#39;class_id&#39;: 1}, {&#39;student_id&#39;: 2021002, &#39;name&#39;: &#39;Bob&#39;, &#39;major&#39;: &#39;finance&#39;, &#39;class_id&#39;: 1}, {&#39;student_id&#39;: 2021003, &#39;name&#39;: &#39;Clare&#39;, &#39;major&#39;: &#39;finance&#39;, &#39;class_id&#39;: 2}]</code></pre>
 </div>
-<div id="在spyder中写代码" class="section level2" number="3.2">
-<h2><span class="header-section-number">3.2</span> 在Spyder中写代码</h2>
-<p>我们在左侧的文本编辑器，把刚才的1+2程序写进去，按Ctrl+s保存一下（Mac: Cmd + s）。</p>
-<p><img src="images/spyder_ui_1p2.png" /></p>
-</div>
-<div id="运行程序" class="section level2" number="3.3">
-<h2><span class="header-section-number">3.3</span> 运行程序</h2>
-<div id="从头到尾运行代码" class="section level3" number="3.3.1">
-<h3><span class="header-section-number">3.3.1</span> 从头到尾运行代码</h3>
-<p>点击工具栏的运行按钮（Run File），或者按键盘的F5，我们可以把当前的<code>.py</code>脚本从头到尾运行一遍。
-看交互式窗口，得到结果为<code>3</code>。</p>
-<p><img src="images/spyder_ui_runall.png" /></p>
-<p>Run File，这个按钮的功能约等于我们在命令行环境下，直接运行“<code>Python temp.py</code>”。(注意我们正在编辑的文件是<code>temp.py</code>)</p>
-</div>
-<div id="变量监视器" class="section level3" number="3.3.2">
-<h3><span class="header-section-number">3.3.2</span> 变量监视器</h3>
-<p>点击右上角一栏的<code>Variable Explorer</code>（变量浏览器），可以看到当前运行环境中的所有变量和他们的类型以及值（变量类型见后）。
-点击交互界面上方的垃圾桶图标<code>Remove all variables</code>（移除所有变量），点击yes。</p>
-<p><img src="images/spyder_ui_ve.png" /></p>
-</div>
-<div id="单步执行" class="section level3" number="3.3.3">
-<h3><span class="header-section-number">3.3.3</span> 单步执行</h3>
-<p>现在找到“Run selection or current line”按钮。</p>
-<p><img src="images/btn_run_line.png"  width="50"/></p>
-<p>这个按钮，顾名思义。如果你选择了一部分代码则，执行这部分代码。如果你没有选择代码，则执行光标所在行。执行完毕后，光标会自动移动到下一行。</p>
-<p>让我们试一下。</p>
+<div id="编写功能" class="section level2" number="10.2">
+<h2><span class="header-section-number">10.2</span> 编写功能</h2>
+<p>做几个查找：</p>
 <ol style="list-style-type: decimal">
-<li>点击第一行a=1，让输入光标在这一行</li>
-<li>点击 <img src="images/btn_run_line.png"  width="30"/>，或者F9</li>
-<li>我们可以看到，这个按钮把光标所在行的代码“a = 1”，发送到了交互窗口，并执行，且光标自动下移了一行。</li>
-<li>右上方的变量浏览器，现在自动出现了变量a</li>
+<li>找出Alex的信息，既然student_info是一个列表，那我们就用列表推导。</li>
 </ol>
-<p><img src="images/spyder_ui_runline.png"/></p>
-<p>显然，如果我们连续点击<img src="images/btn_run_line.png"  width="30"/>，或者连按F9，我们就可以连续地、单步执行代码。每按一次，Spyder会把当前行的代码（或者你选定的代码），发送到交互窗口并执行。</p>
-<p>打一个比方，这就像你同时打开记事本和python交互环境，一边在记事本中写代码，一边手动地拷贝粘贴到python交互环境中执行，是同样的逻辑。</p>
-<p>这使得我们可以逐步查看每一行代码的效果，是实际工作中的常规操作之一。</p>
-<p><img src="images/spyder_ui_runline_all.png"/></p>
-</div>
-<div id="选择执行" class="section level3" number="3.3.4">
-<h3><span class="header-section-number">3.3.4</span> 选择执行</h3>
-<p>这个按钮也可以一次性执行<strong>你所选择的代码</strong>，这个大家可以自行尝试。</p>
-</div>
-</div>
-<div id="预备知识python的注释comment" class="section level2" number="3.4">
-<h2><span class="header-section-number">3.4</span> 预备知识：Python的注释（comment）</h2>
-<p>先说注释。Python使用井号：<code>#</code>来表示注释。所谓注释，就是“<strong>给人看</strong>”的内容，而Python的解释器会直接忽略掉这部分。</p>
-<ol style="list-style-type: decimal">
-<li>注释可以出现在任何地方，注意<code>#</code>号只会影响同一行右边的代码，因此也可以出现在行尾。</li>
-<li>注释往往也可以用来临时屏蔽一部分代码，只要在代码的最左侧插入一个<code>#</code>，那么整行代码会被Python解释器忽略。这是常用技巧。</li>
-</ol>
-<p>我们尝试写几个注释，例如：</p>
-<p><img src="images/spyder_comment.png"/></p>
-<p>注释是对代码的说明，非常重要：</p>
-<ol style="list-style-type: decimal">
-<li>写代码时间长了，肯定会不记得自己写的内容。有时候上午写的，下午就会忘记。</li>
-<li>多人合作的时候，要读懂彼此的代码，也必须有良好的注释。</li>
-</ol>
-<p>特别地，<strong>注释是考试的给分点</strong>。你的考试程序输出了正确的结果，可以得到合格评价，同时具有良好的编写风格、合理的注释，才能得到更高分。</p>
-</div>
-<div id="运行程序续" class="section level2" number="3.5">
-<h2><span class="header-section-number">3.5</span> 运行程序（续）</h2>
-<div id="按cell单元格执行" class="section level3" number="3.5.1">
-<h3><span class="header-section-number">3.5.1</span> 按Cell（单元格）执行</h3>
-<p>一般我们的程序，往往有一长串代码，或者连续几条语句，只是为了达到某一个特定目的。如果我们修改了某些代码，希望把整个代码块一次执行完，直接查看阶段性的结果，就可以使用cell。</p>
-<p>可以使用特殊的注释<code>#%%</code>，两个<code>#%%</code>中间的代码，会被Spyder认为是一个cell（单元格）。光标所在的cell，会有不同颜色的背景颜色来区分。</p>
-<p><img src="images/spyder_cell.png"/></p>
-<p>定义好cell之后，我们可以使用工具栏中的2个按钮</p>
-<p><img src="images/btn_run_cell.png"/></p>
-<ol style="list-style-type: decimal">
-<li>第一个按钮是“Run current cell：执行这个cell”，快捷键是Ctrl + 回车。</li>
-<li>第二个按钮是“Run current cell and go to the next one：执行这个cell，且光标移动到下一个cell”，快捷键是Shift + 回车。</li>
-</ol>
-<p>按cell执行，和前述的按行执行，是我们做数据分析的时候会反复使用的按钮。</p>
-<p>我们先新建一个“赋值的cell”，和“计算并打印的cell”，们用垃圾桶图标，先清空所有变量。</p>
-<p>执行第一个cell，可以发现，变量<code>a</code>和<code>b</code>同时出现在变量浏览器中。这意味着这个cell内的按钮被一次性执行了。</p>
-<p><img src="images/btn_run_cell_2.png"/></p>
-<p>当我们只关心一大块代码的结果，但不是太关心过程，我们就可以把这块代码划分为一个cell，随后就可以整块整块地执行。</p>
-</div>
-<div id="显示你要的结果" class="section level3" number="3.5.2">
-<h3><span class="header-section-number">3.5.2</span> 显示你要的结果</h3>
-<p>使用交互窗口：
-1. 我们之间在交互窗口输入这个变量名<code>a</code>，回车
-2. 我们之间在交互窗口输入一个打印语句<code>print(a)</code>，回车</p>
-<p>两者基本一样，但某些情况print可以接收参数，改变打印行为（样式等），直接输入变量名，就只能用默认的形式输出。</p>
-<p>使用编辑器
-1. 逐行执行，单独一个变量名也可以显示
-2. 按cell运行，只会显示<code>print()</code>的结果</p>
-<p>一般而言，使用<code>print()</code>，在代码中会比较“显眼”，达到顾名思义的效果，尽量使用。而如果只是想临时看一下变量的值，直接在交互窗口输入也可以。</p>
-</div>
-</div>
-<div id="确定一个项目文件夹" class="section level2" number="3.6">
-<h2><span class="header-section-number">3.6</span> 确定一个项目文件夹</h2>
-<ol style="list-style-type: decimal">
-<li>以<code>C:/PythonClass</code>为例。课程所有的有关文件，都会保存在这个目录下。我们称之为“<strong>工作目录Working Directory</strong>”。</li>
-<li>也可以把工作目录建立在你习惯的位置。</li>
-<li>为一个特定的工作建立一个特定的目录，是一个良好的习惯。</li>
-</ol>
-<div id="在spyder中设定这个目录为工作目录" class="section level3" number="3.6.1">
-<h3><span class="header-section-number">3.6.1</span> 在Spyder中设定这个目录为工作目录</h3>
-<ol style="list-style-type: decimal">
-<li>点击界面右上角的“browse a working directory”按钮，选择你刚才建立的工作目录。（本例中为<code>C:/PythonClass</code>）</li>
-</ol>
-<p><img src="images/btn_setwd.png" title="下载anaconda" /></p>
-<ol start="2" style="list-style-type: decimal">
-<li>切换到Files标签栏</li>
-<li>把我们正在编辑的py文件，另存为到工作目录，命名为<code>add.py</code>。这样，在文件列表，我们会看到这个文件</li>
-</ol>
-<p>注意：如果前面大家按步骤做，这里应该会覆盖掉上一节课的同名文件。</p>
-
+<div class="sourceCode" id="cb503"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb503-1"><a href="综合应用.html#cb503-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb503-2"><a href="综合应用.html#cb503-2" aria-hidden="true" tabindex="-1"></a>result <span class="op">=</span> [s <span class="cf">for</span> s <span class="kw">in</span> student_info <span class="cf">if</span> s[<span class="st">&#39;name&#39;</span>] <span class="op">==</span> <span class="st">&quot;Alex&quot;</span>]</span>
+<span id="cb503-3"><a href="综合应用.html#cb503-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb503-4"><a href="综合应用.html#cb503-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(result)</span></code></pre></div>
+<pre><code>## [{&#39;student_id&#39;: 2021001, &#39;name&#39;: &#39;Alex&#39;, &#39;major&#39;: &#39;finance&#39;, &#39;class_id&#39;: 1}]</code></pre>
+<p>注意：列表推导的结果，也是一个列表，即使其中只有1个元素。看打印的最2边是中括号。</p>
+<p>那么有多少个同学叫Alex?</p>
+<div class="sourceCode" id="cb505"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb505-1"><a href="综合应用.html#cb505-1" aria-hidden="true" tabindex="-1"></a><span class="bu">len</span>(result)</span></code></pre></div>
+<pre><code>## 1</code></pre>
+<p>那我们可以获得Alex的信息，例如学号和专业</p>
+<div class="sourceCode" id="cb507"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb507-1"><a href="综合应用.html#cb507-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(result[<span class="dv">0</span>][<span class="st">&#39;student_id&#39;</span>])</span></code></pre></div>
+<pre><code>## 2021001</code></pre>
+<div class="sourceCode" id="cb509"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb509-1"><a href="综合应用.html#cb509-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(result[<span class="dv">0</span>][<span class="st">&#39;major&#39;</span>])</span></code></pre></div>
+<pre><code>## finance</code></pre>
+<p>按人名查找，是一个特别常用的功能，那我们写一个函数</p>
+<div class="sourceCode" id="cb511"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb511-1"><a href="综合应用.html#cb511-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> find_student_by_name(x, name):</span>
+<span id="cb511-2"><a href="综合应用.html#cb511-2" aria-hidden="true" tabindex="-1"></a>  result <span class="op">=</span> [s <span class="cf">for</span> s <span class="kw">in</span> x <span class="cf">if</span> s[<span class="st">&#39;name&#39;</span>] <span class="op">==</span> name]</span>
+<span id="cb511-3"><a href="综合应用.html#cb511-3" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> result</span>
+<span id="cb511-4"><a href="综合应用.html#cb511-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb511-5"><a href="综合应用.html#cb511-5" aria-hidden="true" tabindex="-1"></a>result <span class="op">=</span> find_student_by_name(student_info,<span class="st">&quot;Alex&quot;</span>)</span>
+<span id="cb511-6"><a href="综合应用.html#cb511-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(result)</span></code></pre></div>
+<pre><code>## [{&#39;student_id&#39;: 2021001, &#39;name&#39;: &#39;Alex&#39;, &#39;major&#39;: &#39;finance&#39;, &#39;class_id&#39;: 1}]</code></pre>
+<div id="练习-3" class="section level3" number="10.2.1">
+<h3><span class="header-section-number">10.2.1</span> 练习</h3>
 </div>
 </div>
 </div>
@@ -505,8 +445,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           </div>
         </div>
       </div>
-<a href="python程序的执行.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="变量和常用类型.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="模块module-施工中.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="面向对象初步.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

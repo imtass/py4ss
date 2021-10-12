@@ -24,7 +24,7 @@
 <meta name="author" content="Li Weicheng @ gpnu" />
 
 
-<meta name="date" content="2021-10-07" />
+<meta name="date" content="2021-10-12" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -53,6 +53,7 @@
 
 <link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<script async defer src="https://hypothes.is/embed.js"></script>
 
 
 <style type="text/css">
@@ -258,6 +259,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="6.1.4" data-path="条件与循环施工中.html"><a href="条件与循环施工中.html#练习"><i class="fa fa-check"></i><b>6.1.4</b> 练习</a></li>
 <li class="chapter" data-level="6.1.5" data-path="条件与循环施工中.html"><a href="条件与循环施工中.html#嵌套if"><i class="fa fa-check"></i><b>6.1.5</b> 嵌套if</a></li>
 <li class="chapter" data-level="6.1.6" data-path="条件与循环施工中.html"><a href="条件与循环施工中.html#练习-1"><i class="fa fa-check"></i><b>6.1.6</b> 练习</a></li>
+<li class="chapter" data-level="6.1.7" data-path="条件与循环施工中.html"><a href="条件与循环施工中.html#再谈布尔值"><i class="fa fa-check"></i><b>6.1.7</b> 再谈布尔值</a></li>
 </ul></li>
 <li class="chapter" data-level="6.2" data-path="条件与循环施工中.html"><a href="条件与循环施工中.html#while循环"><i class="fa fa-check"></i><b>6.2</b> while循环</a>
 <ul>
@@ -266,13 +268,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="6.3" data-path="条件与循环施工中.html"><a href="条件与循环施工中.html#for循环"><i class="fa fa-check"></i><b>6.3</b> for循环</a>
 <ul>
-<li class="chapter" data-level="6.3.1" data-path="条件与循环施工中.html"><a href="条件与循环施工中.html#range的循环"><i class="fa fa-check"></i><b>6.3.1</b> range的循环</a></li>
+<li class="chapter" data-level="6.3.1" data-path="条件与循环施工中.html"><a href="条件与循环施工中.html#如果没有for循环"><i class="fa fa-check"></i><b>6.3.1</b> 如果没有for循环</a></li>
+<li class="chapter" data-level="6.3.2" data-path="条件与循环施工中.html"><a href="条件与循环施工中.html#用while循环"><i class="fa fa-check"></i><b>6.3.2</b> 用while循环？</a></li>
+<li class="chapter" data-level="6.3.3" data-path="条件与循环施工中.html"><a href="条件与循环施工中.html#用for循环"><i class="fa fa-check"></i><b>6.3.3</b> 用for循环</a></li>
+<li class="chapter" data-level="6.3.4" data-path="条件与循环施工中.html"><a href="条件与循环施工中.html#比较"><i class="fa fa-check"></i><b>6.3.4</b> 比较</a></li>
+<li class="chapter" data-level="6.3.5" data-path="条件与循环施工中.html"><a href="条件与循环施工中.html#for循环-1"><i class="fa fa-check"></i><b>6.3.5</b> for循环</a></li>
+<li class="chapter" data-level="6.3.6" data-path="条件与循环施工中.html"><a href="条件与循环施工中.html#range的循环"><i class="fa fa-check"></i><b>6.3.6</b> range的循环</a></li>
 </ul></li>
-<li class="chapter" data-level="6.4" data-path="条件与循环施工中.html"><a href="条件与循环施工中.html#更多练习"><i class="fa fa-check"></i><b>6.4</b> 更多练习</a>
-<ul>
-<li class="chapter" data-level="6.4.1" data-path="条件与循环施工中.html"><a href="条件与循环施工中.html#列表推导式list-comprehension"><i class="fa fa-check"></i><b>6.4.1</b> 列表推导式List Comprehension</a></li>
-</ul></li>
-<li class="chapter" data-level="6.5" data-path="条件与循环施工中.html"><a href="条件与循环施工中.html#循环dict"><i class="fa fa-check"></i><b>6.5</b> 循环Dict</a></li>
+<li class="chapter" data-level="6.4" data-path="条件与循环施工中.html"><a href="条件与循环施工中.html#更多练习"><i class="fa fa-check"></i><b>6.4</b> 更多练习</a></li>
+<li class="chapter" data-level="6.5" data-path="条件与循环施工中.html"><a href="条件与循环施工中.html#列表推导式list-comprehension"><i class="fa fa-check"></i><b>6.5</b> 列表推导式List Comprehension</a></li>
+<li class="chapter" data-level="6.6" data-path="条件与循环施工中.html"><a href="条件与循环施工中.html#循环dict"><i class="fa fa-check"></i><b>6.6</b> 循环Dict</a></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="函数施工中.html"><a href="函数施工中.html"><i class="fa fa-check"></i><b>7</b> 函数（施工中）</a>
 <ul>
@@ -291,11 +296,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="7.2.3" data-path="函数施工中.html"><a href="函数施工中.html#默认参数"><i class="fa fa-check"></i><b>7.2.3</b> 默认参数</a></li>
 <li class="chapter" data-level="7.2.4" data-path="函数施工中.html"><a href="函数施工中.html#例乘方函数n次方"><i class="fa fa-check"></i><b>7.2.4</b> 例：乘方函数（n次方）</a></li>
 <li class="chapter" data-level="7.2.5" data-path="函数施工中.html"><a href="函数施工中.html#不定长参数进阶"><i class="fa fa-check"></i><b>7.2.5</b> 不定长参数（进阶）</a></li>
+<li class="chapter" data-level="7.2.6" data-path="函数施工中.html"><a href="函数施工中.html#可变参数以dict形式传递"><i class="fa fa-check"></i><b>7.2.6</b> 可变参数以dict形式传递</a></li>
 </ul></li>
-<li class="chapter" data-level="7.3" data-path="函数施工中.html"><a href="函数施工中.html#变量作用域"><i class="fa fa-check"></i><b>7.3</b> 变量作用域</a>
+<li class="chapter" data-level="7.3" data-path="函数施工中.html"><a href="函数施工中.html#参数作为可变类型和不可变类型"><i class="fa fa-check"></i><b>7.3</b> 参数作为可变类型和不可变类型</a></li>
+<li class="chapter" data-level="7.4" data-path="函数施工中.html"><a href="函数施工中.html#递归简介知道即可"><i class="fa fa-check"></i><b>7.4</b> 递归简介（知道即可）</a></li>
+<li class="chapter" data-level="7.5" data-path="函数施工中.html"><a href="函数施工中.html#变量作用域"><i class="fa fa-check"></i><b>7.5</b> 变量作用域</a>
 <ul>
-<li class="chapter" data-level="7.3.1" data-path="函数施工中.html"><a href="函数施工中.html#局部作用域"><i class="fa fa-check"></i><b>7.3.1</b> 局部作用域</a></li>
-<li class="chapter" data-level="7.3.2" data-path="函数施工中.html"><a href="函数施工中.html#全局作用域"><i class="fa fa-check"></i><b>7.3.2</b> 全局作用域</a></li>
+<li class="chapter" data-level="7.5.1" data-path="函数施工中.html"><a href="函数施工中.html#局部作用域"><i class="fa fa-check"></i><b>7.5.1</b> 局部作用域</a></li>
+<li class="chapter" data-level="7.5.2" data-path="函数施工中.html"><a href="函数施工中.html#全局作用域"><i class="fa fa-check"></i><b>7.5.2</b> 全局作用域</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="函数式编程入门.html"><a href="函数式编程入门.html"><i class="fa fa-check"></i><b>8</b> 函数式编程入门</a>
@@ -306,13 +314,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="8.1.2" data-path="函数式编程入门.html"><a href="函数式编程入门.html#filter"><i class="fa fa-check"></i><b>8.1.2</b> filter</a></li>
 <li class="chapter" data-level="8.1.3" data-path="函数式编程入门.html"><a href="函数式编程入门.html#混合map和filter"><i class="fa fa-check"></i><b>8.1.3</b> 混合map和filter</a></li>
 <li class="chapter" data-level="8.1.4" data-path="函数式编程入门.html"><a href="函数式编程入门.html#匿名函数-lambda"><i class="fa fa-check"></i><b>8.1.4</b> 匿名函数 lambda</a></li>
+<li class="chapter" data-level="8.1.5" data-path="函数式编程入门.html"><a href="函数式编程入门.html#map和filter的结果惰性"><i class="fa fa-check"></i><b>8.1.5</b> map和filter的结果：惰性</a></li>
 </ul></li>
 <li class="chapter" data-level="8.2" data-path="函数式编程入门.html"><a href="函数式编程入门.html#高阶函数进阶施工中"><i class="fa fa-check"></i><b>8.2</b> 高阶函数（进阶）（施工中）</a>
 <ul>
 <li class="chapter" data-level="8.2.1" data-path="函数式编程入门.html"><a href="函数式编程入门.html#函数是一等公民"><i class="fa fa-check"></i><b>8.2.1</b> 函数是一等公民</a></li>
 <li class="chapter" data-level="8.2.2" data-path="函数式编程入门.html"><a href="函数式编程入门.html#函数作为参数"><i class="fa fa-check"></i><b>8.2.2</b> 函数作为参数</a></li>
 <li class="chapter" data-level="8.2.3" data-path="函数式编程入门.html"><a href="函数式编程入门.html#函数生成器"><i class="fa fa-check"></i><b>8.2.3</b> “函数生成器”</a></li>
-<li class="chapter" data-level="8.2.4" data-path="函数式编程入门.html"><a href="函数式编程入门.html#闭包closure"><i class="fa fa-check"></i><b>8.2.4</b> 闭包Closure</a></li>
+<li class="chapter" data-level="8.2.4" data-path="函数式编程入门.html"><a href="函数式编程入门.html#reduce"><i class="fa fa-check"></i><b>8.2.4</b> reduce</a></li>
+<li class="chapter" data-level="8.2.5" data-path="函数式编程入门.html"><a href="函数式编程入门.html#闭包closure"><i class="fa fa-check"></i><b>8.2.5</b> 闭包Closure</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="9" data-path="模块module-施工中.html"><a href="模块module-施工中.html"><i class="fa fa-check"></i><b>9</b> 模块module （施工中）</a>
@@ -323,11 +333,20 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="9.1.2" data-path="模块module-施工中.html"><a href="模块module-施工中.html#引入到当前名字空间"><i class="fa fa-check"></i><b>9.1.2</b> 引入到当前名字空间</a></li>
 </ul></li>
 <li class="chapter" data-level="9.2" data-path="模块module-施工中.html"><a href="模块module-施工中.html#自定义模块"><i class="fa fa-check"></i><b>9.2</b> 自定义模块</a></li>
+<li class="chapter" data-level="9.3" data-path="模块module-施工中.html"><a href="模块module-施工中.html#包package"><i class="fa fa-check"></i><b>9.3</b> 包package</a></li>
 </ul></li>
-<li class="chapter" data-level="10" data-path="内置函数和常用库.html"><a href="内置函数和常用库.html"><i class="fa fa-check"></i><b>10</b> 内置函数和常用库</a></li>
-<li class="chapter" data-level="11" data-path="numpy.html"><a href="numpy.html"><i class="fa fa-check"></i><b>11</b> Numpy</a></li>
-<li class="chapter" data-level="12" data-path="pandas.html"><a href="pandas.html"><i class="fa fa-check"></i><b>12</b> Pandas</a></li>
-<li class="chapter" data-level="13" data-path="综合数据处理.html"><a href="综合数据处理.html"><i class="fa fa-check"></i><b>13</b> 综合数据处理</a></li>
+<li class="chapter" data-level="10" data-path="综合应用.html"><a href="综合应用.html"><i class="fa fa-check"></i><b>10</b> 综合应用</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="综合应用.html"><a href="综合应用.html#从数据开始"><i class="fa fa-check"></i><b>10.1</b> 从数据开始</a></li>
+<li class="chapter" data-level="10.2" data-path="综合应用.html"><a href="综合应用.html#编写功能"><i class="fa fa-check"></i><b>10.2</b> 编写功能</a>
+<ul>
+<li class="chapter" data-level="10.2.1" data-path="综合应用.html"><a href="综合应用.html#练习-3"><i class="fa fa-check"></i><b>10.2.1</b> 练习</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="面向对象初步.html"><a href="面向对象初步.html"><i class="fa fa-check"></i><b>11</b> 面向对象初步</a></li>
+<li class="chapter" data-level="12" data-path="numpy.html"><a href="numpy.html"><i class="fa fa-check"></i><b>12</b> Numpy</a></li>
+<li class="chapter" data-level="13" data-path="pandas.html"><a href="pandas.html"><i class="fa fa-check"></i><b>13</b> Pandas</a></li>
+<li class="chapter" data-level="14" data-path="综合数据处理.html"><a href="综合数据处理.html"><i class="fa fa-check"></i><b>14</b> 综合数据处理</a></li>
 </ul>
 
       </nav>
@@ -345,6 +364,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
+<div class = rmdreview>
+  
+<p> 这本书添加了注释功能，<span style="background-color: #3297FD; color: white">左键选择任何文字</span>，就会弹出注释菜单。注释功能区在页面的右上角。
+<p> 注释有公共和私人两类。私人注释只有自己能看见，公共则所有人都能看见。</p>
+
+</div>
 <div id="函数式编程入门" class="section level1" number="8">
 <h1><span class="header-section-number">8</span> 函数式编程入门</h1>
 <div id="map和filter" class="section level2" number="8.1">
@@ -356,79 +381,81 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>建立一个空的List用来保存结果<code>result = []</code></li>
 <li>循环<code>a</code>中的所有元素，并且乘以2，添加到<code>result</code>的末端</li>
 </ol>
-<div class="sourceCode" id="cb370"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb370-1"><a href="函数式编程入门.html#cb370-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> [<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>]</span>
-<span id="cb370-2"><a href="函数式编程入门.html#cb370-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(a)</span></code></pre></div>
+<div class="sourceCode" id="cb417"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb417-1"><a href="函数式编程入门.html#cb417-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> [<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>]</span>
+<span id="cb417-2"><a href="函数式编程入门.html#cb417-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(a)</span></code></pre></div>
 <pre><code>## [1, 2, 3, 4, 5]</code></pre>
-<div class="sourceCode" id="cb372"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb372-1"><a href="函数式编程入门.html#cb372-1" aria-hidden="true" tabindex="-1"></a>result <span class="op">=</span> []</span>
-<span id="cb372-2"><a href="函数式编程入门.html#cb372-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> a:</span>
-<span id="cb372-3"><a href="函数式编程入门.html#cb372-3" aria-hidden="true" tabindex="-1"></a>  result.append(i<span class="op">*</span><span class="dv">2</span>)</span>
-<span id="cb372-4"><a href="函数式编程入门.html#cb372-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb372-5"><a href="函数式编程入门.html#cb372-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(result)</span></code></pre></div>
+<div class="sourceCode" id="cb419"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb419-1"><a href="函数式编程入门.html#cb419-1" aria-hidden="true" tabindex="-1"></a>result <span class="op">=</span> []</span>
+<span id="cb419-2"><a href="函数式编程入门.html#cb419-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> a:</span>
+<span id="cb419-3"><a href="函数式编程入门.html#cb419-3" aria-hidden="true" tabindex="-1"></a>  result.append(i<span class="op">*</span><span class="dv">2</span>)</span>
+<span id="cb419-4"><a href="函数式编程入门.html#cb419-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb419-5"><a href="函数式编程入门.html#cb419-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(result)</span></code></pre></div>
 <pre><code>## [2, 4, 6, 8, 10]</code></pre>
 <p><code>map</code>函数，可以把一个函数，应用到List中的所有元素上。</p>
-<div class="sourceCode" id="cb374"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb374-1"><a href="函数式编程入门.html#cb374-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> do_double(x):</span>
-<span id="cb374-2"><a href="函数式编程入门.html#cb374-2" aria-hidden="true" tabindex="-1"></a>  <span class="co">&#39;翻倍函数&#39;</span></span>
-<span id="cb374-3"><a href="函数式编程入门.html#cb374-3" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> x <span class="op">*</span> <span class="dv">2</span></span>
-<span id="cb374-4"><a href="函数式编程入门.html#cb374-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb374-5"><a href="函数式编程入门.html#cb374-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(do_double(<span class="dv">3</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb421"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb421-1"><a href="函数式编程入门.html#cb421-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> do_double(x):</span>
+<span id="cb421-2"><a href="函数式编程入门.html#cb421-2" aria-hidden="true" tabindex="-1"></a>  <span class="co">&#39;翻倍函数&#39;</span></span>
+<span id="cb421-3"><a href="函数式编程入门.html#cb421-3" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> x <span class="op">*</span> <span class="dv">2</span></span>
+<span id="cb421-4"><a href="函数式编程入门.html#cb421-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb421-5"><a href="函数式编程入门.html#cb421-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(do_double(<span class="dv">3</span>))</span></code></pre></div>
 <pre><code>## 6</code></pre>
 <p>把do_dobule函数，应用到列表a中的每一个元素里。</p>
-<div class="sourceCode" id="cb376"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb376-1"><a href="函数式编程入门.html#cb376-1" aria-hidden="true" tabindex="-1"></a>result <span class="op">=</span> <span class="bu">map</span>(do_double, a) <span class="co"># 把do_dobule函数，应用到列表a中的每一个元素里。</span></span>
-<span id="cb376-2"><a href="函数式编程入门.html#cb376-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb376-3"><a href="函数式编程入门.html#cb376-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">list</span>(result))</span></code></pre></div>
+<div class="sourceCode" id="cb423"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb423-1"><a href="函数式编程入门.html#cb423-1" aria-hidden="true" tabindex="-1"></a>result <span class="op">=</span> <span class="bu">map</span>(do_double, a) <span class="co"># 把do_dobule函数，应用到列表a中的每一个元素里。</span></span>
+<span id="cb423-2"><a href="函数式编程入门.html#cb423-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb423-3"><a href="函数式编程入门.html#cb423-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">list</span>(result))</span></code></pre></div>
 <pre><code>## [2, 4, 6, 8, 10]</code></pre>
 <p>也可用列表推导</p>
-<div class="sourceCode" id="cb378"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb378-1"><a href="函数式编程入门.html#cb378-1" aria-hidden="true" tabindex="-1"></a>result <span class="op">=</span> [i <span class="op">*</span> <span class="dv">2</span> <span class="cf">for</span> i <span class="kw">in</span> a]</span>
-<span id="cb378-2"><a href="函数式编程入门.html#cb378-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(result)</span></code></pre></div>
+<div class="sourceCode" id="cb425"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb425-1"><a href="函数式编程入门.html#cb425-1" aria-hidden="true" tabindex="-1"></a>result <span class="op">=</span> [i <span class="op">*</span> <span class="dv">2</span> <span class="cf">for</span> i <span class="kw">in</span> a]</span>
+<span id="cb425-2"><a href="函数式编程入门.html#cb425-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(result)</span></code></pre></div>
 <pre><code>## [2, 4, 6, 8, 10]</code></pre>
-<div class="sourceCode" id="cb380"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb380-1"><a href="函数式编程入门.html#cb380-1" aria-hidden="true" tabindex="-1"></a>result <span class="op">=</span> [do_double(i) <span class="cf">for</span> i <span class="kw">in</span> a]</span>
-<span id="cb380-2"><a href="函数式编程入门.html#cb380-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(result)</span></code></pre></div>
+<div class="sourceCode" id="cb427"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb427-1"><a href="函数式编程入门.html#cb427-1" aria-hidden="true" tabindex="-1"></a>result <span class="op">=</span> [do_double(i) <span class="cf">for</span> i <span class="kw">in</span> a]</span>
+<span id="cb427-2"><a href="函数式编程入门.html#cb427-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(result)</span></code></pre></div>
 <pre><code>## [2, 4, 6, 8, 10]</code></pre>
 <p>把a里的元素，全部转换为str</p>
-<div class="sourceCode" id="cb382"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb382-1"><a href="函数式编程入门.html#cb382-1" aria-hidden="true" tabindex="-1"></a>result <span class="op">=</span> <span class="bu">map</span>(<span class="bu">str</span>, a) <span class="co"># 把str函数，应用到列表a中的每一个元素里。</span></span>
-<span id="cb382-2"><a href="函数式编程入门.html#cb382-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb382-3"><a href="函数式编程入门.html#cb382-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">list</span>(result))</span></code></pre></div>
+<div class="sourceCode" id="cb429"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb429-1"><a href="函数式编程入门.html#cb429-1" aria-hidden="true" tabindex="-1"></a>result <span class="op">=</span> <span class="bu">map</span>(<span class="bu">str</span>, a) <span class="co"># 把str函数，应用到列表a中的每一个元素里。</span></span>
+<span id="cb429-2"><a href="函数式编程入门.html#cb429-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb429-3"><a href="函数式编程入门.html#cb429-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">list</span>(result))</span></code></pre></div>
 <pre><code>## [&#39;1&#39;, &#39;2&#39;, &#39;3&#39;, &#39;4&#39;, &#39;5&#39;]</code></pre>
 </div>
 <div id="filter" class="section level3" number="8.1.2">
 <h3><span class="header-section-number">8.1.2</span> filter</h3>
-<p>有一个List，<code>a = [1,2,3,4,5]</code>，你现在要选出符合特定条件的元素，例如选出其中的基数，组成一个新的List。用循环做：</p>
-<div class="sourceCode" id="cb384"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb384-1"><a href="函数式编程入门.html#cb384-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> [<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>]</span>
-<span id="cb384-2"><a href="函数式编程入门.html#cb384-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb384-3"><a href="函数式编程入门.html#cb384-3" aria-hidden="true" tabindex="-1"></a>result <span class="op">=</span> []</span>
-<span id="cb384-4"><a href="函数式编程入门.html#cb384-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb384-5"><a href="函数式编程入门.html#cb384-5" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> a:</span>
-<span id="cb384-6"><a href="函数式编程入门.html#cb384-6" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> i <span class="op">%</span> <span class="dv">2</span> <span class="op">==</span> <span class="dv">1</span>:</span>
-<span id="cb384-7"><a href="函数式编程入门.html#cb384-7" aria-hidden="true" tabindex="-1"></a>    result.append(i)</span>
-<span id="cb384-8"><a href="函数式编程入门.html#cb384-8" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb384-9"><a href="函数式编程入门.html#cb384-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(result)</span></code></pre></div>
+<p>有一个List，<code>a = [1,2,3,4,5]</code>，你现在要选出符合特定条件的元素，例如选出其中的奇数，组成一个新的List。用循环做：</p>
+<div class="sourceCode" id="cb431"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb431-1"><a href="函数式编程入门.html#cb431-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> [<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>]</span>
+<span id="cb431-2"><a href="函数式编程入门.html#cb431-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb431-3"><a href="函数式编程入门.html#cb431-3" aria-hidden="true" tabindex="-1"></a>result <span class="op">=</span> []</span>
+<span id="cb431-4"><a href="函数式编程入门.html#cb431-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb431-5"><a href="函数式编程入门.html#cb431-5" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> a:</span>
+<span id="cb431-6"><a href="函数式编程入门.html#cb431-6" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> i <span class="op">%</span> <span class="dv">2</span> <span class="op">==</span> <span class="dv">1</span>:</span>
+<span id="cb431-7"><a href="函数式编程入门.html#cb431-7" aria-hidden="true" tabindex="-1"></a>    result.append(i)</span>
+<span id="cb431-8"><a href="函数式编程入门.html#cb431-8" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb431-9"><a href="函数式编程入门.html#cb431-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(result)</span></code></pre></div>
 <pre><code>## [1, 3, 5]</code></pre>
+<iframe width="800" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=a%20%3D%20%5B1,2,3,4,5%5D%0A%0Aresult%20%3D%20%5B%5D%0A%0Afor%20i%20in%20a%3A%0A%20%20if%20i%20%25%202%20%3D%3D%201%3A%0A%20%20%20%20result.append%28i%29%0A%20%20%0Aprint%28result%29&amp;codeDivHeight=400&amp;codeDivWidth=350&amp;cumulative=false&amp;curInstr=17&amp;heapPrimitives=nevernest&amp;origin=opt-frontend.js&amp;py=3&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false">
+</iframe>
 <p>和map一样，定义一个is_odd函数，作为filter的过滤条件，应该返回布尔值(<code>True/False</code>)，作为是否符合条件的结果。</p>
-<div class="sourceCode" id="cb386"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb386-1"><a href="函数式编程入门.html#cb386-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> is_odd(x):</span>
-<span id="cb386-2"><a href="函数式编程入门.html#cb386-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> x <span class="op">%</span> <span class="dv">2</span> <span class="op">==</span> <span class="dv">1</span></span>
-<span id="cb386-3"><a href="函数式编程入门.html#cb386-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb386-4"><a href="函数式编程入门.html#cb386-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(is_odd(<span class="dv">3</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb433"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb433-1"><a href="函数式编程入门.html#cb433-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> is_odd(x):</span>
+<span id="cb433-2"><a href="函数式编程入门.html#cb433-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> x <span class="op">%</span> <span class="dv">2</span> <span class="op">==</span> <span class="dv">1</span></span>
+<span id="cb433-3"><a href="函数式编程入门.html#cb433-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb433-4"><a href="函数式编程入门.html#cb433-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(is_odd(<span class="dv">3</span>))</span></code></pre></div>
 <pre><code>## True</code></pre>
-<div class="sourceCode" id="cb388"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb388-1"><a href="函数式编程入门.html#cb388-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(is_odd(<span class="dv">6</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb435"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb435-1"><a href="函数式编程入门.html#cb435-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(is_odd(<span class="dv">6</span>))</span></code></pre></div>
 <pre><code>## False</code></pre>
 <p>filter(判断函数, List)</p>
-<div class="sourceCode" id="cb390"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb390-1"><a href="函数式编程入门.html#cb390-1" aria-hidden="true" tabindex="-1"></a>resutl <span class="op">=</span> <span class="bu">filter</span>(is_odd, a)</span>
-<span id="cb390-2"><a href="函数式编程入门.html#cb390-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">list</span>(result))</span></code></pre></div>
+<div class="sourceCode" id="cb437"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb437-1"><a href="函数式编程入门.html#cb437-1" aria-hidden="true" tabindex="-1"></a>resutl <span class="op">=</span> <span class="bu">filter</span>(is_odd, a)</span>
+<span id="cb437-2"><a href="函数式编程入门.html#cb437-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">list</span>(result))</span></code></pre></div>
 <pre><code>## [1, 3, 5]</code></pre>
 <p>当然，也可以用列表推导</p>
-<div class="sourceCode" id="cb392"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb392-1"><a href="函数式编程入门.html#cb392-1" aria-hidden="true" tabindex="-1"></a>[i <span class="cf">for</span> i <span class="kw">in</span> a <span class="cf">if</span> is_odd(i)]</span></code></pre></div>
+<div class="sourceCode" id="cb439"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb439-1"><a href="函数式编程入门.html#cb439-1" aria-hidden="true" tabindex="-1"></a>[i <span class="cf">for</span> i <span class="kw">in</span> a <span class="cf">if</span> is_odd(i)]</span></code></pre></div>
 <pre><code>## [1, 3, 5]</code></pre>
 </div>
 <div id="混合map和filter" class="section level3" number="8.1.3">
 <h3><span class="header-section-number">8.1.3</span> 混合map和filter</h3>
-<p>选出a中的基数，并乘以2</p>
+<p>选出a中的奇数，并乘以2</p>
 <p>map 和 filter的做法</p>
-<div class="sourceCode" id="cb394"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb394-1"><a href="函数式编程入门.html#cb394-1" aria-hidden="true" tabindex="-1"></a>result <span class="op">=</span> <span class="bu">list</span>(<span class="bu">map</span>(do_double, <span class="bu">filter</span>(is_odd, a)))</span>
-<span id="cb394-2"><a href="函数式编程入门.html#cb394-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(result)</span></code></pre></div>
+<div class="sourceCode" id="cb441"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb441-1"><a href="函数式编程入门.html#cb441-1" aria-hidden="true" tabindex="-1"></a>result <span class="op">=</span> <span class="bu">list</span>(<span class="bu">map</span>(do_double, <span class="bu">filter</span>(is_odd, a)))</span>
+<span id="cb441-2"><a href="函数式编程入门.html#cb441-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(result)</span></code></pre></div>
 <pre><code>## [2, 6, 10]</code></pre>
 <p>列表推导的做法</p>
-<div class="sourceCode" id="cb396"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb396-1"><a href="函数式编程入门.html#cb396-1" aria-hidden="true" tabindex="-1"></a>result <span class="op">=</span> [do_double(i) <span class="cf">for</span> i <span class="kw">in</span> a <span class="cf">if</span> is_odd(i)]</span>
-<span id="cb396-2"><a href="函数式编程入门.html#cb396-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(result)</span></code></pre></div>
+<div class="sourceCode" id="cb443"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb443-1"><a href="函数式编程入门.html#cb443-1" aria-hidden="true" tabindex="-1"></a>result <span class="op">=</span> [do_double(i) <span class="cf">for</span> i <span class="kw">in</span> a <span class="cf">if</span> is_odd(i)]</span>
+<span id="cb443-2"><a href="函数式编程入门.html#cb443-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(result)</span></code></pre></div>
 <pre><code>## [2, 6, 10]</code></pre>
 <p>注：</p>
 <ol style="list-style-type: decimal">
@@ -446,15 +473,47 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div id="匿名函数-lambda" class="section level3" number="8.1.4">
 <h3><span class="header-section-number">8.1.4</span> 匿名函数 lambda</h3>
+<p>在我们使用<code>map</code>、<code>filter</code>，或者列表推导的时候，如果要对列表做的操作<strong>非常简单、一目了然</strong>，并且可以<strong>写进一行</strong>（比如乘以二，或者取最后一个字母等等），那么我们可以不用专门写一个函数，而直接放一个匿名函数进去。</p>
 <p>使用<code>lambda</code>关键字，一个表达式，直接返回这个表达式的结果，不用写<code>return</code>。</p>
+<p>写法一般是：</p>
+<p><code>lambda &lt;参数列表&gt;: &lt;对参数的操作&gt;</code></p>
+<p>例如一个匿名版本的<code>add(a,b)</code>函数：</p>
+<p><code>lambda a,b : a + b</code></p>
+<p>或者一个匿名的翻倍函数：</p>
+<p><code>lambda x: x * 2</code></p>
+<p>以把一个列表所以元素翻倍为例：</p>
+<p>用普通函数：事先定义了一个do_double函数，这个函数返回参数x2</p>
+<div class="sourceCode" id="cb445"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb445-1"><a href="函数式编程入门.html#cb445-1" aria-hidden="true" tabindex="-1"></a>result <span class="op">=</span>  <span class="bu">map</span>(do_double, a)</span>
+<span id="cb445-2"><a href="函数式编程入门.html#cb445-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">list</span>(result))</span></code></pre></div>
+<pre><code>## [2, 4, 6, 8, 10]</code></pre>
+<p>用匿名函数：乘以2这类简单操作，用匿名函数即可，可以省下预先定义<code>do_double</code>函数。</p>
+<div class="sourceCode" id="cb447"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb447-1"><a href="函数式编程入门.html#cb447-1" aria-hidden="true" tabindex="-1"></a>result <span class="op">=</span>  <span class="bu">map</span>(<span class="kw">lambda</span> x : x <span class="op">*</span> <span class="dv">2</span>,a)</span>
+<span id="cb447-2"><a href="函数式编程入门.html#cb447-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">list</span>(result))</span></code></pre></div>
+<pre><code>## [2, 4, 6, 8, 10]</code></pre>
 <p>注：</p>
-<p>对于初学者，建议还是把具体的操作起一个可以“顾名思义”的名字。</p>
-<div class="sourceCode" id="cb398"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb398-1"><a href="函数式编程入门.html#cb398-1" aria-hidden="true" tabindex="-1"></a>result <span class="op">=</span>  <span class="bu">map</span>(do_double, a)</span>
-<span id="cb398-2"><a href="函数式编程入门.html#cb398-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">list</span>(result))</span></code></pre></div>
+<p>对于初学者，如果不是一个超级简单的操作，建议还是应该用一个可以“顾名思义”的函数。</p>
+</div>
+<div id="map和filter的结果惰性" class="section level3" number="8.1.5">
+<h3><span class="header-section-number">8.1.5</span> map和filter的结果：惰性</h3>
+<p>如果我们直接打印map和filter的结果，我们会发现，它们的返回值不是一个List，而是一个<code>map object</code>或者<code>filter object</code>。</p>
+<p>这是因为<code>map</code>和<code>filter</code>，不会在你调用<code>map()/filter()</code>函数的时候马上进行计算，而是在你<strong>读取其中的值的时候</strong>，才进行具体计算。我们称之为“惰性求值”。</p>
+<p>例如，用前面的List翻倍的例子。</p>
+<div class="sourceCode" id="cb449"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb449-1"><a href="函数式编程入门.html#cb449-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> [<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>]</span>
+<span id="cb449-2"><a href="函数式编程入门.html#cb449-2" aria-hidden="true" tabindex="-1"></a>result <span class="op">=</span> <span class="bu">map</span>(<span class="kw">lambda</span> x : x <span class="op">*</span> <span class="dv">2</span>,a) <span class="co"># 当你调用map的时候，并未真正地进行计算</span></span>
+<span id="cb449-3"><a href="函数式编程入门.html#cb449-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(result)</span></code></pre></div>
+<pre><code>## &lt;map object at 0x7f5a018f4f10&gt;</code></pre>
+<p>所以，当你把<code>map()/filter()</code>函数的结果打印出来看的时候，python会告诉你，这是个map/filter object，即map/filter函数的结果。但是，里面具体的数据还没计算出来，所以没法直接使用</p>
+<p>要用，很简单，用<code>list()</code>函数转换为一个列表即可。</p>
+<div class="sourceCode" id="cb451"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb451-1"><a href="函数式编程入门.html#cb451-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">list</span>(result))</span></code></pre></div>
 <pre><code>## [2, 4, 6, 8, 10]</code></pre>
-<div class="sourceCode" id="cb400"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb400-1"><a href="函数式编程入门.html#cb400-1" aria-hidden="true" tabindex="-1"></a>result <span class="op">=</span>  <span class="bu">map</span>(<span class="kw">lambda</span> x:x <span class="op">*</span> <span class="dv">2</span>,a)</span>
-<span id="cb400-2"><a href="函数式编程入门.html#cb400-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">list</span>(result))</span></code></pre></div>
+<p>当然，如果你使用列表推导，那么结果直接就是一个List。</p>
+<div class="sourceCode" id="cb453"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb453-1"><a href="函数式编程入门.html#cb453-1" aria-hidden="true" tabindex="-1"></a>result <span class="op">=</span> [i <span class="op">*</span> <span class="dv">2</span> <span class="cf">for</span> i <span class="kw">in</span> [<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>]]</span>
+<span id="cb453-2"><a href="函数式编程入门.html#cb453-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(result)</span></code></pre></div>
 <pre><code>## [2, 4, 6, 8, 10]</code></pre>
+<div class="sourceCode" id="cb455"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb455-1"><a href="函数式编程入门.html#cb455-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> is_even(x):</span>
+<span id="cb455-2"><a href="函数式编程入门.html#cb455-2" aria-hidden="true" tabindex="-1"></a>      <span class="cf">return</span> x <span class="op">&amp;</span> <span class="dv">1</span> <span class="op">!=</span> <span class="dv">0</span></span>
+<span id="cb455-3"><a href="函数式编程入门.html#cb455-3" aria-hidden="true" tabindex="-1"></a><span class="bu">filter</span>(is_even, [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">9</span>, <span class="dv">10</span>])</span></code></pre></div>
+<pre><code>## &lt;filter object at 0x7f5a018faa90&gt;</code></pre>
 </div>
 </div>
 <div id="高阶函数进阶施工中" class="section level2" number="8.2">
@@ -463,66 +522,88 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>一个函数，可以和任何变量或者对象一样，绑定一个名字（函数名），也可以换一个名字（重绑定），也可以作为参数传递给另一个函数（函数作为参数传另一个函数），也可以作为一个函数的返回值（函数返回另一个函数）。</p>
 <div id="函数是一等公民" class="section level3" number="8.2.1">
 <h3><span class="header-section-number">8.2.1</span> 函数是一等公民</h3>
-<div class="sourceCode" id="cb402"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb402-1"><a href="函数式编程入门.html#cb402-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> add(x,y):</span>
-<span id="cb402-2"><a href="函数式编程入门.html#cb402-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> x <span class="op">+</span> y</span>
-<span id="cb402-3"><a href="函数式编程入门.html#cb402-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb402-4"><a href="函数式编程入门.html#cb402-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(add(<span class="dv">1</span>,<span class="dv">2</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb457"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb457-1"><a href="函数式编程入门.html#cb457-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> add(x,y):</span>
+<span id="cb457-2"><a href="函数式编程入门.html#cb457-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> x <span class="op">+</span> y</span>
+<span id="cb457-3"><a href="函数式编程入门.html#cb457-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb457-4"><a href="函数式编程入门.html#cb457-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(add(<span class="dv">1</span>,<span class="dv">2</span>))</span></code></pre></div>
 <pre><code>## 3</code></pre>
 <p>函数和变量一样，其名字也可以重新绑定.</p>
 <p><code>dda = add</code>之后，<code>dda</code>和<code>add</code>指向同一个函数（加法函数），<code>dda()</code>也可以正常调用。</p>
-<div class="sourceCode" id="cb404"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb404-1"><a href="函数式编程入门.html#cb404-1" aria-hidden="true" tabindex="-1"></a>dda <span class="op">=</span> add</span>
-<span id="cb404-2"><a href="函数式编程入门.html#cb404-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb404-3"><a href="函数式编程入门.html#cb404-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(dda(<span class="dv">1</span>,<span class="dv">2</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb459"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb459-1"><a href="函数式编程入门.html#cb459-1" aria-hidden="true" tabindex="-1"></a>dda <span class="op">=</span> add</span>
+<span id="cb459-2"><a href="函数式编程入门.html#cb459-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb459-3"><a href="函数式编程入门.html#cb459-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(dda(<span class="dv">1</span>,<span class="dv">2</span>))</span></code></pre></div>
 <pre><code>## 3</code></pre>
 </div>
 <div id="函数作为参数" class="section level3" number="8.2.2">
 <h3><span class="header-section-number">8.2.2</span> 函数作为参数</h3>
 <p>例如map，可以把一个指定的函数，应用到List的每一个元素上。</p>
 <p><code>map()</code>函数的第一参数，就是你要应用到List元素上的函数， 比如前例中乘以2<code>do_double</code>，这里是把函数<code>do_double</code>作为参数传递给了<code>map</code>。第二个参数，就是你要处理的List。</p>
-<div class="sourceCode" id="cb406"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb406-1"><a href="函数式编程入门.html#cb406-1" aria-hidden="true" tabindex="-1"></a>result <span class="op">=</span> <span class="bu">map</span>(do_double, [<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>])</span>
-<span id="cb406-2"><a href="函数式编程入门.html#cb406-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">list</span>(result))</span></code></pre></div>
+<div class="sourceCode" id="cb461"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb461-1"><a href="函数式编程入门.html#cb461-1" aria-hidden="true" tabindex="-1"></a>result <span class="op">=</span> <span class="bu">map</span>(do_double, [<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>])</span>
+<span id="cb461-2"><a href="函数式编程入门.html#cb461-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">list</span>(result))</span></code></pre></div>
 <pre><code>## [2, 4, 6, 8, 10]</code></pre>
 </div>
 <div id="函数生成器" class="section level3" number="8.2.3">
 <h3><span class="header-section-number">8.2.3</span> “函数生成器”</h3>
 <p>用参数来生成不同的函数。</p>
 <p>这个函数，可以根据你给的参数<code>n</code>，生成另一个函数：n次方函数生成器</p>
-<div class="sourceCode" id="cb408"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb408-1"><a href="函数式编程入门.html#cb408-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> power(n):</span>
-<span id="cb408-2"><a href="函数式编程入门.html#cb408-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb408-3"><a href="函数式编程入门.html#cb408-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">def</span> fun(x):</span>
-<span id="cb408-4"><a href="函数式编程入门.html#cb408-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> x <span class="op">**</span> n</span>
-<span id="cb408-5"><a href="函数式编程入门.html#cb408-5" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb408-6"><a href="函数式编程入门.html#cb408-6" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> fun</span></code></pre></div>
-<div class="sourceCode" id="cb409"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb409-1"><a href="函数式编程入门.html#cb409-1" aria-hidden="true" tabindex="-1"></a>square <span class="op">=</span> power(<span class="dv">2</span>)</span>
-<span id="cb409-2"><a href="函数式编程入门.html#cb409-2" aria-hidden="true" tabindex="-1"></a><span class="co">&#39;&#39;&#39;</span></span>
-<span id="cb409-3"><a href="函数式编程入门.html#cb409-3" aria-hidden="true" tabindex="-1"></a><span class="co">n = 2</span></span>
-<span id="cb409-4"><a href="函数式编程入门.html#cb409-4" aria-hidden="true" tabindex="-1"></a><span class="co">def fun(x):</span></span>
-<span id="cb409-5"><a href="函数式编程入门.html#cb409-5" aria-hidden="true" tabindex="-1"></a><span class="co">  return x ** n</span></span>
-<span id="cb409-6"><a href="函数式编程入门.html#cb409-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb409-7"><a href="函数式编程入门.html#cb409-7" aria-hidden="true" tabindex="-1"></a><span class="co">square = fun</span></span>
-<span id="cb409-8"><a href="函数式编程入门.html#cb409-8" aria-hidden="true" tabindex="-1"></a><span class="co">&#39;&#39;&#39;</span></span></code></pre></div>
+<div class="sourceCode" id="cb463"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb463-1"><a href="函数式编程入门.html#cb463-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> power(n):</span>
+<span id="cb463-2"><a href="函数式编程入门.html#cb463-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb463-3"><a href="函数式编程入门.html#cb463-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">def</span> fun(x):</span>
+<span id="cb463-4"><a href="函数式编程入门.html#cb463-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> x <span class="op">**</span> n</span>
+<span id="cb463-5"><a href="函数式编程入门.html#cb463-5" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb463-6"><a href="函数式编程入门.html#cb463-6" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> fun</span></code></pre></div>
+<div class="sourceCode" id="cb464"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb464-1"><a href="函数式编程入门.html#cb464-1" aria-hidden="true" tabindex="-1"></a>square <span class="op">=</span> power(<span class="dv">2</span>)</span>
+<span id="cb464-2"><a href="函数式编程入门.html#cb464-2" aria-hidden="true" tabindex="-1"></a><span class="co">&#39;&#39;&#39;</span></span>
+<span id="cb464-3"><a href="函数式编程入门.html#cb464-3" aria-hidden="true" tabindex="-1"></a><span class="co">n = 2</span></span>
+<span id="cb464-4"><a href="函数式编程入门.html#cb464-4" aria-hidden="true" tabindex="-1"></a><span class="co">def fun(x):</span></span>
+<span id="cb464-5"><a href="函数式编程入门.html#cb464-5" aria-hidden="true" tabindex="-1"></a><span class="co">  return x ** n</span></span>
+<span id="cb464-6"><a href="函数式编程入门.html#cb464-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb464-7"><a href="函数式编程入门.html#cb464-7" aria-hidden="true" tabindex="-1"></a><span class="co">square = fun</span></span>
+<span id="cb464-8"><a href="函数式编程入门.html#cb464-8" aria-hidden="true" tabindex="-1"></a><span class="co">&#39;&#39;&#39;</span></span></code></pre></div>
 <pre><code>## &#39;\nn = 2\ndef fun(x):\n  return x ** n\n\nsquare = fun\n&#39;</code></pre>
-<div class="sourceCode" id="cb411"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb411-1"><a href="函数式编程入门.html#cb411-1" aria-hidden="true" tabindex="-1"></a>cube <span class="op">=</span> power(<span class="dv">3</span>)</span></code></pre></div>
-<div class="sourceCode" id="cb412"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb412-1"><a href="函数式编程入门.html#cb412-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(square(<span class="dv">3</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb466"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb466-1"><a href="函数式编程入门.html#cb466-1" aria-hidden="true" tabindex="-1"></a>cube <span class="op">=</span> power(<span class="dv">3</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb467"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb467-1"><a href="函数式编程入门.html#cb467-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(square(<span class="dv">3</span>))</span></code></pre></div>
 <pre><code>## 9</code></pre>
-<div class="sourceCode" id="cb414"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb414-1"><a href="函数式编程入门.html#cb414-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(cube(<span class="dv">2</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb469"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb469-1"><a href="函数式编程入门.html#cb469-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(cube(<span class="dv">2</span>))</span></code></pre></div>
 <pre><code>## 8</code></pre>
 </div>
-<div id="闭包closure" class="section level3" number="8.2.4">
-<h3><span class="header-section-number">8.2.4</span> 闭包Closure</h3>
+<div id="reduce" class="section level3" number="8.2.4">
+<h3><span class="header-section-number">8.2.4</span> reduce</h3>
+<p><code>reduce</code>和<code>map</code>一样，不单是一个具体的函数，同时也是“一种常用的操作”，所以放在大部分编程语言中，都有相同的含义。因此一般会与<code>map</code>并列，常称之为<code>map/reduce</code>。</p>
+<p>和<code>map</code>一样，<code>reduce</code>同样可以把一个函数应用到一个列表上，区别在于，你使用<code>reduce</code>的时候，你要运用的函数，例如<code>func(x,y)</code>，有2个参数。</p>
+<p>reduce会这么做：</p>
+<ol style="list-style-type: decimal">
+<li>取出你要处理的列表的头2个元素（<code>a[0]</code>和<code>a[1]</code>），传进<code>func(a[0], a[1])</code>中，并得到一个返回值，如<code>z1</code></li>
+<li>取出列表的第3个元素<code>a[2]</code>，和前一个结果，一起传入<code>func(z1,a[2])</code>，得到一个返回值，如<code>z2</code></li>
+<li>取出列表的第4个元素<code>a[3]</code>，和前一个结果，一起传入<code>func(z2,a[3])</code>，得到一个返回值，如<code>z3</code></li>
+<li>…</li>
+</ol>
+<p>例如，我们对一个列表<code>a = [1,2,3,5,7,9]</code>，<code>reduce</code>一下应用我们前面写的<code>add()</code>函数。</p>
+<p>显然，这个操作大概是这个过程。</p>
+<p><img src="images/reduce.png" /></p>
+<p><code>reduce</code>函数在<code>functools</code>模块中，模块我们后面会讲。要引入<code>reduce</code>函数，使用这行代码：</p>
+<p><code>from functools import reduce</code></p>
+<div class="sourceCode" id="cb471"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb471-1"><a href="函数式编程入门.html#cb471-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> functools <span class="im">import</span> <span class="bu">reduce</span></span>
+<span id="cb471-2"><a href="函数式编程入门.html#cb471-2" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> [<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">5</span>,<span class="dv">7</span>,<span class="dv">9</span>]</span>
+<span id="cb471-3"><a href="函数式编程入门.html#cb471-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb471-4"><a href="函数式编程入门.html#cb471-4" aria-hidden="true" tabindex="-1"></a><span class="bu">reduce</span>(add,a)</span></code></pre></div>
+<pre><code>## 27</code></pre>
+</div>
+<div id="闭包closure" class="section level3" number="8.2.5">
+<h3><span class="header-section-number">8.2.5</span> 闭包Closure</h3>
 <p>一个闭包closure，可以认为是一个函数，但除了函数体本身，包含了定义闭包时的数据。</p>
 <p>例如</p>
-<div class="sourceCode" id="cb416"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb416-1"><a href="函数式编程入门.html#cb416-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> power(n):</span>
-<span id="cb416-2"><a href="函数式编程入门.html#cb416-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb416-3"><a href="函数式编程入门.html#cb416-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">def</span> fun(x):</span>
-<span id="cb416-4"><a href="函数式编程入门.html#cb416-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> x <span class="op">**</span> n</span>
-<span id="cb416-5"><a href="函数式编程入门.html#cb416-5" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb416-6"><a href="函数式编程入门.html#cb416-6" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> fun</span></code></pre></div>
+<div class="sourceCode" id="cb473"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb473-1"><a href="函数式编程入门.html#cb473-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> power(n):</span>
+<span id="cb473-2"><a href="函数式编程入门.html#cb473-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb473-3"><a href="函数式编程入门.html#cb473-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">def</span> fun(x):</span>
+<span id="cb473-4"><a href="函数式编程入门.html#cb473-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> x <span class="op">**</span> n</span>
+<span id="cb473-5"><a href="函数式编程入门.html#cb473-5" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb473-6"><a href="函数式编程入门.html#cb473-6" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> fun</span></code></pre></div>
 <p>这个代码里，调用<code>power()</code>函数，会返回另一个函数<code>fun()</code>。</p>
-<p>这个函数里面调用了变量<code>n</code>，但<code>n</code>不在<code>fun()</code>的函数体内，而在上一层。<code>fun()</code>函数，会把生产自己的坏境中的变量，也包括在里面：闭包是一个附带数据的函数。</p>
+<p>这个函数里面调用了变量<code>n</code>，但<code>n</code>不在<code>fun()</code>的函数体内，而在上一层。<code>fun()</code>函数，会把生产自己的坏境中的变量（本例中即<code>n</code>），也包括在里面：<strong>闭包是一个附带数据的函数</strong>。</p>
 <p>这段代码发生了什么？</p>
-<div class="sourceCode" id="cb417"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb417-1"><a href="函数式编程入门.html#cb417-1" aria-hidden="true" tabindex="-1"></a>square <span class="op">=</span> power(<span class="dv">2</span>) </span></code></pre></div>
-<p><code>square</code>函数，相当于一个附带了<code>n=2</code>的<code>fun</code>函数</p>
+<div class="sourceCode" id="cb474"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb474-1"><a href="函数式编程入门.html#cb474-1" aria-hidden="true" tabindex="-1"></a>square <span class="op">=</span> power(<span class="dv">2</span>) </span></code></pre></div>
+<p><code>square</code>函数，相当于一个<strong>附带了<code>n=2</code>的<code>fun()</code>函数</strong></p>
 <ol style="list-style-type: decimal">
 <li><code>power(n = 2)</code>，其中<code>n = 2</code></li>
 <li>在<code>power()</code>函数的内部，<code>fun(x)</code>是可以看见这个<code>n=2</code>的</li>
@@ -536,6 +617,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>G全局：代码的最外层</li>
 <li>B内置名称：python的一些内置的名称，如<code>max</code>函数</li>
 </ol>
+<p>现在可知，python查找变量名，先找局部作用域（函数内部），再找闭包的附带数据，再找全局变量，再找python的内置名称。</p>
 
 </div>
 </div>
