@@ -53,7 +53,6 @@
 
 <link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
-<script async defer src="https://hypothes.is/embed.js"></script>
 
 
 <style type="text/css">
@@ -364,12 +363,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div class = rmdreview>
-  
-<p> 这本书添加了注释功能，<span style="background-color: #3297FD; color: white">左键选择任何文字</span>，就会弹出注释菜单。注释功能区在页面的右上角。
-<p> 注释有公共和私人两类。私人注释只有自己能看见，公共则所有人都能看见。</p>
-
-</div>
 <div id="函数式编程入门" class="section level1" number="8">
 <h1><span class="header-section-number">8</span> 函数式编程入门</h1>
 <div id="map和filter" class="section level2" number="8.1">
@@ -501,7 +494,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="sourceCode" id="cb449"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb449-1"><a href="函数式编程入门.html#cb449-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> [<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>]</span>
 <span id="cb449-2"><a href="函数式编程入门.html#cb449-2" aria-hidden="true" tabindex="-1"></a>result <span class="op">=</span> <span class="bu">map</span>(<span class="kw">lambda</span> x : x <span class="op">*</span> <span class="dv">2</span>,a) <span class="co"># 当你调用map的时候，并未真正地进行计算</span></span>
 <span id="cb449-3"><a href="函数式编程入门.html#cb449-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(result)</span></code></pre></div>
-<pre><code>## &lt;map object at 0x7f5a018f4f10&gt;</code></pre>
+<pre><code>## &lt;map object at 0x7f2ad9474f10&gt;</code></pre>
 <p>所以，当你把<code>map()/filter()</code>函数的结果打印出来看的时候，python会告诉你，这是个map/filter object，即map/filter函数的结果。但是，里面具体的数据还没计算出来，所以没法直接使用</p>
 <p>要用，很简单，用<code>list()</code>函数转换为一个列表即可。</p>
 <div class="sourceCode" id="cb451"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb451-1"><a href="函数式编程入门.html#cb451-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">list</span>(result))</span></code></pre></div>
@@ -513,7 +506,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="sourceCode" id="cb455"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb455-1"><a href="函数式编程入门.html#cb455-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> is_even(x):</span>
 <span id="cb455-2"><a href="函数式编程入门.html#cb455-2" aria-hidden="true" tabindex="-1"></a>      <span class="cf">return</span> x <span class="op">&amp;</span> <span class="dv">1</span> <span class="op">!=</span> <span class="dv">0</span></span>
 <span id="cb455-3"><a href="函数式编程入门.html#cb455-3" aria-hidden="true" tabindex="-1"></a><span class="bu">filter</span>(is_even, [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">9</span>, <span class="dv">10</span>])</span></code></pre></div>
-<pre><code>## &lt;filter object at 0x7f5a018faa90&gt;</code></pre>
+<pre><code>## &lt;filter object at 0x7f2ad9478a90&gt;</code></pre>
 </div>
 </div>
 <div id="高阶函数进阶施工中" class="section level2" number="8.2">
