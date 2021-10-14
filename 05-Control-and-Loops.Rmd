@@ -145,7 +145,7 @@ is_blowing = True
 ```
 判断是否同时在刮风和下雨
 ```{python}
-print(is_blowing and is_raining)
+print(is_raining and is_blowing)
 ```
 
 
@@ -154,7 +154,7 @@ print(is_blowing and is_raining)
 `bad_weather`
 
 ```{python}
-bad_weather = is_blowing and is_blowing # 布尔运算的结果，也是一个布尔型，并且可以赋值给另一个变量
+bad_weather = is_raining and is_blowing # 布尔运算的结果，也是一个布尔型，并且可以赋值给另一个变量
 print(bad_weather)
 ```
 
@@ -167,13 +167,13 @@ bool_and(x, y)
 就可以视为一个函数调用，返回的结果，就是与操作
 
 ```{python eval=FALSE}
-bad_weather = bool_and(is_blowing, is_blowing) # 这是随便写的，无法执行
+bad_weather = bool_and(is_raining and is_blowing) # 这是随便写的，无法执行
 ```
 
 回到我们的`if`语句。`if`语句接受的判断条件，本质上一个**布尔型变量**
 
 ```{python}
-if is_blowing and is_blowing:
+if is_raining and is_blowing:
   print('don\'t go outside!')
 ```
 
@@ -183,7 +183,7 @@ if bad_weather:
 ```
 
 
-所以，你在`if`后面跟一个布尔型变量`bad_weather`，或者一个条件`is_blowing and is_blowing`，是等价的。
+所以，你在`if`后面跟一个布尔型变量`bad_weather`，或者一个条件`is_raining and is_blowing`，是等价的。
 
 回看前面的例子：
 ```{python}
