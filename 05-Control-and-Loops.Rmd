@@ -1,4 +1,4 @@
-# 条件与循环（施工中）
+# 条件与循环
 
 ## 条件if
 
@@ -131,7 +131,7 @@ print(f"最大值是{max_value}")
 实际上，这2个符号，是**布尔型变量的值**，和`1,2,3,4`是整型的值，`'apple'`是字符串的值类似。但布尔型的值只有2种。
 
 
-例如，有一个变量，用于表示“现在是否下雨”。这个问题只要2个答案，是或者否，显然这就可以用布尔型来表示：`True`就表示下雨，`False`就表示没下雨。我们就定义一个布尔型变量`is_raining`。
+例如，有一个变量，用于表示“现在是否下雨”。这个问题只有2个答案，是或者否，显然这就可以用布尔型来表示：`True`就表示下雨，`False`就表示没下雨。我们就定义一个布尔型变量`is_raining`。
 
 注意：为了达到顾名思义的效果，布尔型的变量，可以考虑用`is_`，`has_`等等开头，显示这是个“是否”问题的答案。
 
@@ -167,7 +167,7 @@ bool_and(x, y)
 就可以视为一个函数调用，返回的结果，就是与操作
 
 ```{python eval=FALSE}
-bad_weather = bool_and(is_raining and is_blowing) # 这是随便写的，无法执行
+bad_weather = bool_and(is_raining, is_blowing) # 这是随便写的，无法执行
 ```
 
 回到我们的`if`语句。`if`语句接受的判断条件，本质上一个**布尔型变量**
@@ -177,13 +177,14 @@ if is_raining and is_blowing:
   print('don\'t go outside!')
 ```
 
+等价于：
+
 ```{python}
 if bad_weather:
   print('don\'t go outside!')
 ```
 
-
-所以，你在`if`后面跟一个布尔型变量`bad_weather`，或者一个条件`is_raining and is_blowing`，是等价的。
+所以，你在`if`后面跟一个布尔型变量`bad_weather`，或者一个条件`is_raining and is_blowing`，是等价的。但后者可以少进行一次赋值的操作，并且节约一个变量名。
 
 回看前面的例子：
 ```{python}

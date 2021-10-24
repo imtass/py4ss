@@ -4,6 +4,7 @@ bookdown::gitbook:
     before_body: open_review_block.html
   css: style.css
   config:
+    toc_depth: 3
     toc:
       before: |
         <li><a href="./">写给文科生的Python入门和数据处理教程</a></li>

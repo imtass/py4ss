@@ -75,6 +75,42 @@ from <模块名> import *
 
 `r red("注意：")``这种方式不推荐。引入大量的你可能用不到，甚至不知道存在的东西，不是一个好习惯。
 
+## Python常用模块
+
+### os模块
+
+详细内容请参与官方文档：
+
+https://docs.python.org/zh-cn/3/library/os.html
+
+首先要import一下
+```{python}
+import os
+```
+
+1. 列出目录
+
+```{python}
+os.listdir(".")
+```
+
+
+### time模块
+
+
+### str模块
+
+
+### math模块
+
+
+
+
+
+
+
+
+
 
 ## 自定义模块
 
@@ -117,6 +153,7 @@ def do_double(x):
 
 
 在我们后续的任务中，如果要调用这2个函数，就可以用import
+
 
 ```{python}
 import my_calc

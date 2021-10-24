@@ -1,6 +1,6 @@
 
 
-# 函数（施工中）
+# 函数
 
 一个函数，就是一个包装好的代码：你给它一些输入（参数），函数给你一个结果（返回值）：
 
@@ -336,7 +336,7 @@ print(a_list)
 若传递的参数是不可变类型，如int，str等，则对参数的修改会自动引发拷贝，没有上述问题。前面已经说过了。
 
 
-## 递归简介（知道即可）
+## 递归简介（进阶）
 
 递归：函数自己调用自己调用自己调用自己调用自己 ...
 
@@ -452,7 +452,7 @@ def func():
 func()
 ```
 
-# 函数式编程入门
+# 函数式编程简述
 
 
 
@@ -550,7 +550,7 @@ print(is_odd(6))
 filter(判断函数, List)
 
 ```{python}
-resutl = filter(is_odd, a)
+result = filter(is_odd, a)
 print(list(result))
 ```
 
@@ -577,6 +577,23 @@ print(result)
 result = [do_double(i) for i in a if is_odd(i)]
 print(result)
 ```
+
+这其实可以理解为一个“数据流的概念”：
+
+```{python}
+'''
+a 
+-> filter by is_odd()
+-> map by do_double()
+-> reuslt
+'''
+
+```
+
+
+1. 列表`a`首先经过filter函数的加工，然后再经过map函数的加工，最后得到reuslt。
+2. 比喻：一堆水果(数据）-> 剔除坏的（处理1）-> 清洗（处理2）-> 削皮（处理3）-> 榨汁（处理4） -> 果汁（处理后的数据）
+
 
 注：
 
@@ -677,7 +694,7 @@ filter(is_even, [1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
 ```
 
 
-## 高阶函数（进阶）（施工中）
+## 高阶函数
 
 
 
@@ -721,41 +738,80 @@ print(list(result))
 
 
 
-### “函数生成器”
+### “函数生成器”（进阶）
 
 用参数来生成不同的函数。
 
+例如，我们写一个函数，用于求一个数x的n次方。显然我们可以写一个这样的函数。
 
+```{python}
+def power(x,n):
+  return x ** n
+```
 
+例如，3的平方：
 
+```{python}
+print(power(3,2))
+```
+
+例如，2的3次方：
+
+```{python}
+print(power(2,3))
+```
+平方、三次方等等，非常的常用，我们想写个专门的函数，可以少输入一个参数
+
+```{python}
+def square(x):
+  return power(x,2)
+
+print(square(3))
+```
+同样，三次方也是
+```{python}
+def cube(x):
+  return power(x,3)
+
+print(cube(2))
+```
+我们看到，这2个函数，函数体几乎完全一样，只有1个地方不同：2和3。
+
+1. 如果某些场合，4次方也很常用，我们可以原样建立一个4次方函数。
+2. 但是，这么多的函数，只有1个地方不同，必定是可以再往上抽象一层。
 
 
 这个函数，可以根据你给的参数`n`，生成另一个函数：n次方函数生成器
 
 ```{python}
-def power(n):
-
-  def fun(x):
-    return x ** n
+def make_power_funcion(n):
   
-  return fun
+  def func(x):
+    # return power(x, n) # 也是一样的
+    return x ** n 
+  
+  return func
 ```
 
+`make_power_funcion`是一个函数，这个函数会返回另一个函数`func`
 
 ```{python}
-square = power(2)
 '''
-n = 2
-def fun(x):
+约等于以下代码
+
+def func(x):
+  n = 2
   return x ** n
 
-square = fun
+square = func
 '''
+square = make_power_funcion(2)
+
 ```
 
 
 ```{python}
-cube = power(3)
+cube = make_power_funcion(3)
 
 ```
 
@@ -767,7 +823,7 @@ print(cube(2))
 
 ```
 
-### reduce 
+### reduce （进阶）
 
 `reduce`和`map`一样，不单是一个具体的函数，同时也是“一种常用的操作”，所以放在大部分编程语言中，都有相同的含义。因此一般会与`map`并列，常称之为`map/reduce`。
 
@@ -783,7 +839,7 @@ reduce会这么做：
 4. ... 
 
 
-例如，我们对一个列表`a = [1,2,3,5,7,9]`，`reduce`一下应用我们前面写的`add()`函数。
+例如，我们对一个列表`a = [1,3,5,7,9]`，`reduce`一下应用我们前面写的`add()`函数。
 
 显然，这个操作大概是这个过程。
 
@@ -795,14 +851,14 @@ reduce会这么做：
 
 ```{python}
 from functools import reduce
-a = [1,2,3,5,7,9]
+a = [1,3,5,7,9]
 
 reduce(add,a)
 
 ```
 
 
-### 闭包Closure
+### 闭包Closure（进阶）
 
 
 一个闭包closure，可以认为是一个函数，但除了函数体本身，包含了定义闭包时的数据。
@@ -810,12 +866,13 @@ reduce(add,a)
 例如
 
 ```{python}
-def power(n):
-
-  def fun(x):
-    return x ** n
+def make_power_funcion(n):
   
-  return fun
+  def func(x):
+    # return power(x, n) # 也是一样的
+    return x ** n 
+  
+  return func
 ```
 
 
@@ -826,22 +883,22 @@ def power(n):
 
 这段代码发生了什么？
 ```{python}
-square = power(2) 
+square = make_power_funcion(2) 
 ```
 
-`square`函数，相当于一个**附带了`n=2`的`fun()`函数**
+`square`函数，相当于一个**附带了`n=2`的`func()`函数**
 
 1. `power(n = 2)`，其中`n = 2`
-2. 在`power()`函数的内部，`fun(x)`是可以看见这个`n=2`的
-3. `return fun`的时候，会把`n=2`，一并返回到外层
-4. `square = power(2) `,此时我们把`square`这个名字，绑定给`fun`这个函数（闭包），而后者同时还附带了`n=2`
+2. 在`make_power_funcion()`函数的内部，`func(x)`是可以看见这个`n=2`的
+3. `return func`的时候，会把`n=2`，一并返回到外层
+4. `square = power(2) `,此时我们把`square`这个名字，绑定给`func`这个函数（闭包），而后者同时还附带了`n=2`
 
 
 
 前面讲变量作用域，python找一个名称，是从内到外
 
-1. L局部作用域：即函数体内。例如本例中`fun`函数的`x`
-2. Enclosing function locals：函数中嵌套函数的外部：例如本例中`fun`函数的`n`
+1. L局部作用域：即函数体内。例如本例中`func`函数的`x`
+2. Enclosing function locals：函数中嵌套函数的外部：例如本例中`func`函数的`n`
 3. G全局：代码的最外层
 4. B内置名称：python的一些内置的名称，如`max`函数
 
